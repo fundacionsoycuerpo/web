@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --text-color: #2f2f2f;
+  --main-bg: white;
+  --contrast-bg: black;
+  --contrast-text-color: white;
+}
+
+html,
+body {
+  background: var(--main-bg);
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  color: var(--text-color);
+}
+
+body * {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.inner-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+@media (min-width: 490px) {
+  .inner-content {
+    padding: 5rem;
+  }
+}
+
+.inner-content > section + section {
+  margin-top: 2rem;
+}
+
+@media (min-width: 490px) {
+  .inner-content > section + section {
+    margin-top: 5rem;
+  }
+}
+.inner-content h1 {
+  margin-bottom: 1rem;
+}
+
+.inner-content p {
+  margin-bottom: 1rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+button.button {
+  cursor: pointer;
+  background: var(--main-bg);
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button.contrast {
+  background: var(--contrast-bg);
+  color: white;
+}
