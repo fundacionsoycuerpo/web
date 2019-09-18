@@ -1,6 +1,6 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`eventos/2019_09_05_el_cuerpo_de_la_memoria/images.json`)
+    return this.fetch(`galeria/2019_09_05_el_cuerpo_de_la_memoria/images.json`)
       .then(r => r.json())
       .then(images => {
         return { images };
@@ -42,9 +42,13 @@
   }
 </style>
 
+<svelte:head>
+  <title>Fundación Soy Cuerpo - Eventos - El Cuerpo de la Memoria - 2019</title>
+</svelte:head>
+
 <div class="container">
   <div class="image">
-    <img src="el_cuerpo_de_la_memoria/IMG_7277_comp.jpg" alt="Background" />
+    <img class="gallery-item" src="el_cuerpo_de_la_memoria/IMG_7277_comp.jpg" alt="Background" />
   </div>
   <div class="inner-content">
     <h1>El Cuerpo de la Memoria</h1>
