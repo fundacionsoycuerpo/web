@@ -55,6 +55,7 @@
       <a href="departamentos/arte">Departamento de arte</a>
       <a href="departamentos/plataformas">Departamento de plataformas</a>
       <a href="departamentos/salud">Departamento de salud</a>
+      <a href="galeria">Galería</a>
     </div>
   </nav>
 </footer>

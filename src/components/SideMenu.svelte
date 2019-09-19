@@ -4,10 +4,8 @@
   export let segment;
 
   function toggle() {
-    menuIsOpen.update(isOpen=>!isOpen);
+    menuIsOpen.update(isOpen => !isOpen);
   }
-
-
 </script>
 
 <style>
@@ -76,7 +74,7 @@
   }
 </style>
 
-<nav class="{$menuIsOpen ? 'open' : ''}">
+<nav class={$menuIsOpen ? 'open' : ''}>
   <ul>
     <li>
       <a href="." on:click={toggle}>Inicio</a>
@@ -102,6 +100,9 @@
       </ul>
     </li>
     <li>
+      <a href="galeria" on:click={toggle}>Galería</a>
+    </li>
+    <li>
       <a href="donaciones" on:click={toggle}>Donaciones</a>
     </li>
     <li>
@@ -111,5 +112,5 @@
 </nav>
 
 {#if $menuIsOpen}
-  <div class="overlay" on:click={toggle} ></div>
+  <div class="overlay" on:click={toggle} />
 {/if}
