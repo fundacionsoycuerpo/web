@@ -1,18 +1,22 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`noticias.json`)
-      .then(res => res.json())
-      .then(news => {
-        return { news: news.slice(0, 5) };
+    return Promise.all([
+      this.fetch("noticias.json"),
+      this.fetch("eventos.json")
+    ])
+      .then((responses) => Promise.all(responses.map(res=>res.json())))
+      .then(([news, events]) => {
+        return { news: news.slice(0, 5), events: events.slice(0, 5) };
       });
   }
 </script>
 
 <script>
   import Article from "../components/Article.svelte";
+  import Event from "../components/Event.svelte";
 
   export let news;
-
+  export let events;
 </script>
 
 <style>
@@ -63,6 +67,14 @@
   </div>
   <div class="inner-content">
     {#if news && news.length}
+      <section class="events">
+        <h1>Próximos eventos</h1>
+        {#each events as event, i}
+          <Event {event} />
+        {/each}
+      </section>
+    {/if}
+    {#if news && news.length}
       <section class="news">
         <h1>Noticias</h1>
         {#each news as article, i}
@@ -71,7 +83,7 @@
       </section>
     {/if}
     <section class="big-banner">
-      <img src="img/colabora - 02.jpg" alt="Afiche colaboración" />
+      <img src="img/somos_cerro - colabora.png" alt="Afiche colaboración" />
     </section>
   </div>
 </div>

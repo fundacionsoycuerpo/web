@@ -48,6 +48,6 @@
     </div>
   </section>
   <section class="big-banner">
-    <img src="img/colabora - 02.jpg" alt="Afiche colaboración" />
+    <img src="img/somos_cerro - colabora.png" alt="Afiche colaboración" />
   </section>
 </div>
