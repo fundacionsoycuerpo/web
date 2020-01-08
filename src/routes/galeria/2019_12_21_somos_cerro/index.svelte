@@ -1,6 +1,6 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`galeria/2019_09_05_el_cuerpo_de_la_memoria/images.json`)
+    return this.fetch(`galeria/2019_12_21_somos_cerro/images.json`)
       .then(r => r.json())
       .then(images => {
         return { images };
@@ -14,8 +14,8 @@
   export let segment;
   export let images;
 
-  let alt = "Encuentro El Cuerpo de la Memoria";
-  let source = "el_cuerpo_de_la_memoria"
+  let alt = "Encuentro Somos Cerro";
+  let source = "somos_cerro"
 </script>
 
 <style>
@@ -46,7 +46,7 @@
 </style>
 
 <svelte:head>
-  <title>Fundación Soy Cuerpo - Eventos - El Cuerpo de la Memoria - 2019</title>
+  <title>Fundación Soy Cuerpo - Eventos - Somos Cerro - 2019</title>
 </svelte:head>
 
 <div class="container">
@@ -54,9 +54,9 @@
     <img class="gallery-item" src="{source}/portada.jpg" alt="Background" />
   </div>
   <div class="inner-content">
-    <h1>El Cuerpo de la Memoria</h1>
-    <h2>05 de septiembre del 2019</h2>
-    <h3>Museo de la Memoria y los Derechos Humanos</h3>
+    <h1>Somos Cerro. 1era Jornada de Autocuidado en Espacios Naturales</h1>
+    <h2>21 de diciembre del 2019</h2>
+    <h3>Vivero Cumbre. Cerro San Cristóbal.</h3>
     <div class="gallery">
       <Gallery {images} {alt} {source} />
     </div>

@@ -19,7 +19,7 @@
     io.observe(target);
   };
 
-  export let images;
+  export let images, alt, source;
 
   const setStyle = src => {
     const image = images.find(i => src.includes(i.src));
@@ -41,7 +41,7 @@
       targets.forEach(target => {
         target.onload = function() {
           target.removeAttribute("style");
-          target.setAttribute("alt", "Encuentro el Cuerpo de la Memoria");
+          target.setAttribute("alt", alt);
         };
         lazyLoad(target);
       });
@@ -89,7 +89,7 @@
       {#each images as image, i}
         <img
           class="gallery-item"
-          data-lazy="el_cuerpo_de_la_memoria/gallery/{image.src}"
+          data-lazy="{source}/gallery/{image.src}"
           alt="" />
       {/each}
     </section>

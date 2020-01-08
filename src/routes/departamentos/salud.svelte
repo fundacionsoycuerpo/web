@@ -1,3 +1,19 @@
+<script context="module">
+  export function preload({ params, query }) {
+    return this.fetch(`noticias.json`)
+      .then(res => res.json())
+      .then(news => {
+        return { news: news.filter(n => n.type === "health").slice(0, 5) };
+      });
+  }
+</script>
+
+<script>
+  import Article from "../../components/Article.svelte";
+
+  export let news;
+</script>
+
 <svelte:head>
   <title>Fundación Soy Cuerpo - Departamento de Salud</title>
 </svelte:head>
@@ -28,4 +44,13 @@
       al reconociendo en un constante movimiento de transformación."
     </p>
   </section>
+
+  {#if news && news.length}
+    <section class="news">
+      <h2>Noticias</h2>
+      {#each news as article, i}
+        <Article {article} />
+      {/each}
+    </section>
+  {/if}
 </div>

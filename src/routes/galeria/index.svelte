@@ -5,8 +5,19 @@
       name: "El Cuerpo de la Memoria",
       date: "05 de septiembre del 2019",
       location: "Museo de la Memoria y los Derechos Humanos",
-      img: "fundacion-temp.jpg",
-      url: "galeria/2019_09_05_el_cuerpo_de_la_memoria"
+      img: "img/afiche_el_cuerpo_de_la_memoria.jpg",
+      url: "galeria/2019_09_05_el_cuerpo_de_la_memoria",
+      alt: 'Encuentro El Cuerpo de la Memoria',
+      source: "el_cuerpo_de_la_memoria"
+    },
+    {
+      name: "Somos Cerro. 1era Jornada de Autocuidado en Espacios Naturales",
+      date: "21 de Diciembre del 2019",
+      location: "Vivero Cumbre. Cerro San Cristóbal",
+      img: "img/afiche_somos_cerro.jpg",
+      url: "galeria/2019_12_21_somos_cerro",
+      alt: 'Encuentro Somos Cerro',
+      source: "somos_cerro"
     }
   ];
   let expanded = null;
