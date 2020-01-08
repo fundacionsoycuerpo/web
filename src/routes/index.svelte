@@ -66,7 +66,7 @@
     <img src="img/bg-home.jpg" alt="Background" />
   </div>
   <div class="inner-content">
-    {#if news && news.length}
+    {#if events && events.length}
       <section class="events">
         <h1>Próximos eventos</h1>
         {#each events as event, i}
@@ -83,7 +83,7 @@
       </section>
     {/if}
     <section class="big-banner">
-      <img src="img/somos_cerro - colabora.png" alt="Afiche colaboración" />
+      <img src="img/colabora - generico.jpg" alt="Afiche colaboración" />
     </section>
   </div>
 </div>
