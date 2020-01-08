@@ -8,8 +8,8 @@ const news = [
     img: "img/afiche_somos_cerro.jpg",
     imgAlt: "Afiche evento Somos Cerro",
     content: [
-      "Somos Cerro: 1era Jornada de Autocuidado en Espacios Naturales se realizó en las dependencias del Vivero Cumbre, en alianza con la Fundación Senderos Chile y la colaboración de Fundación Somos Yoga y Parque Metropolitano de Santiago.",
-      "Fomentando el desarollo saludable, ecológico y sustentable del ser humano, se ofrece a la comunidad una instancia para el autocuidado en conexión con su espacio cotidiano natural, reivindicando la idea de habitar nuestro territorio corporal y geográfico.",
+      "Somos Cerro: 1era Jornada de Autocuidado en Espacios Naturales se realizó en las dependencias del Vivero Cumbre, en alianza con la Fundación Sendero de Chile y la colaboración de Fundación Somos Yoga y Parque Metropolitano de Santiago.",
+      "Fomentando el desarrollo saludable, ecológico y sustentable del ser humano, se ofrece a la comunidad una instancia para el autocuidado en conexión con su espacio cotidiano natural, reivindicando la idea de habitar nuestro territorio corporal y geográfico.",
     ],
     tags: [{ name: "Salud", url: "departamentos/salud" }]
   },
