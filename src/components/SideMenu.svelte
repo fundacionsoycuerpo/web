@@ -1,8 +1,6 @@
 <script>
   import { menuIsOpen } from "../stores.js";
 
-  export let segment;
-
   function toggle() {
     menuIsOpen.update(isOpen => !isOpen);
   }
@@ -50,9 +48,6 @@
     padding: 0;
   }
 
-  /*
- * And let's slide it in from the left
- */
   nav.open {
     transform: none;
     height: 100%;

@@ -117,7 +117,7 @@
       class="button"
       aria-label={expanded ? 'Ver menos' : 'Ver más'}
       on:click={expand}>
-       {expanded ? '-' : '+'}
+      {expanded ? '-' : '+'}
     </button>
   </div>
   {#if expanded}

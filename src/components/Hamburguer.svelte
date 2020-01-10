@@ -1,8 +1,8 @@
 <script>
   import { menuIsOpen } from "../stores.js";
-  
+
   function toggle() {
-    menuIsOpen.update(isOpen=>!isOpen);
+    menuIsOpen.update(isOpen => !isOpen);
   }
 </script>
 
@@ -56,7 +56,7 @@
   }
 </style>
 
-<button on:click={toggle} class="{$menuIsOpen ? 'open' : ''}">
+<button on:click={toggle} class={$menuIsOpen ? 'open' : ''}>
   <span />
   <span />
   <span />

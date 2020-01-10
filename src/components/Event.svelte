@@ -10,7 +10,7 @@
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--text-color);
   }
-  
+
   .content {
     display: flex;
     width: 100%;
