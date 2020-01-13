@@ -59,8 +59,8 @@
   <title>{gallery.head_title}</title>
   <meta property="og:title" content={gallery.head_title} />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content={'https://fundacionsoycuerpo.cl/galeria/' + gallery.slug + '/portada.jpg'} />
-  <meta property="og:url" content={'https://fundacionsoycuerpo.cl/galeria/' + gallery.slug + '/portada.jpg'} />
+  <meta property="og:image" content={'https://fundacionsoycuerpo.cl/' + gallery.slug + '/portada.jpg'} />
+  <meta property="og:url" content={'https://fundacionsoycuerpo.cl/' + gallery.slug + '/portada.jpg'} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={gallery.head_title} />
   <meta name="twitter:image" content={'https://fundacionsoycuerpo.cl/galeria/' + gallery.slug + '/portada.jpg'} />
