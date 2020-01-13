@@ -47,6 +47,12 @@
   .gallery {
     margin-top: 3rem;
   }
+
+  a {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 2rem;
+  }
 </style>
 
 <svelte:head>
@@ -67,5 +73,6 @@
     <div class="gallery">
       <Gallery {images} bind:alt={gallery.imgsAlt} bind:source={gallery.slug} />
     </div>
+      <a href="galeria">Volver a Galería</a>
   </div>
 </div>
