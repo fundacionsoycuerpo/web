@@ -1,7 +1,3 @@
-<script>
-  export let segment;
-</script>
-
 <style>
   nav > div {
     display: flex;
@@ -42,9 +38,9 @@
 
 <footer>
   <nav>
-    <a href="." routerLinkActive="active"
-      ><img src="img/2610_Fundacion_Soy_Cuerpo_D_01.png" alt="Logo"
-    /></a>
+    <a href="." routerLinkActive="active">
+      <img src="img/2610_Fundacion_Soy_Cuerpo_D_01.png" alt="Logo" />
+    </a>
     <div>
       <a href="quienes_somos">Quienes somos</a>
       <a href="equipo">Equipo</a>

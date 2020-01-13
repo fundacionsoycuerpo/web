@@ -1,10 +1,10 @@
 <script context="module">
   export function preload({ params, query }) {
     return Promise.all([
-      this.fetch("noticias.json"),
-      this.fetch("eventos.json")
+      this.fetch('noticias.json'),
+      this.fetch('eventos.json')
     ])
-      .then((responses) => Promise.all(responses.map(res=>res.json())))
+      .then(responses => Promise.all(responses.map(res => res.json())))
       .then(([news, events]) => {
         return { news: news.slice(0, 5), events: events.slice(0, 5) };
       });
@@ -12,11 +12,16 @@
 </script>
 
 <script>
-  import Article from "../components/Article.svelte";
-  import Event from "../components/Event.svelte";
+  import Article from '../components/Article.svelte';
+  import Event from '../components/Event.svelte';
 
   export let news;
   export let events;
+
+  export let head_title = 'Fundación Soy Cuerpo';
+  export let head_description =
+    'Fundación Soy Cuerpo es una organización sin fines de lucro, que nace como una respuesta concreta a la necesidad de poner en valor el cuerpo humano, potenciando el entendimiento integral de éste.';
+  export let head_img = 'https://fundacionsoycuerpo.cl/img/logo_bg.jpg';
 </script>
 
 <style>
@@ -58,7 +63,15 @@
 </style>
 
 <svelte:head>
-  <title>Fundación Soy Cuerpo</title>
+  <title>{head_title}</title>
+  <meta property="og:title" content={head_title} />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content={head_img} />
+  <meta property="og:url" content="https://fundacionsoycuerpo.cl" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={head_title} />
+  <meta name="twitter:description" content={head_description} />
+  <meta name="twitter:image" content={head_img} />
 </svelte:head>
 
 <div class="container">

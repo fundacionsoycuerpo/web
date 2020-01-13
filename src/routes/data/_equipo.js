@@ -1,7 +1,4 @@
-<script>
-  import Member from "../components/Member.svelte";
-
-  const members = [
+const team = [
     {
       name: "Javiera Beas Álvarez",
       email: "javiera@fundacionsoycuerpo.cl",
@@ -79,36 +76,4 @@
     }
   ];
 
-  let expanded = null;
-</script>
-
-<style>
-  .members {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
-  }
-
-  @media (max-width: 936px) {
-    .members {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-</style>
-
-<svelte:head>
-  <title>Fundación Soy Cuerpo - Equipo</title>
-</svelte:head>
-
-<div class="inner-content">
-  <h1>Equipo Humano</h1>
-  <div class="members">
-    {#each members as member}
-      <Member
-        {member}
-        expanded={member.email === expanded}
-        on:expand={e => (expanded = e.detail)} />
-    {/each}
-  </div>
-</div>
+  export default team;

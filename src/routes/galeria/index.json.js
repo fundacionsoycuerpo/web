@@ -1,7 +1,7 @@
-import news from '../data/_noticias';
+import galleries from '../data/_galerias';
 
 export function get(req, res) {
-  const content = JSON.stringify(news);
+  const content = JSON.stringify(galleries);
   res.writeHead(200, {
     'Content-Type': 'application/json'
   });

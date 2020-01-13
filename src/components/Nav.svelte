@@ -8,7 +8,7 @@
   function close() {
     menuIsOpen.update(isOpen => false);
   }
-    </script>
+</script>
 
 <style>
   header {
@@ -53,7 +53,10 @@
 
 <header>
   <Hamburguer />
-  <a class="logo-link {segment === undefined ? 'active' : ''}" href="." on:click={close}>
+  <a
+    class="logo-link {segment === undefined ? 'active' : ''}"
+    href="."
+    on:click={close}>
     <img src="img/2610_Fundacion_Soy_Cuerpo_D_01.png" alt="Logo" />
   </a>
   <a class="button" href="donaciones" on:click={close}>Colabora</a>

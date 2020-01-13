@@ -11,7 +11,6 @@
 <script>
   import Article from "../../components/Article.svelte";
 
-  export let segment;
   export let news;
 </script>
 
