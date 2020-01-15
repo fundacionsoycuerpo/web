@@ -7,18 +7,21 @@
     width: 100%;
     object-fit: contain;
     object-position: center;
+    margin-bottom: 2rem;
   }
 
   .content {
     display: flex;
     flex-direction: column;
+    align-items: start;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 700px) {
     img {
       width: 200px;
       min-width: 200px;
       margin-right: 2rem;
+      margin-bottom:0;
     }
 
     .content {
