@@ -2,18 +2,37 @@
   nav > div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items:start
+  }
+
+  nav > div.social {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
   }
 
   nav {
-    display: grid;
+    display: flex;
     width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    justify-content: space-between;
   }
 
-  img {
-    height: 80px;
-    width: 80px;
+  .home-anchor {
+      display:none;
+    }
+
+  img.logo {
+    height: 120px;
+    width: 120px;
+    object-fit: contain;
+    object-position: center;
+    filter: brightness(0) invert(1);
+  }
+
+  .social img {
+    height: 40px;
+    width: 40px;
     object-fit: contain;
     object-position: center;
     filter: brightness(0) invert(1);
@@ -32,15 +51,44 @@
 
   footer {
     background: var(--contrast-bg);
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 4rem;
+  }
+
+  @media (max-width: 880px) {
+    footer {
+      padding: 2.5rem 2rem;
+    }
+  }
+
+   @media (max-width: 700px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav > div, nav > div.social {
+      align-items: center;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    img.logo {
+      display:none;
+    }
+
+    .home-anchor {
+      display:block;
+    }
   }
 </style>
 
 <footer>
   <nav>
-    <a href="." routerLinkActive="active">
-      <img src="img/2610_Fundacion_Soy_Cuerpo_D_01.png" alt="Logo" />
-    </a>
+    <div>
+      <a href=".">
+        <img class="logo" src="img/2610_Fundacion_Soy_Cuerpo_D_01.png" alt="Logo" />
+        <span class="home-anchor">Inicio</span>
+      </a>
+    </div>
     <div>
       <a href="quienes_somos">Quienes somos</a>
       <a href="equipo">Equipo</a>
@@ -52,6 +100,14 @@
       <a href="departamentos/plataformas">Departamento de plataformas</a>
       <a href="departamentos/salud">Departamento de salud</a>
       <a href="galeria">Galería</a>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com/fundacionsoycuerpo">
+        <img src="svg/facebook.svg" alt="Facebook Logo" />
+      </a>
+      <a href="https://www.instagram.com/fundacionsoycuerpo">
+        <img src="svg/instagram.svg" alt="Instagram Logo" />
+      </a>
     </div>
   </nav>
 </footer>
