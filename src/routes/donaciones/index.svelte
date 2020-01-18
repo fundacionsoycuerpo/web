@@ -1,3 +1,4 @@
+
 <style>
   .card {
     display: flex;
@@ -26,6 +27,22 @@
     object-fit: contain;
     object-position: center;
   }
+
+  a {
+    padding: 12px 24px;
+    background: white;
+    color: var(--contrast-bg);
+    border: 1px solid var(--contrast-bg);
+    border-radius: 10px;
+    margin-top: 12px;
+    display: inline-block;
+  }
+
+  a:hover {
+    cursor: pointer;
+    background: var(--contrast-bg);
+    color: white;
+  }
 </style>
 
 <svelte:head>
@@ -37,9 +54,15 @@
   <p>
     Con tu ayuda seguiremos desarrollando programas y proyectos en pos del
     cuerpo a nivel nacional.
-    <br />
   </p>
   <section>
+    <h2>Dona</h2>
+    <a href='https://sandbox.flow.cl/btn.php?token=efedpkl' target='_blank'>
+  Donar
+</a>
+  </section>
+  <section>
+    <h2>Deposita</h2>
     <div class="card">
       <span>Nro de cuenta: 20270013326</span>
       <span>Banco: Banco Estado</span>
