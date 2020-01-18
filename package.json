@@ -8,8 +8,8 @@
   },
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper export",
-    "export": "sapper export --legacy",
+    "build": "sapper export --entry='index.html donaciones/gracias.html donaciones/error'",
+    "export": "sapper export --legacy --entry='index.html donaciones/gracias.html donaciones/error'",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
