@@ -1,47 +1,34 @@
 <script context="module">
   export function preload({ params, query }) {
     const { slug } = params;
-    return Promise.all([
-      this.fetch(`departamentos.json`),
-      this.fetch(`noticias.json`)
-    ])
-      .then(res => Promise.all(res.map(r => r.json())))
-      .then(([deps, news]) => {
-        const dep = deps.find(d => d.slug === slug);
-        if (!dep) {
-          return this.error(404, "Not Found");
-        }
-        return {
-          department: dep,
-          news: news.filter(n => n.department_slug === dep.slug).slice(0, 5)
-        };
-      });
+    return this.fetch(`departamentos/${slug}.json`)
+      .then(res => res.json())
+      .catch(err => this.error(404, 'Page Not found'));
   }
 </script>
 
 <script>
-  import Article from "../../components/Article.svelte";
-
+  import Article from '../../components/Article.svelte';
+  
   export let department;
-  export let news;
 </script>
 
 <svelte:head>
-  <title>{department.head_title}</title>
+  <title>Fundación Soy Cuerpo - {department.name}</title>
 </svelte:head>
 
 <div class="inner-content">
-  <h1>{department.content_title}</h1>
+  <h1>{department.name}</h1>
   <section>
-    <p>{department.content_description}</p>
+    <p>{department.description}</p>
     <h2>Manifiesto</h2>
-    <p class="italic">{department.content_manifest}</p>
+    <p class="italic">{department.manifest}</p>
   </section>
 
-  {#if news && news.length}
+  {#if department.tag && department.tag.articles && department.tag.articles.length}
     <section class="news">
       <h2>Noticias</h2>
-      {#each news as article, i}
+      {#each department.tag.articles as article, i}
         <Article {article} />
       {/each}
     </section>

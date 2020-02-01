@@ -1,10 +1,8 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-
   export let member;
   export let expanded = false;
   export let flat = false;
-
   const dispatch = createEventDispatcher();
 
   function expand(event) {
@@ -64,7 +62,7 @@
     margin-top: 2rem;
   }
 
-  .expanded-info > p {
+  .expanded-info :global(p) {
     margin-bottom: 1rem;
   }
 
@@ -104,7 +102,9 @@
 
 <div class="card {flat ? 'flat' : ''}">
   <div class="info">
-    <img src={member.img} alt="Perfil" />
+    {#if member.profile && member.profile.url}
+      <img src={member.profile.url} alt="Perfil" />
+    {/if}
     <div class="main-info">
       <span>
         <b>{member.name}</b>
@@ -123,9 +123,7 @@
   </div>
   {#if expanded}
     <div class="expanded-info">
-      {#each member.bio as paragraph}
-        <p>{paragraph}</p>
-      {/each}
+      {@html member.bio}
     </div>
   {/if}
 </div>

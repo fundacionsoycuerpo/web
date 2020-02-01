@@ -1,17 +1,15 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`noticias.json`)
+    return this.fetch(`index.json`)
       .then(res => res.json())
-      .then(news => {
-        return { news };
-      });
+      .catch(err => this.error(404, 'Page Not found'));
   }
 </script>
 
 <script>
   import Article from "../../components/Article.svelte";
 
-  export let news;
+  export let articles;
 </script>
 
 <svelte:head>
@@ -20,8 +18,8 @@
 
 <div class="inner-content">
   <h1>Noticias</h1>
-  {#if news && news.length}
-    {#each news as article, i}
+  {#if articles && articles.length}
+    {#each articles as article, i}
       <Article {article} />
     {/each}
   {/if}

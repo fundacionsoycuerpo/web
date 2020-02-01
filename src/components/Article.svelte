@@ -53,25 +53,23 @@
 </style>
 
 <article>
-  <small>{article.published}</small>
+  <small>{article.published_at}</small>
   <h3>{article.title}</h3>
   <div class="content">
-    <img src={article.img} alt={article.imgAlt} />
+    <img src={article.image.url} alt={article.imgAlt} />
     <div>
-      {#each article.content as paragraph, i}
-        <p>{paragraph}</p>
-      {/each}
+      {@html article.content}
       {#if article.tags && article.tags.length}
         <div class="tags">
           {#each article.tags as tag, i}
-            <a href={tag.url}>
+            <a href="/{tag.url}">
               <span class="tag">#{tag.name}</span>
             </a>
           {/each}
         </div>
       {/if}
-      {#if article.gallery}
-        <a href={article.gallery}>Ir a la galería</a>
+      {#if article.gallery_url}
+        <a href={article.gallery_url}>Ir a la galería</a>
         <br />
       {/if}
     </div>
