@@ -33,7 +33,7 @@
     <div>
       <h1>¡Oh!</h1>
       <p>
-        Hubo un error en el proceso de donación. Te agredecemos intentar nuevamente.
+        Hubo un error en el proceso de donación. Te agradecemos intentar nuevamente.
     </div>
   </div>
 </div>

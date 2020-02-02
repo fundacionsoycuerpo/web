@@ -64,7 +64,7 @@ small {
   </p>
   <section>
     <h2>Donación online</h2>
-    <a href="https://sandbox.flow.cl/btn.php?token=efedpkl" target="_blank">
+    <a href='https://www.flow.cl/btn.php?token=xx2flzy' target='_blank'>
       Donar
     </a>
     <small>*Serás redirigido al portal de pagos</small>
