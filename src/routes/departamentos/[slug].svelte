@@ -11,6 +11,7 @@
   import Article from '../../components/Article.svelte';
 
   export let department;
+  export let articles;
 </script>
 
 <svelte:head>
@@ -25,12 +26,12 @@
     <p class="italic">"{department.manifest}"</p>
   </section>
 
-  <!-- {#if department.tag && department.tag.articles && department.tag.articles.length}
+  {#if articles && articles.length}
     <section class="news">
       <h2>Noticias</h2>
-      {#each department.tag.articles as article, i}
+      {#each articles as article, i}
         <Article {article} />
       {/each}
     </section>
-  {/if} -->
+  {/if}
 </div>

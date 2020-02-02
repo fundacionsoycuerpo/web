@@ -6,15 +6,7 @@ export async function get(req, res) {
     let data = await getDepartmentPageData(req.params.slug);
     data = {
       ...data,
-      department: {
-        ...data.department,
-        tag: {
-          ...data.department.tag,
-          articles: data.department.tag.articles.map(article =>
-            formatArticle(article)
-          )
-        }
-      }
+      articles: data.articles.map(formatArticle)
     };
 
     res.writeHead(200, {

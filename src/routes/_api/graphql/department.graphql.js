@@ -1,36 +1,44 @@
 import queryData from '.';
 
 const getDepartmentPageData = slug => {
-  const query = `query DepartmentPageData($slug: String!) {
+  const departmentQuery = `query DepartmentPageData($slug: String!) {
     department: departmentBySlug(slug: $slug) {
-        id
+      id
+      name
+      slug
+      description
+      manifest
+      tag {
         name
-        slug
-        description
-        manifest
-        tag {
-            name
-            articles (sort: "published_at:desc" limit: 2) {
-                published_at
-                title
-                content
-                media {
-                    image {
-                        url
-                    }
-                    caption
-                }
-                gallery_url
-                tags {
-                    name
-                    url
-                }
-            }
-        }
+      }
     }
-}`;
+  }`;
 
-  return queryData(query, { slug });
+  const articlesQuery = `query DepartmentPageArticlesData ($name: String!) {
+    articles (sort: "published_at:desc" limit: 2  where: { tags: { name: $name } }) {
+      published_at
+      title
+      content
+      media {
+        image {
+          url
+        }
+        caption
+      }
+      gallery_url
+      tags {
+        name
+        url
+      }
+    }
+  }`;
+
+  // FIX_ME: Issue with nested relationships
+  return queryData(departmentQuery, { slug }).then(({ department }) =>
+    queryData(articlesQuery, {
+      name: department.tag.name
+    }).then(({ articles }) => ({ department, articles }))
+  );
 };
 
 export default getDepartmentPageData;
