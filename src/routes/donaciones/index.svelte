@@ -1,3 +1,16 @@
+<script context="module">
+  export function preload({ params, query }) {
+    const { slug } = params;
+    return this.fetch(`donaciones.json`)
+      .then(res => res.json())
+      .catch(err => this.error(404, 'Page Not found'));
+  }
+</script>
+
+<script>
+  export let flow;
+</script>
+
 <style>
   .card {
     display: flex;
@@ -10,6 +23,7 @@
     align-items: left;
     margin-bottom: 2rem;
     max-width: 400px;
+    margin-top: 12px;
   }
 
   .big-banner {
@@ -62,13 +76,15 @@ small {
     Con tu ayuda seguiremos desarrollando programas y proyectos en pos del
     cuerpo a nivel nacional.
   </p>
+  {#if flow}
   <section>
     <h2>Donación online</h2>
-    <a href='https://www.flow.cl/btn.php?token=xx2flzy' target='_blank'>
+    <a href={flow} target='_blank'>
       Donar
     </a>
     <small>*Serás redirigido al portal de pagos</small>
   </section>
+  {/if}
   <section>
     <h2>Donación por transferencia bancaria</h2>
     <div class="card">
@@ -80,6 +96,6 @@ small {
     </div>
   </section>
   <section class="big-banner">
-    <img src="img/colabora - generico.jpg" alt="Afiche colaboración" />
+    <img src="img/colabora - generico2.png" alt="Afiche colaboración" />
   </section>
 </div>
