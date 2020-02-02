@@ -5,11 +5,12 @@ export async function get(req, res) {
   try {
     let data = await getDepartmentPageData(req.params.slug);
     data = {
+      ...data,
       department: {
-        ...data.departmentBySlug,
+        ...data.department,
         tag: {
-          ...data.departmentBySlug.tag,
-          articles: data.departmentBySlug.tag.articles.map(article =>
+          ...data.department.tag,
+          articles: data.department.tag.articles.map(article =>
             formatArticle(article)
           )
         }

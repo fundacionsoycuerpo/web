@@ -102,9 +102,7 @@
 
 <div class="card {flat ? 'flat' : ''}">
   <div class="info">
-    {#if member.profile && member.profile.url}
-      <img src={member.profile.url} alt="Perfil" />
-    {/if}
+    <img src={member.avatar.image.url} alt={member.avatar.caption} />
     <div class="main-info">
       <span>
         <b>{member.name}</b>

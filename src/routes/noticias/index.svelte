@@ -1,6 +1,6 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch(`index.json`)
+    return this.fetch(`noticias.json`)
       .then(res => res.json())
       .catch(err => this.error(404, 'Page Not found'));
   }

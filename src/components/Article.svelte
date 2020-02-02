@@ -56,7 +56,7 @@
   <small>{article.published_at}</small>
   <h3>{article.title}</h3>
   <div class="content">
-    <img src={article.image.url} alt={article.imgAlt} />
+    <img src={article.media.image.url} alt={article.media.caption} />
     <div>
       {@html article.content}
       {#if article.tags && article.tags.length}
@@ -70,7 +70,6 @@
       {/if}
       {#if article.gallery_url}
         <a href={article.gallery_url}>Ir a la galería</a>
-        <br />
       {/if}
     </div>
   </div>

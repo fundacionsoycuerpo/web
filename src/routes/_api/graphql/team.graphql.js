@@ -7,8 +7,11 @@ const getTeamPageData = () => {
         bio
         role
         email
-        profile {
-            url
+        avatar {
+          image {
+              url
+          }
+          caption
         }
     }
 }`;

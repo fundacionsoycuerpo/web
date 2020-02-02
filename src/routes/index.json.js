@@ -1,9 +1,9 @@
 import getHomePageData from './_api/graphql/home.graphql';
 import formatArticle from './data/_helpers';
+
 export async function get(req, res) {
   try {
     let data = await getHomePageData();
-
     data = {
       ...data,
       articles: data.articles.map(formatArticle)

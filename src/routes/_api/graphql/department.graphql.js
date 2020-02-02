@@ -2,7 +2,7 @@ import queryData from '.';
 
 const getDepartmentPageData = slug => {
   const query = `query DepartmentPageData($slug: String!) {
-    departmentBySlug(slug: $slug) {
+    department: departmentBySlug(slug: $slug) {
         id
         name
         slug
@@ -14,8 +14,11 @@ const getDepartmentPageData = slug => {
                 published_at
                 title
                 content
-                image {
-                    url
+                media {
+                    image {
+                        url
+                    }
+                    caption
                 }
                 gallery_url
                 tags {

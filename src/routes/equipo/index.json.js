@@ -3,12 +3,11 @@ import marked from 'marked';
 
 export async function get(req, res) {
   try {
-    let data = await getTeamPageData(req.params.slug);
+    let data = await getTeamPageData();
     data = {
       ...data,
       members: data.members.map(member => {
         member.bio = marked(member.bio);
-        console.log(member);
         return member;
       })
     };

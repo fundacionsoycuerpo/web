@@ -1,9 +1,6 @@
 <script context="module">
   export function preload({ params, query }) {
-    return Promise.all([
-      this.fetch('index.json'),
-      this.fetch('eventos.json')
-    ])
+    return Promise.all([this.fetch('index.json'), this.fetch('eventos.json')])
       .then(responses => Promise.all(responses.map(res => res.json())))
       .then(([data, events]) => {
         return { articles: data.articles, events: events.slice(0, 5) };

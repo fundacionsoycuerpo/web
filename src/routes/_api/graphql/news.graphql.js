@@ -6,8 +6,11 @@ const getNewsPageData = () => {
         published_at
         title
         content
-        image {
-            url
+        media {
+          image {
+              url
+          }
+          caption
         }
         gallery_url
         tags {
