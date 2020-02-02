@@ -10,7 +10,8 @@
   ],
   "build": {
     "env": {
-      "STRAPI_URL": "@fundacionsoycuerpo-strapi-url"
+      "STRAPI_URL": "@fundacionsoycuerpo-strapi-url",
+      "FLOW_URL": "@flow-url"
     }
   }
 }

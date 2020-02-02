@@ -1,8 +1,20 @@
+<script context="module">
+  export function preload({ params, query }) {
+    const { slug } = params;
+    return this.fetch(`donaciones.json`)
+      .then(res => res.json())
+      .catch(err => this.error(404, 'Page Not found'));
+  }
+</script>
+
+<script>
+  export let flow;
+</script>
+
 <style>
   .card {
     display: flex;
     flex-direction: column;
-    margin: auto;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
       0 2px 4px 0 rgba(14, 30, 37, 0.12);
     transition: 0.3s;
@@ -11,6 +23,7 @@
     align-items: left;
     margin-bottom: 2rem;
     max-width: 400px;
+    margin-top: 12px;
   }
 
   .big-banner {
@@ -26,6 +39,31 @@
     object-fit: contain;
     object-position: center;
   }
+
+  a {
+    padding: 12px 24px;
+    background: white;
+    color: var(--contrast-bg);
+    border: 1px solid var(--contrast-bg);
+    border-radius: 10px;
+    margin-top: 12px;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 1rem;
+  }
+
+  a:hover {
+    cursor: pointer;
+    background: var(--contrast-bg);
+    color: white;
+  }
+
+small {
+  display: block;
+}
+  section {
+    margin-top: 3rem;
+  }
 </style>
 
 <svelte:head>
@@ -37,9 +75,18 @@
   <p>
     Con tu ayuda seguiremos desarrollando programas y proyectos en pos del
     cuerpo a nivel nacional.
-    <br />
   </p>
+  {#if flow}
   <section>
+    <h2>Donación online</h2>
+    <a href={flow} target='_blank'>
+      Donar
+    </a>
+    <small>*Serás redirigido al portal de pagos</small>
+  </section>
+  {/if}
+  <section>
+    <h2>Donación por transferencia bancaria</h2>
     <div class="card">
       <span>Nro de cuenta: 20270013326</span>
       <span>Banco: Banco Estado</span>
@@ -49,6 +96,6 @@
     </div>
   </section>
   <section class="big-banner">
-    <img src="img/colabora - generico.jpg" alt="Afiche colaboración" />
+    <img src="img/colabora - generico2.png" alt="Afiche colaboración" />
   </section>
 </div>

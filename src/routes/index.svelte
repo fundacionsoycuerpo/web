@@ -93,7 +93,7 @@
       </section>
     {/if}
     <section class="big-banner">
-      <img src="img/colabora - generico.jpg" alt="Afiche colaboración" />
+      <img src="img/colabora - generico2.png" alt="Afiche colaboración" />
     </section>
   </div>
 </div>
