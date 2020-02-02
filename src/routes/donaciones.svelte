@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+      0 2px 4px 0 rgba(14, 30, 37, 0.12);
     transition: 0.3s;
     padding: 1rem;
     border-radius: 5px;
@@ -14,14 +15,14 @@
 
   .big-banner {
     width: 100%;
-    display:flex;
+    display: flex;
   }
 
   .big-banner img {
     width: 100%;
-    max-width:800px;
-    height:100%;
-    margin:auto;
+    max-width: 800px;
+    height: 100%;
+    margin: auto;
     object-fit: contain;
     object-position: center;
   }

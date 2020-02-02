@@ -1,16 +1,14 @@
 <script context="module">
   export function preload({ params, query }) {
-    return this.fetch("equipo.json")
+    return this.fetch('equipo.json')
       .then(res => res.json())
-      .then(team => {
-        return { team };
-      });
+      .catch(err => this.error(404, 'Page Not found'));
   }
 </script>
 
 <script>
-  import Member from "../../components/Member.svelte";
-  export let team;
+  import Member from '../../components/Member.svelte';
+  export let members;
   let expanded = null;
 </script>
 
@@ -36,7 +34,7 @@
 <div class="inner-content">
   <h1>Equipo Humano</h1>
   <div class="members">
-    {#each team as member}
+    {#each members as member}
       <Member
         {member}
         expanded={member.email === expanded}
