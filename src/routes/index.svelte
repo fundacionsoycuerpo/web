@@ -1,12 +1,9 @@
 <script context="module">
   export function preload({ params, query }) {
-    return Promise.all([
-      this.fetch('noticias.json'),
-      this.fetch('eventos.json')
-    ])
+    return Promise.all([this.fetch('index.json'), this.fetch('eventos.json')])
       .then(responses => Promise.all(responses.map(res => res.json())))
-      .then(([news, events]) => {
-        return { news: news.slice(0, 5), events: events.slice(0, 5) };
+      .then(([data, events]) => {
+        return { articles: data.articles, events: events.slice(0, 5) };
       });
   }
 </script>
@@ -15,7 +12,7 @@
   import Article from '../components/Article.svelte';
   import Event from '../components/Event.svelte';
 
-  export let news;
+  export let articles;
   export let events;
 
   export let head_title = 'Fundación Soy Cuerpo';
@@ -87,16 +84,16 @@
         {/each}
       </section>
     {/if}
-    {#if news && news.length}
+    {#if articles && articles.length}
       <section class="news">
         <h1>Noticias</h1>
-        {#each news as article, i}
+        {#each articles as article, i}
           <Article {article} />
         {/each}
       </section>
     {/if}
     <section class="big-banner">
-      <img src="img/colabora - generico.jpg" alt="Afiche colaboración" />
+      <img src="img/colabora - generico2.png" alt="Afiche colaboración" />
     </section>
   </div>
 </div>

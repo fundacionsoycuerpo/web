@@ -1,15 +1,12 @@
-import getTeamPageData from '../_api/graphql/team.graphql';
-import marked from 'marked';
+import getDepartmentPageData from '../_api/graphql/department.graphql';
+import formatArticle from '../data/_helpers';
 
 export async function get(req, res) {
   try {
-    let data = await getTeamPageData();
+    let data = await getDepartmentPageData(req.params.slug);
     data = {
       ...data,
-      members: data.members.map(member => {
-        member.bio = marked(member.bio);
-        return member;
-      })
+      articles: data.articles.map(formatArticle)
     };
 
     res.writeHead(200, {

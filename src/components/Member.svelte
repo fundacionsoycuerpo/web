@@ -1,14 +1,12 @@
 <script>
-  import { createEventDispatcher } from "svelte";
-
+  import { createEventDispatcher } from 'svelte';
   export let member;
   export let expanded = false;
   export let flat = false;
-
   const dispatch = createEventDispatcher();
 
   function expand(event) {
-    dispatch("expand", expanded ? null : member.email);
+    dispatch('expand', expanded ? null : member.email);
   }
 </script>
 
@@ -16,7 +14,8 @@
   .card {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+      0 2px 4px 0 rgba(14, 30, 37, 0.12);
     transition: 0.3s;
     padding: 1rem;
     border-radius: 5px;
@@ -63,7 +62,7 @@
     margin-top: 2rem;
   }
 
-  .expanded-info > p {
+  .expanded-info :global(p) {
     margin-bottom: 1rem;
   }
 
@@ -103,7 +102,7 @@
 
 <div class="card {flat ? 'flat' : ''}">
   <div class="info">
-    <img src={member.img} alt="Perfil" />
+    <img src={member.avatar.image.url} alt={member.avatar.caption} />
     <div class="main-info">
       <span>
         <b>{member.name}</b>
@@ -122,9 +121,7 @@
   </div>
   {#if expanded}
     <div class="expanded-info">
-      {#each member.bio as paragraph}
-        <p>{paragraph}</p>
-      {/each}
+      {@html member.bio}
     </div>
   {/if}
 </div>

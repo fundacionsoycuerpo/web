@@ -1,9 +1,22 @@
-import news from '../data/_noticias';
+import getNewsPageData from '../_api/graphql/news.graphql';
+import formatArticle from '../data/_helpers';
 
-export function get(req, res) {
-  const content = JSON.stringify(news);
-  res.writeHead(200, {
-    'Content-Type': 'application/json'
-  });
-  res.end(content);
+export async function get(req, res) {
+  try {
+    let data = await getNewsPageData();
+    data = {
+      ...data,
+      articles: data.articles.map(formatArticle)
+    };
+
+    res.writeHead(200, {
+      'Content-Type': 'application/json'
+    });
+    res.end(JSON.stringify(data));
+  } catch (e) {
+    res.writeHead(400, {
+      'Content-Type': 'application/json'
+    });
+    return res.end();
+  }
 }
