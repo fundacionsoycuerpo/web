@@ -8,6 +8,7 @@
     object-fit: contain;
     object-position: center;
     margin-bottom: 2rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   }
 
   .content {
@@ -21,7 +22,7 @@
       width: 200px;
       min-width: 200px;
       margin-right: 2rem;
-      margin-bottom:0;
+      margin-bottom: 0;
     }
 
     .content {

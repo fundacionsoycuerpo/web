@@ -22,6 +22,7 @@
     object-fit: contain;
     object-position: top;
     width: 100%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   }
 
   .content .event-description {
@@ -36,6 +37,9 @@
   }
 
   @media (min-width: 900px) {
+    article {
+      justify-content: flex-start;
+    }
     .content {
       flex-direction: row;
       align-items: flex-start;
