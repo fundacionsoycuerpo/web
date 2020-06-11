@@ -94,6 +94,7 @@
       <a href="equipo">Equipo</a>
       <a href="donaciones">Donaciones</a>
       <a href="noticias" routerLinkActive="active">Noticias</a>
+      <a href="documentos" routerLinkActive="active">Documentos</a>
     </div>
     <div>
       <a href="departamentos/arte">Departamento de arte</a>

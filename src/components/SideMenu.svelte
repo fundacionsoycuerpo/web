@@ -103,6 +103,9 @@
     <li>
       <a href="noticias" on:click={toggle}>Noticias</a>
     </li>
+     <li>
+      <a href="documentos" on:click={toggle}>Documentos</a>
+    </li>
   </ul>
 </nav>
 
