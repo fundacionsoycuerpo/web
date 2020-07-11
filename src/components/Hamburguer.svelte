@@ -56,7 +56,7 @@
   }
 </style>
 
-<button on:click={toggle} class={$menuIsOpen ? 'open' : ''}>
+<button on:click={toggle} class={$menuIsOpen ? 'open' : ''} aria-label={$menuIsOpen ? 'Close menu' : 'Open menu'} >
   <span />
   <span />
   <span />

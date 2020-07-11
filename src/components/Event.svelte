@@ -36,6 +36,10 @@
     align-items: center;
   }
 
+  :global(h3 + p) {
+    margin-top:16px;
+  }
+
   @media (min-width: 900px) {
     article {
       justify-content: flex-start;
@@ -43,11 +47,11 @@
     .content {
       flex-direction: row;
       align-items: flex-start;
-      width: 800px;
     }
 
     .content img {
       flex: 1 0 50%;
+      max-width: 50%;
     }
 
     .content .event-description {
@@ -67,7 +71,7 @@
     <img src={event.img} alt={event.imgAlt} />
     <div class="event-description">
       <h3>{event.title}</h3>
-      <p>{event.description}</p>
+      {@html event.description}
       <div class="event-location">
         <span>
           <i>{event.date}</i>

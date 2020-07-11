@@ -31,6 +31,7 @@
   .image img {
     width: 100%;
     height: 100%;
+    max-height: 80vh;
     object-fit: cover;
     object-position: center;
   }
