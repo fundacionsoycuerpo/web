@@ -44,12 +44,6 @@
 </script>
 
 <style>
-  section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
     .projects-list {
     display: grid;
     width: 100%;
@@ -70,14 +64,6 @@
           {/each}
         </div>
     {/if}
-      <!-- {#each slides as slide, i}
-        <div class="slide">
-          {#if slide.imgSrc}
-            <img src={slide.imgSrc} alt={slide.imgAlt} />
-            <a href={slide.link}>{slide.linkText}</a>
-          {/if}
-        </div>
-      {/each} -->
     </section>
   </div>
 
