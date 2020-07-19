@@ -3,7 +3,10 @@
     return Promise.all([this.fetch('index.json'), this.fetch('eventos.json')])
       .then(responses => Promise.all(responses.map(res => res.json())))
       .then(([data, events]) => {
-        return { articles: data.articles, events: events.slice(0, 5) };
+        return {
+          articles: data.articles.slice(0, 3),
+          events: events.slice(0, 3)
+        };
       });
   }
 </script>
@@ -11,14 +14,32 @@
 <script>
   import Article from '../components/Article.svelte';
   import Event from '../components/Event.svelte';
+  import Slider from '../components/Slider.svelte';
+  import Alert from '../components/Alert.svelte';
+  import ProjectCard from '../components/ProjectCard.svelte';
 
   export let articles;
   export let events;
 
-  export let head_title = 'Fundación Soy Cuerpo';
-  export let head_description =
+  let head_title = 'Fundación Soy Cuerpo';
+  let head_description =
     'Fundación Soy Cuerpo es una organización sin fines de lucro, que nace como una respuesta concreta a la necesidad de poner en valor el cuerpo humano, potenciando el entendimiento integral de éste.';
-  export let head_img = 'https://fundacionsoycuerpo.cl/img/logo_bg.jpg';
+  let head_img = 'https://fundacionsoycuerpo.cl/img/logo_bg.jpg';
+
+  let slides = [
+    {
+      imgSrc: 'img/banner-el_cuerpo_de_la_memoria.jpg',
+      imgAlt: 'Banner proyecto el cuerpo de la memoria'
+    },
+    {
+      imgSrc: 'img/banner-cuerpo_territorio.jpg',
+      imgAlt: 'Banner proyecto cuerpo territorio'
+    },
+    {
+      imgSrc: 'img/banner-somos_cerro.jpg',
+      imgAlt: 'Banner proyecto somos cerro'
+    }
+  ];
 </script>
 
 <style>
@@ -26,22 +47,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-  }
-
-  .image img {
-    width: 100%;
-    height: 100%;
-    max-height: 80vh;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* height: 70vh; */
-    max-height: 70vh;
   }
 
   .big-banner {
@@ -58,6 +63,24 @@
     object-fit: contain;
     object-position: center;
   }
+
+  :global(h2 + article) {
+    margin-top: 1rem;
+  }
+
+  .more-news { 
+    display: flex;width: 100%;
+    justify-content: center;
+  }
+
+  .more-news a, .more-news a:visited {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+  }
 </style>
 
 <svelte:head>
@@ -73,13 +96,12 @@
 </svelte:head>
 
 <div class="container">
-  <div class="image">
-    <img src="img/bg-home.jpg" alt="Background" />
-  </div>
+  <Alert />
+  <Slider {slides} />
   <div class="inner-content">
     {#if events && events.length}
       <section class="events">
-        <h1>Próximos eventos</h1>
+        <h2>Próximos eventos</h2>
         {#each events as event, i}
           <Event {event} />
         {/each}
@@ -87,10 +109,13 @@
     {/if}
     {#if articles && articles.length}
       <section class="news">
-        <h1>Noticias</h1>
+        <h2>Noticias</h2>
         {#each articles as article, i}
           <Article {article} />
         {/each}
+        <div class="more-news">
+          <a href="noticias">Ver todas las noticias</a>
+        </div>
       </section>
     {/if}
     <section class="big-banner">

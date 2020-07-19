@@ -9,6 +9,7 @@
 
 <script>
   import Article from '../../components/Article.svelte';
+  import Alert from '../../components/Alert.svelte';
 
   export let department;
   export let articles;
@@ -18,6 +19,9 @@
   <title>Fundación Soy Cuerpo - {department.name}</title>
 </svelte:head>
 
+{#if department.name === 'Departamento de Arte'}
+<Alert />
+{/if}
 <div class="inner-content">
   <h1>{department.name}</h1>
   <section>

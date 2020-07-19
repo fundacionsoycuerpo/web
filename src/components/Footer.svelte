@@ -93,14 +93,15 @@
       <a href="quienes_somos">Quienes somos</a>
       <a href="equipo">Equipo</a>
       <a href="donaciones">Donaciones</a>
-      <a href="noticias" routerLinkActive="active">Noticias</a>
-      <a href="documentos" routerLinkActive="active">Documentos</a>
+      <a href="noticias">Noticias</a>
+      <a href="proyectos">Proyectos</a>
     </div>
     <div>
       <a href="departamentos/arte">Departamento de arte</a>
       <a href="departamentos/plataformas">Departamento de plataformas</a>
       <a href="departamentos/salud">Departamento de salud</a>
       <a href="galeria">Galería</a>
+      <a href="documentos">Documentos</a>
     </div>
     <div class="social">
       <a href="https://www.facebook.com/fundacionsoycuerpo">
