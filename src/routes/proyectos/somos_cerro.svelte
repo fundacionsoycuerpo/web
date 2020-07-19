@@ -83,7 +83,7 @@
   section.events .event a,
   section.projects .project a {
     margin-top: 20px;
-    color: white;
+    color: black;
   }
 
   @media (min-width: 415px) {
