@@ -80,6 +80,12 @@
     <li>
       <a href="equipo" on:click={toggle}>Equipo</a>
     </li>
+    <li>
+      <a href="donaciones" on:click={toggle}>Donaciones</a>
+    </li>
+    <li>
+      <a href="proyectos" on:click={toggle}>Proyectos</a>
+    </li>
     <li id="deps">
       <b>Departamentos</b>
       <ul>
@@ -97,9 +103,7 @@
     <li>
       <a href="galeria" on:click={toggle}>Galería</a>
     </li>
-    <li>
-      <a href="donaciones" on:click={toggle}>Donaciones</a>
-    </li>
+    
     <li>
       <a href="noticias" on:click={toggle}>Noticias</a>
     </li>

@@ -37,7 +37,7 @@
     cursor: pointer;
     background: var(--contrast-bg);
     color: white;
-    padding: 10px;
+    padding: 8px 16px;
     border-radius: 5px;
   }
 
@@ -54,6 +54,7 @@
 <header>
   <Hamburguer />
   <a
+    aria-label="Ir al inicio"
     class="logo-link {segment === undefined ? 'active' : ''}"
     href="."
     on:click={close}>
