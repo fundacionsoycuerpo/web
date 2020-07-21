@@ -81,6 +81,21 @@
     color: black;
     border-radius: 5px;
   }
+
+  .partners-list{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+  }
+
+  .partners-list img {
+    max-height:150px;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+  }
 </style>
 
 <svelte:head>
@@ -118,6 +133,19 @@
         </div>
       </section>
     {/if}
+
+     <section class="partners">
+     <h2>Alianzas y Colaboraciones</h2>
+     <div class="partners-list">
+      <img src="img/logos_ext/centro_cultural_españa.jpg" alt="Logo centro cultural de españa" />
+      <img src="img/logos_ext/sendero_de_chile.png" alt="Logo fundación sendero de chile" />
+      <img src="img/logos_ext/coanil.png" alt="Logo fundación coanil" />
+      <img src="img/logos_ext/somos_yoga.jpg" alt="Logo fundación somos yoga" />
+      <img src="img/logos_ext/museo_de_la_memoria.svg" alt="Logo museo de la memoria" />
+     </div>
+      
+    </section>
+
     <section class="big-banner">
       <img src="img/colabora - generico2.png" alt="Afiche colaboración" />
     </section>
