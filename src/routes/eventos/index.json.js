@@ -1,4 +1,4 @@
-import events from '../data/_eventos';
+import events from '../_data/_eventos';
 import marked from 'marked';
 
 export function get(req, res) {

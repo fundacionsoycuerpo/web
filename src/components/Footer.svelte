@@ -85,7 +85,7 @@
   <nav>
     <div>
       <a href=".">
-        <img class="logo" src="img/2610_Fundacion_Soy_Cuerpo_D_01.png" alt="Logo" />
+        <img class="logo" src="img/2610_Fundacion_Soy_Cuerpo_D_01-120x120.png" srcset="img/2610_Fundacion_Soy_Cuerpo_D_01-120x120.png 1x,img/2610_Fundacion_Soy_Cuerpo_D_01-240x240.png 2x, img/2610_Fundacion_Soy_Cuerpo_D_01-480x480.png 4x" alt="Logo" />
         <span class="home-anchor">Inicio</span>
       </a>
     </div>

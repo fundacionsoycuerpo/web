@@ -2,7 +2,7 @@ import marked from 'marked';
 import { format, parseISO } from 'date-fns';
 import es from 'date-fns/locale/es';
 
-const formatArticle = article => {
+const formatArticle = (article) => {
   if (article.content) {
     article.content = marked(article.content);
   }
@@ -11,7 +11,7 @@ const formatArticle = article => {
       parseISO(article.published_at),
       "dd 'de' MMMM 'de' yyyy",
       {
-        locale: es
+        locale: es,
       }
     );
   }
