@@ -1,17 +1,18 @@
 <script context="module">
   export function preload({ params, query }) {
     return Promise.all([this.fetch('index.json'), this.fetch('eventos.json')])
-      .then(responses => Promise.all(responses.map(res => res.json())))
+      .then((responses) => Promise.all(responses.map((res) => res.json())))
       .then(([data, events]) => {
         return {
           articles: data.articles.slice(0, 3),
-          events: events.slice(0, 3)
+          events: events.slice(0, 3),
         };
       });
   }
 </script>
 
 <script>
+  import { onMount } from 'svelte';
   import Article from '../components/Article.svelte';
   import Event from '../components/Event.svelte';
   import Slider from '../components/Slider.svelte';
@@ -29,17 +30,23 @@
   let slides = [
     {
       imgSrc: 'img/banner-el_cuerpo_de_la_memoria.jpg',
-      imgAlt: 'Banner proyecto el cuerpo de la memoria'
+      imgAlt: 'Banner proyecto el cuerpo de la memoria',
     },
-    {
-      imgSrc: 'img/banner-cuerpo_territorio.jpg',
-      imgAlt: 'Banner proyecto cuerpo territorio'
-    },
-    {
-      imgSrc: 'img/banner-somos_cerro.jpg',
-      imgAlt: 'Banner proyecto somos cerro'
-    }
   ];
+
+  onMount(() => {
+    slides = [
+      ...slides,
+      {
+        imgSrc: 'img/banner-cuerpo_territorio.jpg',
+        imgAlt: 'Banner proyecto cuerpo territorio',
+      },
+      {
+        imgSrc: 'img/banner-somos_cerro.jpg',
+        imgAlt: 'Banner proyecto somos cerro',
+      },
+    ];
+  });
 </script>
 
 <style>
@@ -68,12 +75,14 @@
     margin-top: 1rem;
   }
 
-  .more-news { 
-    display: flex;width: 100%;
+  .more-news {
+    display: flex;
+    width: 100%;
     justify-content: center;
   }
 
-  .more-news a, .more-news a:visited {
+  .more-news a,
+  .more-news a:visited {
     margin-top: 10px;
     padding: 8px 16px;
     border: 2px solid black;
@@ -82,8 +91,8 @@
     border-radius: 5px;
   }
 
-  .partners-list{
-    width:100%;
+  .partners-list {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 2rem;
@@ -91,7 +100,7 @@
   }
 
   .partners-list img {
-    max-height:150px;
+    max-height: 150px;
     width: 100%;
     object-fit: contain;
     display: block;
@@ -134,16 +143,24 @@
       </section>
     {/if}
 
-     <section class="partners">
-     <h2>Alianzas y Colaboraciones</h2>
-     <div class="partners-list">
-      <img src="img/logos_ext/centro_cultural_españa.jpg" alt="Logo centro cultural de españa" />
-      <img src="img/logos_ext/sendero_de_chile.png" alt="Logo fundación sendero de chile" />
-      <img src="img/logos_ext/coanil.png" alt="Logo fundación coanil" />
-      <img src="img/logos_ext/somos_yoga.jpg" alt="Logo fundación somos yoga" />
-      <img src="img/logos_ext/museo_de_la_memoria.svg" alt="Logo museo de la memoria" />
-     </div>
-      
+    <section class="partners">
+      <h2>Alianzas y Colaboraciones</h2>
+      <div class="partners-list">
+        <img
+          src="img/logos_ext/centro_cultural_españa.jpg"
+          alt="Logo centro cultural de españa" />
+        <img
+          src="img/logos_ext/sendero_de_chile.png"
+          alt="Logo fundación sendero de chile" />
+        <img src="img/logos_ext/coanil.png" alt="Logo fundación coanil" />
+        <img
+          src="img/logos_ext/somos_yoga.jpg"
+          alt="Logo fundación somos yoga" />
+        <img
+          src="img/logos_ext/museo_de_la_memoria.svg"
+          alt="Logo museo de la memoria" />
+      </div>
+
     </section>
 
     <section class="big-banner">
