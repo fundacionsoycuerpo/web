@@ -17,6 +17,17 @@
     align-items: start;
   }
 
+  :global(h5 + *) {
+    margin-top: 8px;
+  }
+
+  :global(h4){
+    margin-top: 16px;
+  }
+
+:global(div.footer){
+    margin-top: 24px;
+  }
   @media (min-width: 700px) {
     img {
       width: 200px;
@@ -63,9 +74,7 @@
       {#if article.tags && article.tags.length}
         <div class="tags">
           {#each article.tags as tag, i}
-            <a href="/{tag.url}">
-              <span class="tag">#{tag.name}</span>
-            </a>
+            <a href="/{tag.url}"> <span class="tag">#{tag.name}</span> </a>
           {/each}
         </div>
       {/if}
