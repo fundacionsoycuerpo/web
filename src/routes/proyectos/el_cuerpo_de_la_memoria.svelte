@@ -1,7 +1,3 @@
-<script>
-  import Alert from '../../components/Alert.svelte';
-</script>
-
 <style>
   :global(section.ecdlm h1::before) {
     content: '';
@@ -138,7 +134,6 @@
   }
 </style>
 
-<Alert />
 <div class="inner-content">
 
   <section class="ecdlm description">
@@ -164,7 +159,6 @@
 
       <div class="event">
         <h2>El Cuerpo de la Memoria 2020</h2>
-        <a class="button" target="__blank" rel="noopener" href="docs/ECDLM_2020_bases.pdf">Descargar bases 2020</a>
         <img src="img/el_cuerpo_de_la_memoria_2020-pronto-2.jpg" alt="" />
       </div>
     </div>

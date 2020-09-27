@@ -16,8 +16,6 @@
   import Article from '../components/Article.svelte';
   import Event from '../components/Event.svelte';
   import Slider from '../components/Slider.svelte';
-  import Alert from '../components/Alert.svelte';
-  import ProjectCard from '../components/ProjectCard.svelte';
 
   export let articles;
   export let events;
@@ -120,7 +118,6 @@
 </svelte:head>
 
 <div class="container">
-  <Alert />
   <Slider {slides} />
   <div class="inner-content">
     {#if events && events.length}
