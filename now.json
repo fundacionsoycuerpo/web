@@ -5,5 +5,11 @@
       "STRAPI_URL": "@fundacionsoycuerpo-strapi-url",
       "FLOW_URL": "@flow-url"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/youtube",
+      "destination": "https://www.youtube.com/channel/UClWWhHm4BwOydrgI5X6kMUQ"
+    }
+  ]
 }
