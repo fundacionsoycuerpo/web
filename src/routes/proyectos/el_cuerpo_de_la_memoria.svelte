@@ -159,7 +159,7 @@
 
       <div class="event">
         <h2>El Cuerpo de la Memoria 2020</h2>
-        <img src="img/el_cuerpo_de_la_memoria_2020-pronto-2.jpg" alt="" />
+        <img src="img/el_cuerpo_de_la_memoria_2020.jpg" alt="" />
       </div>
     </div>
   </section>
