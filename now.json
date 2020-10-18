@@ -10,6 +10,10 @@
     {
       "source": "/youtube",
       "destination": "https://www.youtube.com/channel/UClWWhHm4BwOydrgI5X6kMUQ"
+    },
+    {
+      "source": "/Youtube",
+      "destination": "https://www.youtube.com/channel/UClWWhHm4BwOydrgI5X6kMUQ"
     }
   ]
 }
