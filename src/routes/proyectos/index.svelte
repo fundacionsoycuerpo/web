@@ -1,25 +1,5 @@
 <script>
   import ProjectCard from '../../components/ProjectCard.svelte';
-  let slides = [
-    {
-      imgSrc: 'img/banner-el_cuerpo_de_la_memoria.jpg',
-      imgAlt: 'Banner proyecto el cuerpo de la memoria',
-      linkText: 'Ver Proyecto',
-      link: 'proyectos/el_cuerpo_de_la_memoria'
-    },
-    {
-      imgSrc: 'img/banner-cuerpo_territorio.jpg',
-      imgAlt: 'Banner proyecto cuerpo territorio',
-      linkText: 'Ver Proyecto',
-      link: 'proyectos/cuerpo_territorio'
-    },
-    {
-      imgSrc: 'img/banner-somos_cerro.jpg',
-      imgAlt: 'Banner proyecto somos cerro',
-      linkText: 'Ver Proyecto',
-      link: 'proyectos/somos_cerro'
-    }
-  ];
 
   let projects = [
     {

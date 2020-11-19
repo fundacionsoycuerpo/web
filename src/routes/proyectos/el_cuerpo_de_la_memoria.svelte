@@ -80,19 +80,6 @@
     margin-top: 20px;
     width: 100%;
   }
-  section.events .event a.button {
-    margin-top: 20px;
-    border: 2px solid black;
-    padding: 8px 16px;
-    text-decoration:none;
-    color: black;
-    border-radius: 5px;
-    text-align:center;
-  }
-
-  section.events .event a:visited.button {
-    color: black;
-  }
 
   section.events .event a,
   section.projects .project a {

@@ -24,7 +24,4 @@
   }
 </style>
 
-<!-- <div  style="background: {project.color}; border:2px solid {project.color}"> -->
   <a class="project" style="background: {project.color}; border:2px solid {project.color}" href="{project.link}">{project.title}</a>
-  <!-- <p>{project.description}</p> -->
-<!-- </div> -->

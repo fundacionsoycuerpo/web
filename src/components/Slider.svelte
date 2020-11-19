@@ -1,6 +1,5 @@
 <script>
   import { onMount } from 'svelte';
-  import { cubicOut } from 'svelte/easing';
   export let slides = [];
   export let auto = true;
   export let interval = 5000;
@@ -32,7 +31,6 @@
   }
 
   .inner-wrapper {
-    /* height: 100%; */
     display: flex;
     width: 100vw;
     height: 100%;
