@@ -96,6 +96,6 @@ small {
     </div>
   </section>
   <section class="big-banner">
-    <img src="img/colabora - generico2.png" alt="Afiche colaboración" />
+    <img src="img/colabora_-_generico2.png" alt="Afiche colaboración" />
   </section>
 </div>

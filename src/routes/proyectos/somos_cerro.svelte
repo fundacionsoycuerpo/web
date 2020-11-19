@@ -72,10 +72,6 @@
     border-radius: 5px;
   }
 
-  section.events .event + .event {
-    margin-top: 20px;
-  }
-
   section.events .event img{
     margin-top: 20px;
     width: 100%;
@@ -92,10 +88,6 @@
     }
     section.events .event {
       flex: 0 1 calc(50% - 10px);
-    }
-
-    section.events .event + .event {
-      margin-top: 0;
     }
   }
 
@@ -151,8 +143,4 @@
       </li>
     </ul>
   </section>
-  <!-- <div class="img-wrapper">
-        <img src="2019_09_05_el_cuerpo_de_la_memoria/gallery/Soy Cuerpo-IMG_7456.jpg" alt="">
-        <img class="imago" src="2019_09_05_el_cuerpo_de_la_memoria/gallery/Soy Cuerpo-IMG_7463.jpg" alt="">
-    </div> -->
 </div>

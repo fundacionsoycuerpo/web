@@ -12,7 +12,6 @@
 </script>
 
 <script>
-  import { onMount } from 'svelte';
   import Article from '../components/Article.svelte';
   import Event from '../components/Event.svelte';
   import Slider from '../components/Slider.svelte';
@@ -27,24 +26,10 @@
 
   let slides = [
     {
-      imgSrc: 'img/banner-el_cuerpo_de_la_memoria.jpg',
-      imgAlt: 'Banner proyecto el cuerpo de la memoria',
+      imgSrc: 'img/banner-somos_cerro.jpg',
+      imgAlt: 'Banner proyecto somos cerro',
     },
   ];
-
-  onMount(() => {
-    slides = [
-      ...slides,
-      {
-        imgSrc: 'img/banner-cuerpo_territorio.jpg',
-        imgAlt: 'Banner proyecto cuerpo territorio',
-      },
-      {
-        imgSrc: 'img/banner-somos_cerro.jpg',
-        imgAlt: 'Banner proyecto somos cerro',
-      },
-    ];
-  });
 </script>
 
 <style>
@@ -118,7 +103,7 @@
 </svelte:head>
 
 <div class="container">
-  <Slider {slides} />
+  <Slider {slides} auto={false} />
   <div class="inner-content">
     {#if events && events.length}
       <section class="events">
@@ -157,11 +142,10 @@
           src="img/logos_ext/museo_de_la_memoria.svg"
           alt="Logo museo de la memoria" />
       </div>
-
     </section>
 
     <section class="big-banner">
-      <img src="img/colabora - generico2.png" alt="Afiche colaboración" />
+      <img src="img/colabora_-_generico2.png" alt="Afiche colaboración" />
     </section>
   </div>
 </div>
