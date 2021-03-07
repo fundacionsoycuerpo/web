@@ -14,7 +14,6 @@
 <script>
   import Article from '../components/Article.svelte';
   import Event from '../components/Event.svelte';
-  import Slider from '../components/Slider.svelte';
 
   export let articles;
   export let events;
@@ -24,12 +23,6 @@
     'Fundación Soy Cuerpo es una organización sin fines de lucro, que nace como una respuesta concreta a la necesidad de poner en valor el cuerpo humano, potenciando el entendimiento integral de éste.';
   let head_img = 'https://fundacionsoycuerpo.cl/img/logo_bg.jpg';
 
-  let slides = [
-    {
-      imgSrc: 'img/banner-somos_cerro.jpg',
-      imgAlt: 'Banner proyecto somos cerro',
-    },
-  ];
 </script>
 
 <style>
@@ -103,8 +96,8 @@
 </svelte:head>
 
 <div class="container">
-  <Slider {slides} auto={false} />
   <div class="inner-content">
+    <h1>Fundación Soy Cuerpo</h1>
     {#if events && events.length}
       <section class="events">
         <h2>Próximos eventos</h2>
