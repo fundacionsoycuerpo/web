@@ -1,6 +1,10 @@
 <script>
   export let documents = [
     {
+      name: 'Reflexiones Fundación Soy Cuerpo - 2020',
+      filename: 'reflexiones_2020_FSC.pdf'
+    },
+    {
       name: 'Reflexiones Fundación Soy Cuerpo - 2019',
       filename: 'reflexiones_2019_FSC.pdf'
     }
