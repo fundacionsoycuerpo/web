@@ -14,14 +14,21 @@
   export let articles;
 </script>
 
+<style>
+  .manifest {
+    margin-top: 2rem;
+  }
+</style>
+
+
 <svelte:head>
   <title>Fundación Soy Cuerpo - {department.name}</title>
 </svelte:head>
 
 <div class="inner-content">
   <h1>{department.name}</h1>
-  <section>
-    <p>{department.description}</p>
+  <p>{department.description}</p>
+  <section class="manifest">
     <h2>Manifiesto</h2>
     <p class="italic">"{department.manifest}"</p>
   </section>

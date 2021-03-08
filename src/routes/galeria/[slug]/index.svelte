@@ -53,6 +53,10 @@
     margin-right:auto;
     margin-top: 2rem;
   }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
 </style>
 
 <svelte:head>
@@ -75,8 +79,8 @@
   </div>
   <div class="inner-content">
     <h1>{gallery.content_title}</h1>
-    <h2>{gallery.content_date}</h2>
-    <h3>{gallery.content_location}</h3>
+    <p>{gallery.content_date}</p>
+    <p>{gallery.content_location}</p>
     <div class="gallery">
       <Gallery {images} bind:alt={gallery.imgsAlt} bind:source={gallery.slug} />
     </div>

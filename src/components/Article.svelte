@@ -55,12 +55,14 @@
   .tags {
     margin-bottom: 1rem;
   }
-  a .tag {
+  a.tag {
     color: var(--contrast-text-color);
     padding: 5px 10px;
     background: var(--contrast-bg-light);
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 20px;
+    display:inline-block;
   }
 </style>
 
@@ -74,7 +76,7 @@
       {#if article.tags && article.tags.length}
         <div class="tags">
           {#each article.tags as tag, i}
-            <a href="/{tag.url}"> <span class="tag">#{tag.name}</span> </a>
+            <a class="tag" href="/{tag.url}"> #{tag.name} </a>
           {/each}
         </div>
       {/if}
