@@ -205,6 +205,9 @@
     padding: 3px 16px;
     border-radius: 5px;
     margin-left: 6px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 
   .flex-section {
