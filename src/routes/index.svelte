@@ -47,9 +47,9 @@
     object-position: center;
   }
 
-  :global(h2 + article) {
+  /* :global(h2 + article) {
     margin-top: 1rem;
-  }
+  } */
 
   .more-news {
     display: flex;
@@ -122,7 +122,7 @@
       <h2>Alianzas y Colaboraciones</h2>
       <div class="partners-list">
         <img
-          src="img/logos_ext/centro_cultural_españa.jpg"
+          src="img/logos_ext/centro_cultural_espana.jpg"
           alt="Logo centro cultural de españa" />
         <img
           src="img/logos_ext/sendero_de_chile.png"

@@ -14,9 +14,8 @@
 
 <style>
   .members {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
+    display: flex;
+    flex-direction: column;
   }
 
   @media (max-width: 936px) {

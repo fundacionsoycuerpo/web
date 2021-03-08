@@ -64,6 +64,8 @@ small {
   section {
     margin-top: 3rem;
   }
+  h1{margin-bottom: 1rem;}
+
 </style>
 
 <svelte:head>
@@ -72,9 +74,10 @@ small {
 
 <div class="inner-content">
   <h1>Donaciones</h1>
-  <p>
+  <p class="sub-h1">
     Con tu ayuda seguiremos desarrollando programas y proyectos en pos del
     cuerpo a nivel nacional.
+    Gracias por ser parte de estas iniciativas.
   </p>
   {#if flow}
   <section>
