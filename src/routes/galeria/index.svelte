@@ -1,27 +1,28 @@
 <script context="module">
-  export async function preload({ params, query }) {
-    const { slug } = params;
-    const galleriesResponse = await this.fetch(`galeria.json`);
-    const galleries = await galleriesResponse.json();
-    return { galleries };
-  }
+	export async function load({ page, fetch, session, context }) {
+		const galleriesResponse = await fetch(`/galeria.json`);
+		const galleries = await galleriesResponse.json();
+		return { galleries };
+	}
+	export const prerender = true;
+	export const ssr = false;
 </script>
 
 <script>
-  export let galleries;
+	export let galleries;
 </script>
 
 <svelte:head>
-  <title>Fundación Soy Cuerpo - Galería</title>
+	<title>Fundación Soy Cuerpo - Galería</title>
 </svelte:head>
 
 <div class="inner-content">
-  <h1>Galería</h1>
-  <ul class="galleries">
-    {#each galleries as event}
-      <li>
-        <a href={'galeria/' + event.slug}>{event.content_title}</a>
-      </li>
-    {/each}
-  </ul>
+	<h1>Galería</h1>
+	<ul class="galleries">
+		{#each galleries as event}
+			<li>
+				<a href={'galeria/' + event.slug}>{event.content_title}</a>
+			</li>
+		{/each}
+	</ul>
 </div>
