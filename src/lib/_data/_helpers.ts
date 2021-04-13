@@ -1,5 +1,5 @@
 import marked from 'marked';
-import * as dateFns from 'date-fns';
+import dateFns from 'date-fns';
 import es from 'date-fns/locale/es/index.js';
 
 export const formatArticle = (article) => {

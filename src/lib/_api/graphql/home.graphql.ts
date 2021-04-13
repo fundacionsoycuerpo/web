@@ -21,5 +21,4 @@ export const getHomePageData = () => {
 }`;
 
 	return queryData(query);
-	// return { articles: [] };
 };

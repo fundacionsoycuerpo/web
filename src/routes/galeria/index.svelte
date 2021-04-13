@@ -2,10 +2,8 @@
 	export async function load({ page, fetch, session, context }) {
 		const galleriesResponse = await fetch(`/galeria.json`);
 		const galleries = await galleriesResponse.json();
-		return { galleries };
+		return { props: { galleries } };
 	}
-	export const prerender = true;
-	export const ssr = false;
 </script>
 
 <script>

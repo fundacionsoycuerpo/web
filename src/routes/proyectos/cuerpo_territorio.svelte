@@ -1,8 +1,3 @@
-<script lang="ts">
-	export const prerender = true;
-	export const ssr = false;
-</script>
-
 <div class="inner-content">
 	<section class="ct description">
 		<div class="container">

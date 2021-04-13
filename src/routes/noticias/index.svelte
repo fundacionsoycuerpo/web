@@ -5,14 +5,12 @@
 			.then((data) => ({ props: { ...data } }))
 			.catch((err) => ({ status: 404, error: new Error('Page Not found') }));
 	}
-	export const prerender = true;
-	export const ssr = false;
 </script>
 
-<script>
+<script lang="ts">
 	import Article from '$lib/Article.svelte';
-
-	export let articles;
+	import type { Article as ArticleModel } from '$types/Article';
+	export let articles: ArticleModel[];
 </script>
 
 <svelte:head>

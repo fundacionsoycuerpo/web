@@ -21,9 +21,6 @@
 			color: 'rgba(255, 191, 176, 0.3)'
 		}
 	];
-
-	export const prerender = true;
-	export const ssr = false;
 </script>
 
 <div class="container">

@@ -5,8 +5,6 @@
 			.then((data) => ({ props: data }))
 			.catch((err) => ({ status: 404, error: new Error('Page Not found') }));
 	}
-	export const prerender = true;
-	export const ssr = false;
 </script>
 
 <script>

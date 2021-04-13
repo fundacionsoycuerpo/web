@@ -1,5 +1,6 @@
-<script>
-	export let article;
+<script lang="ts">
+	import type { Article } from '$types/Article';
+	export let article: Article;
 </script>
 
 <article>

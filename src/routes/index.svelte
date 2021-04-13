@@ -13,14 +13,14 @@
 			})
 			.catch((e) => ({ status: 500, error: e }));
 	}
-	export const ssr = false;
 </script>
 
 <script lang="ts">
+	import type { Article as ArticleModel } from '$types/Article';
 	import Article from '$lib/Article.svelte';
 	import Event from '$lib/Event.svelte';
 
-	export let articles;
+	export let articles: ArticleModel[];
 	export let events;
 
 	let head_title = 'Fundación Soy Cuerpo';
@@ -80,8 +80,6 @@
 		</section>
 	</div>
 </div>
-
-<a href="/other"> got to other</a>
 
 <style>
 	.container {
