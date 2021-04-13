@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { afterUpdate, beforeUpdate, onMount } from 'svelte';
-	let gallery;
+	import { afterUpdate } from 'svelte';
+
 	const lazyLoad = (target) => {
 		const io = new IntersectionObserver((entries, observer) => {
 			entries.forEach((entry) => {
@@ -52,7 +52,7 @@
 	{#if images && images.length}
 		<section>
 			{#each images as image, i}
-				<img class="gallery-item" data-lazy="{source}/gallery/{image.src}" alt="" />
+				<img class="gallery-item" data-lazy="/{source}/gallery/{image.src}" alt="" />
 			{/each}
 		</section>
 	{/if}

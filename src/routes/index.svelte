@@ -59,7 +59,7 @@
 					<Article {article} />
 				{/each}
 				<div class="more-news">
-					<a href="noticias">Ver todas las noticias</a>
+					<a href="/noticias">Ver todas las noticias</a>
 				</div>
 			</section>
 		{/if}

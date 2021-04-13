@@ -1,8 +1,7 @@
 <script>
+	import { dev } from '$app/env';
 	export let status;
 	export let error;
-
-	const dev = process.env['NODE_ENV'] === 'development';
 </script>
 
 <svelte:head>
@@ -10,17 +9,17 @@
 </svelte:head>
 
 <div class="inner-content">
-	{#if dev && status === 404}
+	{#if !dev && status === 404}
 		<h1>:(</h1>
 
 		<p>La página que buscas no existe</p>
 	{:else}
 		<h1>{status}</h1>
 
-		<p>{error.message}</p>
+		<p>{error && error.message}</p>
 	{/if}
 
-	{#if dev && error.stack}
+	{#if dev && error && error.stack}
 		<pre>{error.stack}</pre>
 	{/if}
 </div>

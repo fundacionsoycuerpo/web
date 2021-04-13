@@ -3,7 +3,7 @@
 		Descarga las bases para
 		<b>El Cuerpo de la Memoria 2020</b>
 	</span>
-	<a target="__blank" rel="noopener" href="docs/ECDLM_2020_bases.pdf">Descargar</a>
+	<a target="__blank" rel="noopener" href="/docs/ECDLM_2020_bases.pdf">Descargar</a>
 </div>
 
 <style lang="scss">

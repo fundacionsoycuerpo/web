@@ -43,7 +43,7 @@
 
 <div class="container">
 	<div class="image">
-		<img class="gallery-item" src="{gallery.slug}/portada.jpg" alt="Background" />
+		<img class="gallery-item" src="/{gallery.slug}/portada.jpg" alt="Background" />
 	</div>
 	<div class="inner-content">
 		<h1>{gallery.content_title}</h1>
@@ -52,7 +52,7 @@
 		<div class="gallery">
 			<Gallery {images} bind:alt={gallery.imgsAlt} bind:source={gallery.slug} />
 		</div>
-		<a href="galeria">Volver a Galería</a>
+		<a href="/galeria">Volver a Galería</a>
 	</div>
 </div>
 
