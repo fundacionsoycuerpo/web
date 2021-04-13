@@ -9,9 +9,5 @@ export const queryData = (query, variables = {}) => {
 			query,
 			variables
 		}
-	})
-		.then((r) => r.data.data)
-		.catch((e) => {
-			return { base, meta: import.meta.env, query, variables, env: process.env['STRAPI_URL'], e };
-		});
+	}).then((r) => r.data.data);
 };
