@@ -40,6 +40,6 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v1
       - name: Run Cypress 🌲
-      - run: npx cypress run
+        run: npx cypress run
         env:
           CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
