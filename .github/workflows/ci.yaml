@@ -42,7 +42,6 @@ jobs:
           echo "$GITHUB_CONTEXT"
       - name: Checkout 🛎
         uses: actions/checkout@v1
-      - name: Run Cypress 🌲
       - run: pnpm ci
       - run: pnpm run cy:run
         env:
