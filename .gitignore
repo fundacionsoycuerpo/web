@@ -2,6 +2,8 @@
 node_modules
 yarn-error.log
 /cypress/screenshots/
-/__sapper__/
-
+build
+.svelte
 .vercel
+
+/functions

@@ -1,43 +1,41 @@
 <script context="module">
-  export function preload({ params, query }) {
-    return this.fetch('equipo.json')
-      .then(res => res.json())
-      .catch(err => this.error(404, 'Page Not found'));
-  }
+	export function load({ page, fetch, session, context }) {
+		return fetch('/equipo.json')
+			.then((res) => res.json())
+			.then((data) => ({ props: { ...data } }))
+			.catch((err) => ({ status: 404, error: new Error('Page Not found') }));
+	}
 </script>
 
 <script>
-  import Member from '../../components/Member.svelte';
-  export let members;
-  let expanded = null;
+	import Member from '$lib/Member.svelte';
+	export let members;
+	let expanded = null;
 </script>
 
-<style>
-  .members {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (max-width: 936px) {
-    .members {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-</style>
-
 <svelte:head>
-  <title>Fundación Soy Cuerpo - Equipo</title>
+	<title>Fundación Soy Cuerpo - Equipo</title>
 </svelte:head>
 
 <div class="inner-content">
-  <h1>Equipo Humano</h1>
-  <div class="members">
-    {#each members as member}
-      <Member
-        {member}
-        expanded={member.email === expanded}
-        on:expand={e => (expanded = e.detail)} />
-    {/each}
-  </div>
+	<h1>Equipo Humano</h1>
+	<div class="members">
+		{#each members as member}
+			<Member {member} on:expand={(e) => (expanded = e.detail)} />
+		{/each}
+	</div>
 </div>
+
+<style style="scss">
+	.members {
+		display: flex;
+		flex-direction: column;
+	}
+
+	@media (max-width: 936px) {
+		.members {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+</style>

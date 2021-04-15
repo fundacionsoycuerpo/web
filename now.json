@@ -1,23 +1,23 @@
 {
-  "version": 2,
-  "build": {
-    "env": {
-      "STRAPI_URL": "@fundacionsoycuerpo-strapi-url",
-      "FLOW_URL": "@flow-url"
-    }
-  },
-  "redirects": [
-    {
-      "source": "/youtube",
-      "destination": "https://www.youtube.com/channel/UClWWhHm4BwOydrgI5X6kMUQ"
-    },
-    {
-      "source": "/Youtube",
-      "destination": "https://www.youtube.com/channel/UClWWhHm4BwOydrgI5X6kMUQ"
-    },
-    {
-      "source": "/registro",
-      "destination": "https://docs.google.com/forms/d/e/1FAIpQLSf4ouQSzDLiEZgAmwVaOTcwVF3tTSvC8FcJr0x4B1HQ6FUGmA/viewform"
-    }
-  ]
+	"version": 2,
+	"build": {
+		"env": {
+			"STRAPI_URL": "@fundacionsoycuerpo-strapi-url",
+			"FLOW_URL": "@flow-url"
+		}
+	},
+	"redirects": [
+		{
+			"source": "/youtube",
+			"destination": "https://www.youtube.com/channel/UClWWhHm4BwOydrgI5X6kMUQ"
+		},
+		{
+			"source": "/Youtube",
+			"destination": "https://www.youtube.com/channel/UClWWhHm4BwOydrgI5X6kMUQ"
+		},
+		{
+			"source": "/registro",
+			"destination": "http://eepurl.com/hsrjW5"
+		}
+	]
 }
