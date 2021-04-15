@@ -10,6 +10,12 @@ jobs:
       matrix:
         node-version: [12]
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
+
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
@@ -35,14 +41,8 @@ jobs:
           path: ~/.cache/Cypress
           key: cypress-cache-v2-${{ runner.os }}-${{ hashFiles('**/package.json') }}
       # and run Cypress tests
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: |
-          echo "$GITHUB_CONTEXT"
+
       - name: Checkout 🛎
         uses: actions/checkout@v1
-      - run: pnpm ci
-      - run: pnpm run cy:run
-        env:
-          CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
+      - run: pnpm install
+      - run: pnpm run cy:run -- --config baseUrl=${{ github.event.deployment_status.target_url }}
