@@ -1,5 +1,5 @@
 <script>
-	import { menuIsOpen } from '../stores.js';
+	import { menuIsOpen } from '../stores';
 
 	import Hamburguer from '$lib/Hamburguer.svelte';
 
