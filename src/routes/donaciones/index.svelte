@@ -24,7 +24,7 @@
 
 	{#if flow}
 		<section>
-			<h2>Hazte socia/socio!</h2>
+			<h2>¡Hazte socia/socio!</h2>
 			<small>Contribuye con una donación mensual</small>
 			<a href="/registro"> Ir a registro </a>
 		</section>
