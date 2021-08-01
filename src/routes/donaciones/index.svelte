@@ -21,9 +21,17 @@
 		Con tu ayuda seguiremos desarrollando programas y proyectos en pos del cuerpo a nivel nacional.
 		Gracias por ser parte de estas iniciativas.
 	</p>
+
 	{#if flow}
 		<section>
-			<h2>Donación online</h2>
+			<h2>Hazte socia/socio!</h2>
+			<small>Contribuye con una donación mensual</small>
+			<a href="/registro"> Ir a registro </a>
+		</section>
+	{/if}
+	{#if flow}
+		<section>
+			<h2>Donación única online</h2>
 			<a href={flow} target="_blank"> Donar </a>
 			<small>*Serás redirigido al portal de pagos</small>
 		</section>

@@ -4,6 +4,7 @@ yarn-error.log
 /cypress/screenshots/
 build
 .svelte
+.svelte-kit
 .vercel
 
 /functions
