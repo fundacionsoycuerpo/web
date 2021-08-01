@@ -1,6 +1,6 @@
 <script context="module">
 	export function load({ page, fetch, session, context }) {
-		return fetch(`/registro.json`)
+		return fetch(`/registro_donacion.json`)
 			.then((res) => res.json())
 			.then((data) => ({ props: data }))
 			.catch((err) => ({ status: 404, error: new Error('Page Not found') }));
