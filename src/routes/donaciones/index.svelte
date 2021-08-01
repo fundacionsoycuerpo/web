@@ -26,7 +26,8 @@
 		<section>
 			<h2>¡Hazte socia/socio!</h2>
 			<small>Contribuye con una donación mensual</small>
-			<a href="/registro"> Ir a registro </a>
+			<p>Pronto...</p>
+			<!-- <a href="/registro_donacion"> Ir a registro </a> -->
 		</section>
 	{/if}
 	{#if flow}
