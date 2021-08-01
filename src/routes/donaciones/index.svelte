@@ -21,9 +21,17 @@
 		Con tu ayuda seguiremos desarrollando programas y proyectos en pos del cuerpo a nivel nacional.
 		Gracias por ser parte de estas iniciativas.
 	</p>
+
 	{#if flow}
 		<section>
-			<h2>Donación online</h2>
+			<h2>¡Hazte socia/socio!</h2>
+			<small>Contribuye con una donación mensual</small>
+			<a href="/registro"> Ir a registro </a>
+		</section>
+	{/if}
+	{#if flow}
+		<section>
+			<h2>Donación única online</h2>
 			<a href={flow} target="_blank"> Donar </a>
 			<small>*Serás redirigido al portal de pagos</small>
 		</section>
@@ -31,9 +39,9 @@
 	<section>
 		<h2>Donación por transferencia bancaria</h2>
 		<div class="card">
-			<span>Nro de cuenta: 20270013326</span>
+			<span>Nro de cuenta: 20200055391</span>
 			<span>Banco: Banco Estado</span>
-			<span>Tipo de cuenta: Cuenta Vista</span>
+			<span>Tipo de cuenta: Cuenta Corriente</span>
 			<span>RUT: 65.176.067-4</span>
 			<span>Correo: donaciones@fundacionsoycuerpo.cl</span>
 		</div>
