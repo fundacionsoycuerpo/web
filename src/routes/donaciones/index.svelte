@@ -39,9 +39,9 @@
 	<section>
 		<h2>Donación por transferencia bancaria</h2>
 		<div class="card">
-			<span>Nro de cuenta: 20270013326</span>
+			<span>Nro de cuenta: 20200055391</span>
 			<span>Banco: Banco Estado</span>
-			<span>Tipo de cuenta: Cuenta Vista</span>
+			<span>Tipo de cuenta: Cuenta Corriente</span>
 			<span>RUT: 65.176.067-4</span>
 			<span>Correo: donaciones@fundacionsoycuerpo.cl</span>
 		</div>

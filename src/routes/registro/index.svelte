@@ -1,4 +1,14 @@
+<script context="module">
+	export function load({ page, fetch, session, context }) {
+		return fetch(`/registro.json`)
+			.then((res) => res.json())
+			.then((data) => ({ props: data }))
+			.catch((err) => ({ status: 404, error: new Error('Page Not found') }));
+	}
+</script>
+
 <script lang="ts">
+	export let apiUrl;
 	import axios from 'axios';
 	let sendingData = false;
 	let error = false;
@@ -14,7 +24,7 @@
 			sendingData = true;
 			error = false;
 			await axios
-				.post(`${process.env['API_URL']}/reg`, data, {
+				.post(`${apiUrl}/reg`, data, {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'
@@ -25,6 +35,7 @@
 					sendingData = false;
 				});
 		} catch (e) {
+			console.log(e);
 			// TODO: handle error
 			error = true;
 			sendingData = false;
@@ -41,7 +52,7 @@
 		<label for="email">Correo Electrónico</label>
 		<input type="text" name="email" />
 		<label for="amount">Aporte mensual (mínimo $1000)</label>
-		<input type="number" name="amount" min="5000" max="9999999" />
+		<input type="number" name="amount" min="1000" max="9999999" />
 		<button class="button contrast" disabled={sendingData} type="submit">Donar</button>
 		{#if error}
 			<p>
