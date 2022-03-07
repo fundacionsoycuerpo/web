@@ -2,7 +2,6 @@
 	"name": "fundacionsoycuerpo-web",
 	"description": "Web Fundación Soy Cuerpo",
 	"version": "0.0.1",
-	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/fundacionsoycuerpo/web"
@@ -10,8 +9,12 @@
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
-		"start": "svelte-kit start",
-		"static:serve": "npx http-serve build",
+		"package": "svelte-kit package",
+		"preview": "svelte-kit preview",
+		"prepare": "svelte-kit sync",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"static:serve": "serve build",
 		"lint": "prettier --check . && eslint --ignore-path .gitignore .",
 		"format": "prettier --write .",
 		"cy:run": "cypress run",
@@ -23,37 +26,37 @@
 		"test:run": "run-p --race static:serve cy:run"
 	},
 	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
-		"@testing-library/cypress": "^7.0.1",
-		"@typescript-eslint/eslint-plugin": "^4.19.0",
-		"@typescript-eslint/parser": "^4.19.0",
+		"@testing-library/cypress": "^8.0.2",
+		"@typescript-eslint/eslint-plugin": "^5.10.1",
+		"@typescript-eslint/parser": "^5.10.1",
 		"axios": "^0.21.1",
-		"cypress": "^7.1.0",
+		"cypress": "^9.5.1",
 		"date-fns": "^2.20.3",
-		"eslint": "^7.22.0",
-		"eslint-config-prettier": "^8.1.0",
-		"eslint-plugin-svelte3": "^3.1.0",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^3.2.1",
 		"husky": "^4.3.0",
 		"image-size": "^0.9.3",
 		"marked": "^1.2.4",
 		"npm-run-all": "^4.1.5",
-		"prettier": "~2.2.1",
-		"prettier-plugin-svelte": "^2.2.0",
+		"prettier": "^2.5.1",
+		"prettier-plugin-svelte": "^2.5.0",
 		"pretty-quick": "^3.1.0",
 		"sass": "^1.0.0",
-		"svelte": "^3.29.0",
-		"svelte-preprocess": "^4.0.0",
-		"tslib": "^2.0.0",
-		"typescript": "^4.0.0",
-		"vite": "^2.1.5"
-	},
-	"engines": {
-		"node": "14.x"
+		"serve": "^13.0.2",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.2.6",
+		"svelte-preprocess": "^4.10.1",
+		"tslib": "^2.3.1",
+		"typescript": "~4.6.2"
 	},
 	"husky": {
 		"hooks": {
 			"pre-commit": "pretty-quick --staged"
 		}
-	}
+	},
+	"type": "module"
 }

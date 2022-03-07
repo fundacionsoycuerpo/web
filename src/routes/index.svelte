@@ -1,20 +1,3 @@
-<script context="module" lang="ts">
-	// client-only code here
-	export function load({ page, fetch, session, context }) {
-		return Promise.all([fetch('/index.json'), fetch('/eventos.json')])
-			.then((responses) => Promise.all(responses.map((res) => res.json())))
-			.then(([data, events]) => {
-				return {
-					props: {
-						articles: data.articles.slice(0, 3),
-						events: events.slice(0, 3)
-					}
-				};
-			})
-			.catch((e) => ({ status: 500, error: e }));
-	}
-</script>
-
 <script lang="ts">
 	import type { Article as ArticleModel } from '$types/Article';
 	import Article from '$lib/Article.svelte';

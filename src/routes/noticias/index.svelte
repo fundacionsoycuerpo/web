@@ -1,12 +1,3 @@
-<script context="module">
-	export function load({ page, fetch, session, context }) {
-		return fetch(`/noticias.json`)
-			.then((res) => res.json())
-			.then((data) => ({ props: { ...data } }))
-			.catch((err) => ({ status: 404, error: new Error('Page Not found') }));
-	}
-</script>
-
 <script lang="ts">
 	import Article from '$lib/Article.svelte';
 	import type { Article as ArticleModel } from '$types/Article';

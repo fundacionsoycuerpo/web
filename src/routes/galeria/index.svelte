@@ -1,11 +1,3 @@
-<script context="module">
-	export async function load({ page, fetch, session, context }) {
-		const galleriesResponse = await fetch(`/galeria.json`);
-		const galleries = await galleriesResponse.json();
-		return { props: { galleries } };
-	}
-</script>
-
 <script>
 	export let galleries;
 </script>

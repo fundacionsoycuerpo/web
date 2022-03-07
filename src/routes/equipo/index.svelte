@@ -1,12 +1,3 @@
-<script context="module">
-	export function load({ page, fetch, session, context }) {
-		return fetch('/equipo.json')
-			.then((res) => res.json())
-			.then((data) => ({ props: { ...data } }))
-			.catch((err) => ({ status: 404, error: new Error('Page Not found') }));
-	}
-</script>
-
 <script>
 	import Member from '$lib/Member.svelte';
 	export let members;

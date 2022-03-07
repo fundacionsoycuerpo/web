@@ -35,7 +35,7 @@
 	}
 
 	.thanks > div {
-		flex: 1 1 calc(100% - 200px -2rem);
+		flex: 1 1 calc(100% - 200px - 2rem);
 		margin-left: 2rem;
 	}
 </style>

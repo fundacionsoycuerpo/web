@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import imageSize from 'image-size';
+import { galleries } from '$lib/_data/_galerias';
 
 function getImages(params) {
 	return fs
@@ -15,5 +16,10 @@ function getImages(params) {
 }
 
 export function get({ params }) {
-	return { body: getImages(params) };
+	const gallery = galleries.find((g) => g.slug === params.slug);
+	if (!gallery) {
+		return { status: 404, error: new Error('Page Not found') };
+	}
+
+	return { body: { gallery, images: getImages(params) } };
 }
