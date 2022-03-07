@@ -1,12 +1,3 @@
-<script context="module">
-	export function load({ page, fetch, session, context }) {
-		return fetch(`/registro_donacion.json`)
-			.then((res) => res.json())
-			.then((data) => ({ props: data }))
-			.catch((err) => ({ status: 404, error: new Error('Page Not found') }));
-	}
-</script>
-
 <script lang="ts">
 	export let apiUrl;
 	import axios from 'axios';

@@ -1,22 +1,3 @@
-<script context="module">
-	export async function load({ page, fetch, session, context }) {
-		const { slug } = page.params;
-		const galleriesResponse = await fetch(`/galeria.json`);
-		const galleries = await galleriesResponse.json();
-		const gallery = galleries.find((g) => g.slug === slug);
-		if (!gallery) {
-			return { status: 404, error: new Error('Page Not found') };
-		}
-
-		return fetch(`/galeria/${slug}.json`)
-			.then((r) => r.json())
-			.then((images) => {
-				return { gallery, images };
-			})
-			.then((data) => ({ props: { ...data } }));
-	}
-</script>
-
 <script>
 	import Gallery from '$lib/Gallery.svelte';
 

@@ -20,13 +20,14 @@
 		"cy:run": "cypress run",
 		"cy:open": "cypress open",
 		"test": "run-p --race dev cy:run",
-		"test:build:open": "npm run build && run-p --race static:serve cy:open",
-		"test:build:run": "npm run build && run-p --race static:serve cy:run",
+		"test:build:open": "pnpm run build && run-p --race static:serve cy:open",
+		"test:build:run": "pnpm run build && run-p --race static:serve cy:run",
 		"test:open": "run-p --race static:serve cy:open",
 		"test:run": "run-p --race static:serve cy:run"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
 		"@testing-library/cypress": "^8.0.2",
 		"@typescript-eslint/eslint-plugin": "^5.10.1",
