@@ -46,5 +46,13 @@ export const captionedImages = [
 	{
 		id: 46,
 		caption: 'afiche evento somos cerro'
+	},
+	{
+		id: 47,
+		caption: 'logo fundacion soy cuerpo'
+	},
+	{
+		id: 48,
+		caption: 'afiche daria'
 	}
 ];

@@ -253,5 +253,39 @@ export const uploadFile = [
 		},
 		created_at: '2021-08-29 21:41:36.754+00',
 		updated_at: '2021-08-29 21:41:36.754+00'
+	},
+	{
+		id: 55,
+		name: 'logo_fsc.jpeg',
+		hash: 'df75ced0343b48fcae7e7114d3ca33d6',
+		sha256: 'nOgF84tG-D6TgyFDO7dyD0WGr4V6Gs2A7q9xWDNNyM8',
+		ext: '.jpeg',
+		mime: 'image/jpeg',
+		size: 600,
+		url: 'https://res.cloudinary.com/fundacionsoycuerpo/image/upload/c_scale,h_600/v1650506272/logo_bg_nxvsa8.jpg',
+		provider: 'cloudinary',
+		provider_metadata: {
+			public_id: 'logo_bg_nxvsa8',
+			resource_type: 'image'
+		}
+		// created_at: '2021-08-29 21:41:36.754+00',
+		// updated_at: '2021-08-29 21:41:36.754+00'
+	},
+	{
+		id: 56,
+		name: 'afiche_daria.jpeg',
+		hash: 'df75ced0343b48fcae7e7114d3ca33d6',
+		sha256: 'nOgF84tG-D6TgyFDO7dyD0WGr4V6Gs2A7q9xWDNNyM8',
+		ext: '.jpeg',
+		mime: 'image/jpeg',
+		size: 600,
+		url: 'https://res.cloudinary.com/fundacionsoycuerpo/image/upload//c_scale,h_600/v1650508091/Afiche_NEUTRO_DARIAS_0_oaxg1k.jpg',
+		provider: 'cloudinary',
+		provider_metadata: {
+			public_id: 'Afiche_NEUTRO_DARIAS_0_oaxg1k',
+			resource_type: 'image'
+		}
+		// created_at: '2021-08-29 21:41:36.754+00',
+		// updated_at: '2021-08-29 21:41:36.754+00'
 	}
 ];

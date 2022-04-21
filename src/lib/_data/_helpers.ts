@@ -1,10 +1,10 @@
-import marked from 'marked';
+import { parse } from 'marked';
 import * as dateFns from 'date-fns';
 import es from 'date-fns/locale/es/index.js';
 
 export const formatArticle = (article) => {
 	if (article.content) {
-		article.content = marked(article.content);
+		article.content = parse(article.content);
 	}
 	if (article.published_at) {
 		article.published_at = dateFns.format(
