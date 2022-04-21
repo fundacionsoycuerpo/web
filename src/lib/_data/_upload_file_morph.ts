@@ -82,5 +82,19 @@ export const ufm = [
 		related_id: 46,
 		related_type: 'captioned_images',
 		field: 'image'
+	},
+	{
+		id: 47,
+		upload_file_id: 55,
+		related_id: 47,
+		related_type: 'captioned_images',
+		field: 'image'
+	},
+	{
+		id: 48,
+		upload_file_id: 56,
+		related_id: 48,
+		related_type: 'captioned_images',
+		field: 'image'
 	}
 ];
