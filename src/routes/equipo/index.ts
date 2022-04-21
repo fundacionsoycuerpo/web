@@ -3,7 +3,7 @@ import { members } from '$lib/_data/_members';
 import { membersComponents } from '$lib/_data/_members_components';
 import { uploadFile } from '$lib/_data/_upload_file';
 import { ufm } from '$lib/_data/_upload_file_morph';
-import marked from 'marked';
+import { parse } from 'marked';
 
 export async function get({ params }) {
 	let body = {
@@ -18,7 +18,7 @@ export async function get({ params }) {
 					(file) => file.id === ufm.find((u) => u.related_id === _avatar.id).upload_file_id
 				)
 			};
-			return { ...member, bio: marked(member.bio), avatar };
+			return { ...member, bio: parse(member.bio), avatar };
 		})
 	};
 

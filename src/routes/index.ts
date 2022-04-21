@@ -7,7 +7,7 @@ import { formatArticle } from '$lib/_data/_helpers';
 import { tags } from '$lib/_data/_tags';
 import { uploadFile } from '$lib/_data/_upload_file';
 import { ufm } from '$lib/_data/_upload_file_morph';
-import marked from 'marked';
+import { parse } from 'marked';
 
 export function get({ params }) {
 	const body = {
@@ -34,7 +34,7 @@ export function get({ params }) {
 				return formatArticle({ ...article, media, tags: tags_ });
 			}),
 		events: events.slice(0, 3).map((e) => {
-			return { ...e, description: marked(e.description) };
+			return { ...e, description: parse(e.description) };
 		})
 	};
 	return { body };

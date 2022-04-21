@@ -15,7 +15,7 @@ specifiers:
   eslint-plugin-svelte3: ^3.2.1
   husky: ^4.3.0
   image-size: ^0.9.3
-  marked: ^1.2.4
+  marked: ^4.0.14
   npm-run-all: ^4.1.5
   prettier: ^2.5.1
   prettier-plugin-svelte: ^2.5.0
@@ -43,7 +43,7 @@ devDependencies:
   eslint-plugin-svelte3: 3.4.1_eslint@7.32.0+svelte@3.47.0
   husky: 4.3.8
   image-size: 0.9.7
-  marked: 1.2.9
+  marked: 4.0.14
   npm-run-all: 4.1.5
   prettier: 2.6.2
   prettier-plugin-svelte: 2.7.0_prettier@2.6.2+svelte@3.47.0
@@ -3188,12 +3188,12 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
-  /marked/1.2.9:
+  /marked/4.0.14:
     resolution:
       {
-        integrity: sha512-H8lIX2SvyitGX+TRdtS06m1jHMijKN/XjfH6Ooii9fvxMlh8QdqBfBDkGUpMWH2kQNrtixjzYUa3SH8ROTgRRw==
+        integrity: sha512-HL5sSPE/LP6U9qKgngIIPTthuxC0jrfxpYMZ3LdGDD3vTnLs59m2Z7r6+LNDR3ToqEQdkKd6YaaEfJhodJmijQ==
       }
-    engines: { node: '>= 8.16.2' }
+    engines: { node: '>= 12' }
     hasBin: true
     dev: true
 
