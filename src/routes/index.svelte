@@ -29,9 +29,8 @@
 		<h1>Fundación Soy Cuerpo</h1>
 
 		<section class="video-section">
-			<h2>Estreno (Del 29 de Abril al 7 de mayo)</h2>
-			<h3>DARIA - Danzas Rituales de la Abundacia</h3>
-			<p>Red de Trabajadoras de las Danzas</p>
+			<h2>DARIA - Danzas Rituales de la Abundacia</h2>
+			<p>Estreno (Del 29 de Abril al 7 de mayo)</p>
 			<div class="video-wrapper">
 				<div class="video-container">
 					<iframe
@@ -144,6 +143,7 @@
 		background-color: black;
 		margin-left: -2rem;
 		width: 100vw;
+		max-width: 1400px;
 		color: white;
 		@media (min-width: 490px) {
 			margin-left: -5rem;
