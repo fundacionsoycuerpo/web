@@ -198,7 +198,7 @@
 	// 	margin-left: 0;
 	// }
 	.video-wrapper iframe {
-		margin-top: 40px;
-		margin-bottom: 40px;
+		// margin-top: 40px;
+		// margin-bottom: 40px;
 	}
 </style>
