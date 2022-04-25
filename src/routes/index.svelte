@@ -27,6 +27,24 @@
 <div class="container">
 	<div class="inner-content">
 		<h1>Fundación Soy Cuerpo</h1>
+
+		<section class="video-section">
+			<h2>Estreno (Del 29 de Abril al 7 de mayo)</h2>
+			<h3>DARIA - Danzas Rituales de la Abundacia</h3>
+			<p>Red de Trabajadoras de las Danzas</p>
+			<div class="video-wrapper">
+				<div class="video-container">
+					<iframe
+						src="https://www.youtube.com/embed/teOoQU_TSaY?rel=0"
+						title="Daria"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					/>
+				</div>
+			</div>
+		</section>
+
 		{#if events && events.length}
 			<section class="events">
 				<h2>Próximos eventos</h2>
@@ -64,7 +82,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="scss">
 	.container {
 		width: 100%;
 		display: grid;
@@ -119,5 +137,34 @@
 		width: 100%;
 		object-fit: contain;
 		display: block;
+	}
+	.video-section {
+		position: relative;
+		padding: 40px 0px 80px;
+		background-color: black;
+		margin-left: -2rem;
+		width: 100vw;
+		color: white;
+		@media (min-width: 490px) {
+			margin-left: -5rem;
+		}
+	}
+
+	.video-section > h2,
+	h3,
+	p {
+		display: block;
+		margin-left: 2rem;
+		@media (min-width: 490px) {
+			margin-left: 5rem;
+		}
+	}
+
+	.video-wrapper > * {
+		display: block;
+		margin-left: 0;
+	}
+	.video-wrapper iframe {
+		margin-top: 40px;
 	}
 </style>
