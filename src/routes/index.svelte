@@ -112,6 +112,11 @@
 		width: 100%;
 		justify-content: center;
 	}
+	article {
+		h3 {
+			word-break: break-all;
+		}
+	}
 
 	.more-news a,
 	.more-news a:visited {
@@ -142,28 +147,34 @@
 		padding: 40px 0px 80px;
 		background-color: black;
 		margin-left: -2rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
 		width: 100vw;
 		max-width: 1400px;
 		color: white;
 		@media (min-width: 490px) {
 			margin-left: -5rem;
+			padding-left: 5rem;
+			padding-right: 5rem;
 		}
 	}
 
-	.video-section > h2,
-	h3,
-	p {
-		display: block;
-		margin-left: 2rem;
-		@media (min-width: 490px) {
-			margin-left: 5rem;
-		}
-	}
+	// .video-section > h2,
+	// .video-section > h3,
+	// .video-section > p {
+	// 	display: block;
+	// 	// margin-left: 2rem;
+	// 	// margin-right: 2rem;
+	// 	// @media (min-width: 490px) {
+	// 	// 	margin-left: 5rem;
+	// 	// 	margin-right: 5rem;
+	// 	// }
+	// }
 
-	.video-wrapper > * {
-		display: block;
-		margin-left: 0;
-	}
+	// .video-wrapper > * {
+	// 	display: block;
+	// 	margin-left: 0;
+	// }
 	.video-wrapper iframe {
 		margin-top: 40px;
 	}
