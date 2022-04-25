@@ -171,7 +171,7 @@
 		margin-left: -2rem;
 		padding-left: 2rem;
 		padding-right: 2rem;
-		width: 100%;
+		width: 100vw;
 		max-width: 1400px;
 		color: white;
 		@media (min-width: 490px) {
