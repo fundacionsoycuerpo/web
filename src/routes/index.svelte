@@ -30,33 +30,13 @@
 
 		<section class="video-section">
 			<h2>DARIA - Danzas Rituales de la Abundacia</h2>
-			<p>Estreno (Del 29 de Abril al 7 de mayo)</p>
+			<h3>Red de Trabajadoras de las Danzas</h3>
+			<p class="sub">Videodanza - Estreno del 29 de Abril al 7 de mayo</p>
+			<br />
 			<div class="video-wrapper">
 				<div class="video-container">
 					<iframe
 						src="https://www.youtube.com/embed/teOoQU_TSaY?rel=0"
-						title="Daria"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					/>
-				</div>
-			</div>
-			<div class="video-wrapper">
-				<div class="video-container">
-					<iframe
-						src="https://www.youtube.com/embed/iVEP4elSNhc?rel=0"
-						title="Daria"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					/>
-				</div>
-			</div>
-			<div class="video-wrapper">
-				<div class="video-container">
-					<iframe
-						src="https://www.youtube.com/embed/iVEP4elSNhc?rel=0"
 						title="Daria"
 						frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -181,24 +161,11 @@
 		}
 	}
 
-	// .video-section > h2,
-	// .video-section > h3,
-	// .video-section > p {
-	// 	display: block;
-	// 	// margin-left: 2rem;
-	// 	// margin-right: 2rem;
-	// 	// @media (min-width: 490px) {
-	// 	// 	margin-left: 5rem;
-	// 	// 	margin-right: 5rem;
-	// 	// }
-	// }
-
-	// .video-wrapper > * {
-	// 	display: block;
-	// 	margin-left: 0;
-	// }
-	.video-wrapper iframe {
-		// margin-top: 40px;
-		// margin-bottom: 40px;
+	.video-section p {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		&.sub {
+			margin-top: 8px;
+		}
 	}
 </style>
