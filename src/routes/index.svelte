@@ -168,17 +168,17 @@
 		position: relative;
 		padding: 40px 0px 80px;
 		background-color: black;
-		margin-left: -2rem;
-		padding-left: 2rem;
-		padding-right: 2rem;
-		width: 100vw;
-		max-width: 1400px;
+		// margin-left: -2rem;
+		// padding-left: 2rem;
+		// padding-right: 2rem;
+		width: 100%;
+		// max-width: 1400px;
 		color: white;
-		@media (min-width: 490px) {
-			margin-left: -5rem;
-			padding-left: 5rem;
-			padding-right: 5rem;
-		}
+		// @media (min-width: 490px) {
+		// 	margin-left: -5rem;
+		// 	padding-left: 5rem;
+		// 	padding-right: 5rem;
+		// }
 	}
 
 	// .video-section > h2,
@@ -199,5 +199,6 @@
 	// }
 	.video-wrapper iframe {
 		margin-top: 40px;
+		margin-bottom: 40px;
 	}
 </style>
