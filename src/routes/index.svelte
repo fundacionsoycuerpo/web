@@ -42,6 +42,28 @@
 					/>
 				</div>
 			</div>
+			<div class="video-wrapper">
+				<div class="video-container">
+					<iframe
+						src="https://www.youtube.com/embed/iVEP4elSNhc?rel=0"
+						title="Daria"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					/>
+				</div>
+			</div>
+			<div class="video-wrapper">
+				<div class="video-container">
+					<iframe
+						src="https://www.youtube.com/embed/iVEP4elSNhc?rel=0"
+						title="Daria"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					/>
+				</div>
+			</div>
 		</section>
 
 		{#if events && events.length}
