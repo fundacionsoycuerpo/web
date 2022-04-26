@@ -28,7 +28,7 @@
 	<div class="inner-content">
 		<h1>Fundación Soy Cuerpo</h1>
 
-		<section class="video-section">
+		<!-- <section class="video-section">
 			<h2>DARIA - Danzas Rituales de la Abundacia</h2>
 			<h3>Red de Trabajadoras de las Danzas</h3>
 			<p class="sub">Videodanza - Estreno del 29 de Abril al 7 de mayo</p>
@@ -44,7 +44,7 @@
 					/>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		{#if events && events.length}
 			<section class="events">
