@@ -27,6 +27,25 @@
 <div class="container">
 	<div class="inner-content">
 		<h1>Fundación Soy Cuerpo</h1>
+
+		<section class="video-section">
+			<h2>DARIA - Danzas Rituales de la Abundacia</h2>
+			<h3>Red de Trabajadoras de las Danzas</h3>
+			<p class="sub">Videodanza - Estreno del 29 de Abril al 7 de mayo</p>
+			<br />
+			<div class="video-wrapper">
+				<div class="video-container">
+					<iframe
+						src="https://www.youtube.com/embed/teOoQU_TSaY?rel=0"
+						title="Daria"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					/>
+				</div>
+			</div>
+		</section>
+
 		{#if events && events.length}
 			<section class="events">
 				<h2>Próximos eventos</h2>
@@ -64,7 +83,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="scss">
 	.container {
 		width: 100%;
 		display: grid;
@@ -95,6 +114,11 @@
 		width: 100%;
 		justify-content: center;
 	}
+	article {
+		h3 {
+			word-break: break-all;
+		}
+	}
 
 	.more-news a,
 	.more-news a:visited {
@@ -119,5 +143,29 @@
 		width: 100%;
 		object-fit: contain;
 		display: block;
+	}
+	.video-section {
+		position: relative;
+		padding: 40px 0px 80px;
+		background-color: black;
+		margin-left: -2rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		width: 100vw;
+		max-width: 1400px;
+		color: white;
+		@media (min-width: 490px) {
+			margin-left: -5rem;
+			padding-left: 5rem;
+			padding-right: 5rem;
+		}
+	}
+
+	.video-section p {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		&.sub {
+			margin-top: 8px;
+		}
 	}
 </style>
