@@ -58,7 +58,7 @@
 	{/if}
 </div>
 
-<style lang="scss">
+<style lang="css">
 	.gallery {
 		width: 100%;
 	}
@@ -67,17 +67,18 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		img {
-			position: relative;
-			width: 100%;
-			height: 100%;
-			min-height: 100px;
-			min-width: 50px;
-			margin: 2px;
-			background: lightgray;
-			object-fit: contain;
-			object-position: center;
-		}
+	}
+	
+	section img {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		min-height: 100px;
+		min-width: 50px;
+		margin: 2px;
+		background: lightgray;
+		object-fit: contain;
+		object-position: center;
 	}
 
 	@media (min-width: 600px) {

@@ -3,24 +3,22 @@ import { members } from '$lib/_data/_members';
 import { membersComponents } from '$lib/_data/_members_components';
 import { uploadFile } from '$lib/_data/_upload_file';
 import { ufm } from '$lib/_data/_upload_file_morph';
-import { parse } from 'marked';
+import { marked } from 'marked';
 
-export async function get({ params }) {
-	let body = {
+export async function load() {
+	return {
 		members: members.map((member) => {
 			const _avatar = captionedImages.find(
 				(img) =>
-					img.id === membersComponents.find((item) => item.Member_id === member.id).component_id
+					img.id === membersComponents.find((item) => item.Member_id === member.id)?.component_id
 			);
 			const avatar = {
 				..._avatar,
 				image: uploadFile.find(
-					(file) => file.id === ufm.find((u) => u.related_id === _avatar.id).upload_file_id
+					(file) => file.id === ufm.find((u) => u.related_id === _avatar?.id)?.upload_file_id
 				)
 			};
-			return { ...member, bio: parse(member.bio), avatar };
+			return { ...member, bio: marked.parse(member.bio), avatar };
 		})
 	};
-
-	return { body };
 }

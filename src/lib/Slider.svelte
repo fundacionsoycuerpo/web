@@ -33,7 +33,7 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style lang="css">
 	.extra-outer-wrapper {
 		width: 100vw;
 		height: 100%;

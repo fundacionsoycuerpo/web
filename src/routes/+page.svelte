@@ -3,8 +3,9 @@
 	import Article from '$lib/Article.svelte';
 	import Event from '$lib/Event.svelte';
 
-	export let articles: ArticleModel[];
-	export let events;
+	export let data: { articles: ArticleModel[]; events: any[] };
+	// export let articles: ArticleModel[];
+	// export let events;
 
 	let head_title = 'Fundación Soy Cuerpo';
 	let head_description =
@@ -28,18 +29,18 @@
 	<div class="inner-content">
 		<h1>Fundación Soy Cuerpo</h1>
 
-		{#if events && events.length}
+		{#if data.events && data.events.length}
 			<section class="events">
 				<h2>Próximos eventos</h2>
-				{#each events as event, i}
+				{#each data.events as event, i}
 					<Event {event} />
 				{/each}
 			</section>
 		{/if}
-		{#if articles && articles.length}
+		{#if data.articles && data.articles.length}
 			<section class="news">
 				<h2>Noticias</h2>
-				{#each articles as article, i}
+				{#each data.articles as article, i}
 					<Article {article} />
 				{/each}
 				<div class="more-news">
@@ -65,7 +66,7 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style lang="css">
 	.container {
 		width: 100%;
 		display: grid;
@@ -96,10 +97,9 @@
 		width: 100%;
 		justify-content: center;
 	}
-	article {
-		h3 {
-			word-break: break-all;
-		}
+
+	article h3 {
+		word-break: break-all;
 	}
 
 	.more-news a,
@@ -125,29 +125,5 @@
 		width: 100%;
 		object-fit: contain;
 		display: block;
-	}
-	.video-section {
-		position: relative;
-		padding: 40px 0px 80px;
-		background-color: black;
-		margin-left: -2rem;
-		padding-left: 2rem;
-		padding-right: 2rem;
-		width: 100vw;
-		max-width: 1400px;
-		color: white;
-		@media (min-width: 490px) {
-			margin-left: -5rem;
-			padding-left: 5rem;
-			padding-right: 5rem;
-		}
-	}
-
-	.video-section p {
-		margin-top: 40px;
-		margin-bottom: 40px;
-		&.sub {
-			margin-top: 8px;
-		}
 	}
 </style>

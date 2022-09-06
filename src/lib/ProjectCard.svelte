@@ -8,7 +8,7 @@
 	href={project.link}>{project.title}</a
 >
 
-<style lang="scss">
+<style lang="css">
 	.project {
 		width: 100%;
 		display: flex;

@@ -8,14 +8,16 @@ import { tags } from '$lib/_data/_tags';
 import { uploadFile } from '$lib/_data/_upload_file';
 import { ufm } from '$lib/_data/_upload_file_morph';
 
-export async function get({ params }) {
+export async function load({ params }: { params: any }) {
 	let department = departments.find((department) => department.slug === params.slug);
-
-	let tag = tags.find((tag) => tag.id === department.tag);
+	if (!department) {
+		return
+	}
+	let tag = tags.find((tag) => tag.id === department?.tag);
 
 	let articles_ = articles
 		.filter((article) =>
-			articlesTags.find((at) => at.article_id === article.id && at.tag_id === tag.id)
+			articlesTags.find((at) => at.article_id === article.id && at.tag_id === tag?.id)
 		)
 		.sort((a, b) =>
 			a.published_at > b.published_at ? -1 : a.published_at < b.published_at ? 1 : 0
@@ -24,12 +26,12 @@ export async function get({ params }) {
 		.map((article) => {
 			const _media = captionedImages.find(
 				(img) =>
-					img.id === articlesComponents.find((item) => item.Article_id === article.id).component_id
+					img.id === articlesComponents.find((item) => item.Article_id === article.id)?.component_id
 			);
 			const media = {
 				..._media,
 				image: uploadFile.find(
-					(file) => file.id === ufm.find((u) => u.related_id === _media.id).upload_file_id
+					(file) => file.id === ufm.find((u) => u.related_id === _media?.id)?.upload_file_id
 				)
 			};
 			const tags_ = articlesTags
@@ -38,9 +40,8 @@ export async function get({ params }) {
 			return formatArticle({ ...article, media, tags: tags_ });
 		});
 
-	let body = {
+	return {
 		department: { ...department, tag },
 		articles: articles_
 	};
-	return { body };
 }

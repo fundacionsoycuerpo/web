@@ -54,7 +54,7 @@
 	<div class="overlay" on:click={toggle} />
 {/if}
 
-<style lang="scss">
+<style lang="css">
 	nav {
 		position: fixed;
 		top: 0;
@@ -71,12 +71,12 @@
 		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 		user-select: none;
 		z-index: 2;
+	}
 
-		&.open {
-			transform: none;
-			height: 100%;
-			overflow: scroll;
-		}
+	nav.open {
+		transform: none;
+		height: 100%;
+		overflow: scroll;
 	}
 
 	.overlay {
@@ -91,21 +91,23 @@
 
 	ul {
 		list-style-type: none;
-		li {
-			padding: 10px 0;
-			font-size: 22px;
-			& > ul {
-				padding: 0;
-			}
-		}
+	}
+	ul li {
+		padding: 10px 0;
+		font-size: 22px;
+	}
+
+	ul li > ul {
+		padding: 0;
 	}
 
 	a {
 		text-decoration: none;
 		color: var(--contrast-text-color);
-		&:hover {
-			text-decoration: underline;
-		}
+	}
+	
+	a:hover {
+		text-decoration: underline;
 	}
 
 	#deps {

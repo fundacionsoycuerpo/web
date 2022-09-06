@@ -1,5 +1,5 @@
 <script>
-	import '../app.scss';
+	import '../app.css';
 	import Nav from '$lib/Nav.svelte';
 	import SideMenu from '$lib/SideMenu.svelte';
 	import Footer from '$lib/Footer.svelte';

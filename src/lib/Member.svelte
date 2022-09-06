@@ -1,5 +1,5 @@
-<script>
-	export let member;
+<script lang="ts">
+	export let member: { avatar: any; name: string; role: string; email: string; bio: string };
 </script>
 
 <div class="card">
@@ -19,7 +19,7 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style lang="css">
 	.card {
 		display: flex;
 		flex-direction: column;
@@ -80,8 +80,9 @@
 	a {
 		text-decoration: none;
 		color: var(--text-color);
-		&:hover {
-			text-decoration: underline;
-		}
+	}
+
+	a:hover {
+		text-decoration: underline;
 	}
 </style>

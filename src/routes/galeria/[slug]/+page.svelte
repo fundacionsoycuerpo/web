@@ -1,37 +1,38 @@
-<script>
+<script lang="ts">
 	import Gallery from '$lib/Gallery.svelte';
 
-	export let gallery;
-	export let images;
+	export let data: { gallery: any; images: any };
+	// export let gallery;
+	// export let images;
 </script>
 
 <svelte:head>
-	<title>{gallery.head_title}</title>
-	<meta property="og:title" content={gallery.head_title} />
+	<title>{data.gallery.head_title}</title>
+	<meta property="og:title" content={data.gallery.head_title} />
 	<meta property="og:type" content="website" />
 	<meta
 		property="og:image"
-		content={'https://fundacionsoycuerpo.cl/' + gallery.slug + '/portada.jpg'}
+		content={'https://fundacionsoycuerpo.cl/' + data.gallery.slug + '/portada.jpg'}
 	/>
-	<meta property="og:url" content={'https://fundacionsoycuerpo.cl/galeria/' + gallery.slug} />
+	<meta property="og:url" content={'https://fundacionsoycuerpo.cl/galeria/' + data.gallery.slug} />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={gallery.head_title} />
+	<meta name="twitter:title" content={data.gallery.head_title} />
 	<meta
 		name="twitter:image"
-		content={'https://fundacionsoycuerpo.cl/' + gallery.slug + '/portada.jpg'}
+		content={'https://fundacionsoycuerpo.cl/' + data.gallery.slug + '/portada.jpg'}
 	/>
 </svelte:head>
 
 <div class="container">
 	<div class="image">
-		<img class="gallery-item" src="/{gallery.slug}/portada.jpg" alt="Background" />
+		<img class="gallery-item" src="/{data.gallery.slug}/portada.jpg" alt="Background" />
 	</div>
 	<div class="inner-content">
-		<h1>{gallery.content_title}</h1>
-		<p>{gallery.content_date}</p>
-		<p>{gallery.content_location}</p>
+		<h1>{data.gallery.content_title}</h1>
+		<p>{data.gallery.content_date}</p>
+		<p>{data.gallery.content_location}</p>
 		<div class="gallery">
-			<Gallery {images} bind:alt={gallery.imgsAlt} bind:source={gallery.slug} />
+			<Gallery images={data.images} bind:alt={data.gallery.imgsAlt} bind:source={data.gallery.slug} />
 		</div>
 		<a href="/galeria">Volver a Galería</a>
 	</div>

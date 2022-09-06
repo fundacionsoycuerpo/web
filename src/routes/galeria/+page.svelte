@@ -1,5 +1,5 @@
-<script>
-	export let galleries;
+<script lang="ts">
+	export let data:{galleries:any[]}
 </script>
 
 <svelte:head>
@@ -9,7 +9,7 @@
 <div class="inner-content">
 	<h1>Galería</h1>
 	<ul class="galleries">
-		{#each galleries as event}
+		{#each data.galleries as event}
 			<li>
 				<a href={'galeria/' + event.slug}>{event.content_title}</a>
 			</li>

@@ -3,7 +3,7 @@ import path from 'path';
 import imageSize from 'image-size';
 import { galleries } from '$lib/_data/_galerias';
 
-function getImages(params) {
+function getImages(params: { slug: string }) {
 	return fs
 		.readdirSync(path.join('static', params.slug, 'gallery'))
 		.filter((i) => i.includes('.jpg'))
@@ -15,11 +15,11 @@ function getImages(params) {
 		});
 }
 
-export function get({ params }) {
+export function load({ params }: { params: { slug: string } }) {
 	const gallery = galleries.find((g) => g.slug === params.slug);
 	if (!gallery) {
 		return { status: 404, error: new Error('Page Not found') };
 	}
 
-	return { body: { gallery, images: getImages(params) } };
+	return { gallery, images: getImages(params) };
 }

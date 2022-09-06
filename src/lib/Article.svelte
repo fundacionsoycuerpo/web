@@ -7,7 +7,7 @@
 	<small>{article.published_at}</small>
 	<h3>{article.title}</h3>
 	<div class="content">
-		<img src={article.media.image.url} alt={article.media.caption} />
+		<img src={article.media.image?.url} alt={article.media.caption} />
 		<div>
 			{@html article.content}
 			{#if article.tags && article.tags.length}
@@ -24,7 +24,7 @@
 	</div>
 </article>
 
-<style lang="scss">
+<style lang="css">
 	img {
 		width: 100%;
 		object-fit: contain;

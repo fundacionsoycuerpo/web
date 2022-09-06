@@ -20,7 +20,7 @@
 	<a class="button" href="/donaciones" on:click={close}>Colabora</a>
 </header>
 
-<style lang="scss">
+<style lang="css">
 	header {
 		position: fixed;
 		top: 0;
@@ -50,12 +50,13 @@
 
 	a {
 		text-decoration: none;
-		&.button {
+	}
+
+	a.button {
 			cursor: pointer;
 			background: var(--contrast-bg);
 			color: white;
 			padding: 8px 16px;
 			border-radius: 5px;
 		}
-	}
 </style>

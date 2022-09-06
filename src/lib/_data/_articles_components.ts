@@ -78,5 +78,21 @@ export const articlesComponents = [
 		component_type: 'captioned_images',
 		component_id: 48,
 		Article_id: 42
-	}
+	},
+	{
+		id: 43,
+		field: 'media',
+		order: 1,
+		component_type: 'captioned_images',
+		component_id: 49,
+		Article_id: 43
+	},
+	{
+		id: 44,
+		field: 'media',
+		order: 1,
+		component_type: 'captioned_images',
+		component_id: 50,
+		Article_id: 44
+	},
 ];

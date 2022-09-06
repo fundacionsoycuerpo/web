@@ -54,5 +54,13 @@ export const captionedImages = [
 	{
 		id: 48,
 		caption: 'afiche daria'
-	}
+	},
+	{
+		id: 49,
+		caption: 'logo ministerio secretaría general de gobierno'
+	},
+	{
+		id: 50,
+		caption: 'afiche somos cerro y centro yurani financioado por FFOIP'
+	},
 ];

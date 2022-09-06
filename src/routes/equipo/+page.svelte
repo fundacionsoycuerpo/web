@@ -1,6 +1,6 @@
 <script>
 	import Member from '$lib/Member.svelte';
-	export let members;
+	export let data;
 	let expanded = null;
 </script>
 
@@ -11,13 +11,13 @@
 <div class="inner-content">
 	<h1>Equipo Humano</h1>
 	<div class="members">
-		{#each members as member}
+		{#each data.members as member}
 			<Member {member} on:expand={(e) => (expanded = e.detail)} />
 		{/each}
 	</div>
 </div>
 
-<style style="scss">
+<style style="css">
 	.members {
 		display: flex;
 		flex-direction: column;
