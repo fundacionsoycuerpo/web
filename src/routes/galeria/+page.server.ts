@@ -1,5 +1,5 @@
 import { galleries } from '$lib/_data/_galerias';
 
-export function load({ params }) {
+export function load() {
 	return { galleries };
 }

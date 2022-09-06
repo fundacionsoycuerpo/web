@@ -62,5 +62,5 @@ export const captionedImages = [
 	{
 		id: 50,
 		caption: 'afiche somos cerro y centro yurani financioado por FFOIP'
-	},
+	}
 ];

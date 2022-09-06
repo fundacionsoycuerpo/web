@@ -9,13 +9,13 @@ import { uploadFile } from '$lib/_data/_upload_file';
 import { ufm } from '$lib/_data/_upload_file_morph';
 
 export async function load({ params }: { params: any }) {
-	let department = departments.find((department) => department.slug === params.slug);
+	const department = departments.find((department) => department.slug === params.slug);
 	if (!department) {
-		return
+		return;
 	}
-	let tag = tags.find((tag) => tag.id === department?.tag);
+	const tag = tags.find((tag) => tag.id === department?.tag);
 
-	let articles_ = articles
+	const articles_ = articles
 		.filter((article) =>
 			articlesTags.find((at) => at.article_id === article.id && at.tag_id === tag?.id)
 		)

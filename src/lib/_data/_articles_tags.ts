@@ -48,5 +48,5 @@ export const articlesTags = [
 		id: 10,
 		article_id: 44,
 		tag_id: 3
-	},
+	}
 ];

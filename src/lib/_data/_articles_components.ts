@@ -94,5 +94,5 @@ export const articlesComponents = [
 		component_type: 'captioned_images',
 		component_id: 50,
 		Article_id: 44
-	},
+	}
 ];

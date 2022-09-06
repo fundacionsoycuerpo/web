@@ -30,5 +30,5 @@ export function load() {
 					.map((at) => tags.find((tag) => tag.id === at.tag_id));
 				return formatArticle({ ...article, media, tags: tags_ });
 			})
-	}
+	};
 }
