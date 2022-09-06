@@ -1,21 +1,21 @@
 <script lang="ts">
-	export let apiUrl;
+	export let data: { apiUrl: string };
 	import axios from 'axios';
 	let sendingData = false;
 	let error = false;
-	async function onSubmit(e) {
+	async function onSubmit(e: any) {
 		const formData = new FormData(e.target);
-		const data = {};
+		const data_ = {} as { [key: string]: any };
 		for (let field of formData as any) {
 			const [key, value] = field;
-			data[key] = value;
+			data_[key] = value;
 		}
 
 		try {
 			sendingData = true;
 			error = false;
 			await axios
-				.post(`${apiUrl}/reg`, data, {
+				.post(`${data.apiUrl}/reg`, data_, {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json'

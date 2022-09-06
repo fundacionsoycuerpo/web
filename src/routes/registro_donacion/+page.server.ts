@@ -3,5 +3,5 @@ export async function get() {
 		apiUrl: process.env['API_URL']
 	};
 
-	return { body };
+	return body;
 }

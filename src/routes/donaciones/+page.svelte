@@ -1,5 +1,5 @@
-<script>
-	export let flow;
+<script lang="ts">
+	export let data: { flow: string };
 </script>
 
 <svelte:head>
@@ -13,17 +13,17 @@
 		Gracias por ser parte de estas iniciativas.
 	</p>
 
-	{#if flow}
+	{#if data.flow}
 		<section>
 			<h2>¡Hazte socia/socio!</h2>
 			<small>Contribuye con una donación mensual</small>
 			<a href="/registro_donacion"> Ir a registro </a>
 		</section>
 	{/if}
-	{#if flow}
+	{#if data.flow}
 		<section>
 			<h2>Donación única online</h2>
-			<a href={flow} target="_blank"> Donar </a>
+			<a href={data.flow} target="_blank"> Donar </a>
 			<small>*Serás redirigido al portal de pagos</small>
 		</section>
 	{/if}

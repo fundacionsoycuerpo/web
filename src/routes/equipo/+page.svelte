@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import Member from '$lib/Member.svelte';
-	export let data;
+	export let data: { members: any[] };
 	let expanded = null;
 </script>
 

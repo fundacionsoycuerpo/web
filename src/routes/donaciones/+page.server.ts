@@ -3,5 +3,5 @@ export async function get() {
 		flow: process.env['FLOW_URL']
 	};
 
-	return { body };
+	return body;
 }
