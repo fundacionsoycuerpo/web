@@ -1,15 +1,17 @@
+import { dev } from '$app/environment';
 import fs from 'fs';
 import path from 'path';
 import imageSize from 'image-size';
 import { galleries } from '$lib/_data/_galerias';
 
 function getImages(params: { slug: string }) {
+	let envPath = dev ? path.join('static', params.slug, 'gallery') : path.join(params.slug, 'gallery')
 	return fs
-		.readdirSync(path.join('static', params.slug, 'gallery'))
+		.readdirSync(envPath)
 		.filter((i) => i.includes('.jpg'))
 		.map((i) => {
 			const { width, height } = imageSize(
-				fs.readFileSync(path.join('static', params.slug, 'gallery', i))
+				fs.readFileSync(path.join(envPath, i))
 			);
 			return { src: i, height, width };
 		});
