@@ -5,7 +5,7 @@ import imageSize from 'image-size';
 import { galleries } from '$lib/_data/_galerias';
 
 function getImages(params: { slug: string }) {
-	let envPath = dev ? path.join('static', params.slug, 'gallery') : path.join(params.slug, 'gallery')
+	let envPath = dev ? path.join('static', params.slug, 'gallery') : path.join(__dirname, params.slug, 'gallery')
 	return fs
 		.readdirSync(envPath)
 		.filter((i) => i.includes('.jpg'))
