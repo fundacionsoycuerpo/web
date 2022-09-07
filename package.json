@@ -17,6 +17,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@playwright-testing-library/test": "^4.3.1",
 		"@playwright/test": "^1.25.0",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
