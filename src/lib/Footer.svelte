@@ -83,7 +83,7 @@
 	</nav>
 </footer>
 
-<style lang="scss">
+<style lang="css">
 	nav div.social {
 		display: flex;
 		flex-direction: row;
@@ -94,11 +94,12 @@
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
-		& > div {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
+	}
+
+	nav > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.home-anchor {
@@ -125,10 +126,11 @@
 		color: var(--contrast-text-color);
 		text-decoration: none;
 		margin-bottom: 1rem;
-		&:hover {
-			text-decoration: underline;
-			text-decoration-color: var(--contrast-text-color);
-		}
+	}
+
+	a:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--contrast-text-color);
 	}
 
 	footer {

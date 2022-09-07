@@ -1,5 +1,13 @@
-<script>
-	export let event;
+<script lang="ts">
+	export let event: {
+		img: string;
+		imgAlt: string;
+		title: string;
+		description: string;
+		date: string;
+		time: string;
+		location: string;
+	};
 </script>
 
 <article>
@@ -26,7 +34,7 @@
 	</div>
 </article>
 
-<style lang="scss">
+<style lang="css">
 	article {
 		display: flex;
 		width: 100%;
@@ -40,24 +48,23 @@
 		width: 100%;
 		flex-direction: column;
 		align-items: center;
+	}
+	.contentimg {
+		object-fit: contain;
+		object-position: top;
+		width: 100%;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	}
 
-		img {
-			object-fit: contain;
-			object-position: top;
-			width: 100%;
-			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-		}
+	.content .event-description {
+		padding: 20px;
+		text-align: center;
+	}
 
-		.content .event-description {
-			padding: 20px;
-			text-align: center;
-		}
-
-		.event-location {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
+	.content .event-location {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	:global(h3 + p) {
@@ -68,22 +75,23 @@
 		article {
 			justify-content: flex-start;
 		}
+
 		.content {
 			flex-direction: row;
 			align-items: flex-start;
+		}
 
-			img {
-				flex: 1 0 50%;
-				max-width: 50%;
-			}
+		.content img {
+			flex: 1 0 50%;
+			max-width: 50%;
+		}
 
-			.content .event-description {
-				text-align: start;
-				flex: 1 0 50%;
-			}
-			.content .event-location {
-				align-items: flex-start;
-			}
+		.content .event-description {
+			text-align: start;
+			flex: 1 0 50%;
+		}
+		.content .event-location {
+			align-items: flex-start;
 		}
 	}
 </style>

@@ -28,5 +28,25 @@ export const articlesTags = [
 		id: 6,
 		article_id: 6,
 		tag_id: 1
+	},
+	{
+		id: 7,
+		article_id: 40,
+		tag_id: 3
+	},
+	{
+		id: 8,
+		article_id: 42,
+		tag_id: 1
+	},
+	{
+		id: 9,
+		article_id: 43,
+		tag_id: 3
+	},
+	{
+		id: 10,
+		article_id: 44,
+		tag_id: 3
 	}
 ];

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { afterUpdate } from 'svelte';
 
-	const lazyLoad = (target) => {
+	const lazyLoad = (target: Element) => {
 		const io = new IntersectionObserver((entries, observer) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
@@ -19,16 +19,18 @@
 		io.observe(target);
 	};
 
-	export let images: { src: string; width: number; height: number }[], alt, source;
+	export let images: { src: string; width: number; height: number }[], alt: string, source: string;
 
-	const setStyle = (src) => {
+	const setStyle = (src: string) => {
 		const image = images.find((i) => src.includes(i.src));
-		if (window) {
+		if (window && image) {
 			if (window.matchMedia('(min-width: 600px)').matches) {
 				return `min-width:${(image.width * 200) / image.height}px;`;
 			} else {
 				const gallery = document.querySelector('.gallery');
-				return `min-height:${(image.height * gallery.clientWidth) / image.width}px`;
+				if (gallery) {
+					return `min-height:${(image.height * gallery.clientWidth) / image.width}px`;
+				}
 			}
 		}
 		return '';
@@ -36,8 +38,8 @@
 
 	afterUpdate(() => {
 		if (images.length) {
-			const targets = document.querySelectorAll('img.gallery-item');
-			targets.forEach((target: HTMLImageElement) => {
+			const targets = document.querySelectorAll('img.gallery-item') as NodeListOf<HTMLImageElement>;
+			targets.forEach((target) => {
 				target.onload = function () {
 					target.removeAttribute('style');
 					target.setAttribute('alt', alt);
@@ -58,7 +60,7 @@
 	{/if}
 </div>
 
-<style lang="scss">
+<style lang="css">
 	.gallery {
 		width: 100%;
 	}
@@ -67,17 +69,18 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		img {
-			position: relative;
-			width: 100%;
-			height: 100%;
-			min-height: 100px;
-			min-width: 50px;
-			margin: 2px;
-			background: lightgray;
-			object-fit: contain;
-			object-position: center;
-		}
+	}
+
+	section img {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		min-height: 100px;
+		min-width: 50px;
+		margin: 2px;
+		background: lightgray;
+		object-fit: contain;
+		object-position: center;
 	}
 
 	@media (min-width: 600px) {

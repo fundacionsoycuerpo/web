@@ -1,5 +1,5 @@
-<script>
-	export let project;
+<script lang="ts">
+	export let project: { color: string; link: string; title: string };
 </script>
 
 <a
@@ -8,7 +8,7 @@
 	href={project.link}>{project.title}</a
 >
 
-<style lang="scss">
+<style lang="css">
 	.project {
 		width: 100%;
 		display: flex;

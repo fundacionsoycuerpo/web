@@ -95,7 +95,27 @@ export const articles = [
 		title: 'Estreno DARIA en Fundación Soy Cuerpo',
 		published_at: '2022-04-20',
 		content:
-			'Del 29 de abril al 17 de mayo exhibiremos el videodanza **Daria** de la Red de Trabajadoras de las Danzas en fundacionsoycuerpo.cl, celebrando el mes de la danza.\n\nReseña:\n\n*Tejemos rituales desbordantes que sostienen la fragilidad de un futuro negado. En el encuentro ensayamos formas vitales de existencia, configuraciones políticas que toman forma de danzas, acumulación, suma de movimientos, traducción de saberes, mixtura de nuestras identidades en una red de acción política.*\n\n*Ritualizamos: hacemos de nuestro estar entrelazadas la potencia de transformar nuestros presentes, la potencia de transformar las historias compartidas en un Chile que se tensa, que grita, escupe y sangra. Ritualizamos: hacemos de nuestro estar juntes, un grito de guerra, un grito abigarrado.*\n\n*DARIA, es un testimonio danzado de nuestros ensayos, de nuestras prácticas políticas, de nuestras historias de las danzas. Una experiencia coreográfica audiovisual que emerge de nuestro quehacer colectivo. Es una prueba grupal y horizontal de creación como Red de las Trabajadoras de las Danzas, agrupación que nace a raíz del estallido de octubre de 2019.*\n\nA continuación puedes revisar el trailer:\n\n<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/iVEP4elSNhc?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+			'Del 29 de abril al 7 de mayo exhibiremos el videodanza **Daria** de la Red de Trabajadoras de las Danzas en fundacionsoycuerpo.cl, celebrando el mes de la danza.\n\nReseña:\n\n*Tejemos rituales desbordantes que sostienen la fragilidad de un futuro negado. En el encuentro ensayamos formas vitales de existencia, configuraciones políticas que toman forma de danzas, acumulación, suma de movimientos, traducción de saberes, mixtura de nuestras identidades en una red de acción política.*\n\n*Ritualizamos: hacemos de nuestro estar entrelazadas la potencia de transformar nuestros presentes, la potencia de transformar las historias compartidas en un Chile que se tensa, que grita, escupe y sangra. Ritualizamos: hacemos de nuestro estar juntes, un grito de guerra, un grito abigarrado.*\n\n*DARIA, es un testimonio danzado de nuestros ensayos, de nuestras prácticas políticas, de nuestras historias de las danzas. Una experiencia coreográfica audiovisual que emerge de nuestro quehacer colectivo. Es una prueba grupal y horizontal de creación como Red de las Trabajadoras de las Danzas, agrupación que nace a raíz del estallido de octubre de 2019.*\n\nA continuación puedes revisar el trailer:\n\n<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/iVEP4elSNhc?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+		gallery_url: '',
+		created_at: '2022-03-01 00:40:21.569+00',
+		updated_at: '2022-03-01 00:40:21.569+00'
+	},
+	{
+		id: 43,
+		title: 'Fundación Soy Cuerpo se adjudica FFOIP 2022',
+		published_at: '2022-07-04',
+		content:
+			'El viernes 01 de Julio se dio a conocer el listado de proyectos que se adjudicaron el Fondo de Fortalecimiento de Organizaciones de Interés Público 2022 (FFOIP). El Fondo fue adjudicado a Fundación Soy Cuerpo con el proyecto Somos Cerro, a realizar en conjunto con Vivero Cumbre, beneficiando en esta oportunidad a Yurani, Centro de Salud Comunitario. Estamos muy felices como fundación de poder contribuir al bienestar de nuestra comunidad.',
+		gallery_url: '',
+		created_at: '2022-03-01 00:40:21.569+00',
+		updated_at: '2022-03-01 00:40:21.569+00'
+	},
+	{
+		id: 44,
+		title: 'Somos Cerro para Centro Yurani',
+		published_at: '2022-09-05',
+		content:
+			'Estamos muy prontos a implementar el proyecto <b>SOMOS CERRO, Jornadas de Auto-cuidado en Espacios Naturales</b> para Centro Yurani. Financiado este año por el Fondo de Fortalecimiento de Organizaciones de Interés Público FFOIP 2022.\n\nContaremos con diferentes actividades de senderismo, práctica corporal, agroecologia y música en vivo.',
 		gallery_url: '',
 		created_at: '2022-03-01 00:40:21.569+00',
 		updated_at: '2022-03-01 00:40:21.569+00'

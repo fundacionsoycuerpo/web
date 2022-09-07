@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
-	export let slides = [];
+	export let slides: Array<{ imgSrc: string; imgAlt: string }> = [];
 	export let auto = true;
 	export let interval = 5000;
 
 	let cur = 0;
 
-	function next(e) {
+	function next() {
 		if (cur < slides.length - 1) {
 			cur = cur + 1;
 		} else {
@@ -33,7 +33,7 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style lang="css">
 	.extra-outer-wrapper {
 		width: 100vw;
 		height: 100%;

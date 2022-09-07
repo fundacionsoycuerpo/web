@@ -16,7 +16,7 @@
 	<span />
 </button>
 
-<style lang="scss">
+<style lang="css">
 	button {
 		padding: 10px;
 		border: 0;
@@ -36,13 +36,14 @@
 
 		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
 			background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+	}
 
-		&:first-child {
-			transform-origin: 0% 0%;
-		}
-		&:nth-last-child(2) {
-			transform-origin: 0% 100%;
-		}
+	span:first-child {
+		transform-origin: 0% 0%;
+	}
+
+	span:nth-last-child(2) {
+		transform-origin: 0% 100%;
 	}
 
 	/*
@@ -52,13 +53,15 @@
 		opacity: 1;
 		transform: rotate(45deg) translate(5px, -4px);
 		/* background: #232323; */
-		&:nth-last-child(2) {
-			opacity: 0;
-			transform: rotate(0deg) scale(0.2, 0.2);
-		}
-		&:nth-child(3) {
-			opacity: 1;
-			transform: rotate(-45deg) translate(-1px, 3px);
-		}
+	}
+
+	.open span:nth-last-child(2) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	
+	.open span:nth-child(3) {
+		opacity: 1;
+		transform: rotate(-45deg) translate(-1px, 3px);
 	}
 </style>
