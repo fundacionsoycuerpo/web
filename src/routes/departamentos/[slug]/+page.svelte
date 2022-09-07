@@ -1,9 +1,7 @@
 <script lang="ts">
 	import Article from '$lib/Article.svelte';
 
-	export let data:{department:any, articles:any[]}
-	// export let department:any;
-	// export let articles: any[];
+	export let data: { department: any; articles: any[] };
 </script>
 
 <svelte:head>

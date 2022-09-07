@@ -1,5 +1,5 @@
-<script>
-	export let project;
+<script lang="ts">
+	export let project: { color: string; link: string; title: string };
 </script>
 
 <a

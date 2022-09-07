@@ -1,7 +1,5 @@
 export async function get() {
-	const body = {
+	return {
 		flow: process.env['FLOW_URL']
 	};
-
-	return body;
 }

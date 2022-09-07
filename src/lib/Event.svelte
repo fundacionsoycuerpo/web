@@ -1,5 +1,13 @@
-<script>
-	export let event;
+<script lang="ts">
+	export let event: {
+		img: string;
+		imgAlt: string;
+		title: string;
+		description: string;
+		date: string;
+		time: string;
+		location: string;
+	};
 </script>
 
 <article>
@@ -67,7 +75,7 @@
 		article {
 			justify-content: flex-start;
 		}
-		
+
 		.content {
 			flex-direction: row;
 			align-items: flex-start;

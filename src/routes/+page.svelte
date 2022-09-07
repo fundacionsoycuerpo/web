@@ -4,8 +4,6 @@
 	import Event from '$lib/Event.svelte';
 
 	export let data: { articles: ArticleModel[]; events: any[] };
-	// export let articles: ArticleModel[];
-	// export let events;
 
 	let head_title = 'Fundación Soy Cuerpo';
 	let head_description =

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Member from '$lib/Member.svelte';
 	export let data: { members: any[] };
-	let expanded = null;
 </script>
 
 <svelte:head>
@@ -12,7 +11,7 @@
 	<h1>Equipo Humano</h1>
 	<div class="members">
 		{#each data.members as member}
-			<Member {member} on:expand={(e) => (expanded = e.detail)} />
+			<Member {member} />
 		{/each}
 	</div>
 </div>
