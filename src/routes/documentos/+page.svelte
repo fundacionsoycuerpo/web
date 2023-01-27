@@ -1,6 +1,10 @@
 <script>
 	export let documents = [
 		{
+			name: 'Organizaciones de las danzas en Chile durante 1990 -2020 - NIDPLA',
+			filename: 'organizaciones_danzas-NIDPLA.pdf'
+		},
+		{
 			name: 'Reflexiones Fundación Soy Cuerpo - 2021',
 			filename: 'reflexiones_2021_FSC.pdf'
 		},

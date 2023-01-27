@@ -94,5 +94,13 @@ export const articlesComponents = [
 		component_type: 'captioned_images',
 		component_id: 50,
 		Article_id: 44
+	},
+	{
+		id: 45,
+		field: 'media',
+		order: 1,
+		component_type: 'captioned_images',
+		component_id: 51,
+		Article_id: 45
 	}
 ];

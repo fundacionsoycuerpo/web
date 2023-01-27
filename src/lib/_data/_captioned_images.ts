@@ -62,5 +62,9 @@ export const captionedImages = [
 	{
 		id: 50,
 		caption: 'afiche somos cerro y centro yurani financioado por FFOIP'
+	},
+	{
+		id: 51,
+		caption: 'afiche lanzamiento "Organizaciones de las danzas en Chile durante 1990 -2020"'
 	}
 ];
