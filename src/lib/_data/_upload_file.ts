@@ -321,5 +321,22 @@ export const uploadFile = [
 		}
 		// created_at: '2021-08-29 21:41:36.754+00',
 		// updated_at: '2021-08-29 21:41:36.754+00'
+	},
+	{
+		id: 59,
+		name: 'logo_ministerio.jpeg',
+		hash: 'df75ced0343b48fcae7e7114d3ca33d6',
+		sha256: 'nOgF84tG-D6TgyFDO7dyD0WGr4V6Gs2A7q9xWDNNyM8',
+		ext: '.jpeg',
+		mime: 'image/jpeg',
+		size: 600,
+		url: 'https://res.cloudinary.com/fundacionsoycuerpo/image/upload/v1674845788/Afiche_Lanzamiento_otpumo.jpg',
+		provider: 'cloudinary',
+		provider_metadata: {
+			public_id: 'POST_FIJO_pr1jqe',
+			resource_type: 'image'
+		}
+		// created_at: '2021-08-29 21:41:36.754+00',
+		// updated_at: '2021-08-29 21:41:36.754+00'
 	}
 ];
