@@ -117,5 +117,12 @@ export const ufm = [
 		related_id: 51,
 		related_type: 'captioned_images',
 		field: 'image'
+	},
+	{
+		id: 52,
+		upload_file_id: 60,
+		related_id: 52,
+		related_type: 'captioned_images',
+		field: 'image'
 	}
 ];
