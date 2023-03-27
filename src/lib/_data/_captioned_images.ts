@@ -66,5 +66,9 @@ export const captionedImages = [
 	{
 		id: 51,
 		caption: 'afiche lanzamiento "Organizaciones de las danzas en Chile durante 1990 -2020"'
+	},
+	{
+		id: 52,
+		caption: 'miembros del cosoc'
 	}
 ];

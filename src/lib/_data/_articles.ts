@@ -130,5 +130,24 @@ export const articles = [
 		created_at: '2022-03-01 00:40:21.569+00',
 		updated_at: '2022-03-01 00:40:21.569+00'
 	},
+	{
+		id: 46,
+		title: 'Fundación Soy Cuerpo integra el COSOC de Parquemet',
+		published_at: '2023-03-01',
+		content:
+			`Como equipo de Fundación Soy Cuerpo les queremos contar que ya somos integrantes activxs del COSOC (Consejo de la Sociedad Civil) de Parquemet por el periodo 2022- 2025.
+			
+Nos encanta la idea de poder participar como organización que aporta desde su experiencia en las iniciativas y el funcionamiento de esta hermosa red de parques urbanos.
+
+Estamos trabajando para poder desarrollar juntxs un cotidiano más inclusivo, consciente y libre de violencias.
+			
+Agradecemos a nuestrxs compañerxs consejerxs por permitirnos recorrer este camino.
+
+Mas información en el siguiente <a target="_blank" href="https://parquemet.cl/noticias/parquemet-da-la-bienvenida-al-nuevo-cosoc-periodo-2022-2025/">enlace</a>
+`,
+		gallery_url: '',
+		created_at: '2022-03-01 00:40:21.569+00',
+		updated_at: '2022-03-01 00:40:21.569+00'
+	},
 
 ];
