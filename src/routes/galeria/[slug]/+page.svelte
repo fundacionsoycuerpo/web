@@ -1,8 +1,12 @@
 <script lang="ts">
 	import Gallery from '$lib/Gallery.svelte';
 
-	export let data: { gallery: any; images: any };
-	// export let gallery;
+	interface Props {
+		data: { gallery: any; images: any }; // export let gallery;
+	}
+
+	let { data = $bindable() }: Props = $props();
+	
 	// export let images;
 </script>
 

@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let project: { color: string; link: string; title: string };
+	interface Props {
+		project: { color: string; link: string; title: string };
+	}
+
+	let { project }: Props = $props();
 </script>
 
 <a

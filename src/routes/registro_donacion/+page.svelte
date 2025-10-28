@@ -1,8 +1,14 @@
 <script lang="ts">
-	export let data: { apiUrl: string };
+	import { preventDefault } from 'svelte/legacy';
+
 	import axios from 'axios';
-	let sendingData = false;
-	let error = false;
+	interface Props {
+		data: { apiUrl: string };
+	}
+
+	let { data }: Props = $props();
+	let sendingData = $state(false);
+	let error = $state(false);
 	async function onSubmit(e: any) {
 		const formData = new FormData(e.target);
 		const data_ = {} as { [key: string]: any };
@@ -37,7 +43,7 @@
 <div class="inner-content">
 	<h1>Registro de socia/socio</h1>
 
-	<form on:submit|preventDefault={onSubmit}>
+	<form onsubmit={preventDefault(onSubmit)}>
 		<label for="name"> Nombre </label>
 		<input type="text" name="name" />
 		<label for="email">Correo Electrónico</label>

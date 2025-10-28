@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let data:{galleries:any[]}
+	interface Props {
+		data: {galleries:any[]};
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>

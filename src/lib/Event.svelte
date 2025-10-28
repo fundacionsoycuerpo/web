@@ -1,5 +1,6 @@
 <script lang="ts">
-	export let event: {
+	interface Props {
+		event: {
 		img: string;
 		imgAlt: string;
 		title: string;
@@ -8,6 +9,9 @@
 		time: string;
 		location: string;
 	};
+	}
+
+	let { event }: Props = $props();
 </script>
 
 <article>

@@ -1,5 +1,5 @@
-<script>
-	export let documents = [
+<script lang="ts">
+	let { documents = [
 		{
 			name: 'Organizaciones de las danzas en Chile durante 1990 -2020 - NIDPLA',
 			filename: 'organizaciones_danzas-NIDPLA.pdf'
@@ -16,7 +16,7 @@
 			name: 'Reflexiones Fundación Soy Cuerpo - 2019',
 			filename: 'reflexiones_2019_FSC.pdf'
 		}
-	];
+	] } = $props();
 </script>
 
 <svelte:head>

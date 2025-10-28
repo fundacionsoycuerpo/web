@@ -10,14 +10,14 @@
 
 <header>
 	<Hamburguer />
-	<a aria-label="Ir al inicio" class="logo-link" href="/" on:click={close}>
+	<a aria-label="Ir al inicio" class="logo-link" href="/" onclick={close}>
 		<img
 			src="/img/2610_Fundacion_Soy_Cuerpo_D_01-60x60.png"
 			srcset="/img/2610_Fundacion_Soy_Cuerpo_D_01-60x60.png 1x, /img/2610_Fundacion_Soy_Cuerpo_D_01-120x120.png 2x, /img/2610_Fundacion_Soy_Cuerpo_D_01-240x240.png 4x"
 			alt="Logo"
 		/>
 	</a>
-	<a class="button" href="/donaciones" on:click={close}>Colabora</a>
+	<a class="button" href="/donaciones" onclick={close}>Colabora</a>
 </header>
 
 <style lang="css">

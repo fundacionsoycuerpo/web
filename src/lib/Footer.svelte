@@ -26,9 +26,9 @@
 								class="button"
 							/>
 						</div>
-						<div id="mce-responses" class="clear" />
-						<div class="response" id="mce-error-response" style="display:none" />
-						<div class="response" id="mce-success-response" style="display:none" />
+						<div id="mce-responses" class="clear"></div>
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
 					</div>
 					<div style="position: absolute; left: -5000px;" aria-hidden="true">
 						<input

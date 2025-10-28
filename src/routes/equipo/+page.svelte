@@ -1,6 +1,10 @@
 <script lang="ts">
 	import Member from '$lib/Member.svelte';
-	export let data: { members: any[] };
+	interface Props {
+		data: { members: any[] };
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>

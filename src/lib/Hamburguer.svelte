@@ -7,13 +7,13 @@
 </script>
 
 <button
-	on:click={toggle}
+	onclick={toggle}
 	class={$menuIsOpen ? 'open' : ''}
 	aria-label={$menuIsOpen ? 'Close menu' : 'Open menu'}
 >
-	<span />
-	<span />
-	<span />
+	<span></span>
+	<span></span>
+	<span></span>
 </button>
 
 <style lang="css">

@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let member: { avatar: any; name: string; role: string; email: string; bio: string };
+	interface Props {
+		member: { avatar: any; name: string; role: string; email: string; bio: string };
+	}
+
+	let { member }: Props = $props();
 </script>
 
 <div class="card">

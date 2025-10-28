@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let data: { flow: string };
+	interface Props {
+		data: { flow: string };
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>

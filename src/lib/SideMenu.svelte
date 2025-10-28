@@ -9,49 +9,49 @@
 <nav class={$menuIsOpen ? 'open' : ''}>
 	<ul>
 		<li>
-			<a href="/" on:click={toggle}>Inicio</a>
+			<a href="/" onclick={toggle}>Inicio</a>
 		</li>
 		<li>
-			<a href="/quienes_somos" on:click={toggle}>Quienes somos</a>
+			<a href="/quienes_somos" onclick={toggle}>Quienes somos</a>
 		</li>
 		<li>
-			<a href="/equipo" on:click={toggle}>Equipo</a>
+			<a href="/equipo" onclick={toggle}>Equipo</a>
 		</li>
 		<li>
-			<a href="/donaciones" on:click={toggle}>Donaciones</a>
+			<a href="/donaciones" onclick={toggle}>Donaciones</a>
 		</li>
 		<li>
-			<a href="/proyectos" on:click={toggle}>Proyectos</a>
+			<a href="/proyectos" onclick={toggle}>Proyectos</a>
 		</li>
 		<li id="deps">
 			<b>Departamentos</b>
 			<ul>
 				<li>
-					<a href="/departamentos/arte" on:click={toggle}>Arte</a>
+					<a href="/departamentos/arte" onclick={toggle}>Arte</a>
 				</li>
 				<li>
-					<a href="/departamentos/plataformas" on:click={toggle}>Plataformas</a>
+					<a href="/departamentos/plataformas" onclick={toggle}>Plataformas</a>
 				</li>
 				<li>
-					<a href="/departamentos/salud" on:click={toggle}>Salud</a>
+					<a href="/departamentos/salud" onclick={toggle}>Salud</a>
 				</li>
 			</ul>
 		</li>
 		<li>
-			<a href="/galeria" on:click={toggle}>Galería</a>
+			<a href="/galeria" onclick={toggle}>Galería</a>
 		</li>
 
 		<li>
-			<a href="/noticias" on:click={toggle}>Noticias</a>
+			<a href="/noticias" onclick={toggle}>Noticias</a>
 		</li>
 		<li>
-			<a href="/documentos" on:click={toggle}>Documentos</a>
+			<a href="/documentos" onclick={toggle}>Documentos</a>
 		</li>
 	</ul>
 </nav>
 
 {#if $menuIsOpen}
-	<div class="overlay" on:click={toggle} />
+	<div class="overlay" onclick={toggle}></div>
 {/if}
 
 <style lang="css">
