@@ -19,13 +19,6 @@
 
 	{#if data.flow}
 		<section>
-			<h2>¡Hazte socia/socio!</h2>
-			<small>Contribuye con una donación mensual</small>
-			<a href="/registro_donacion"> Ir a registro </a>
-		</section>
-	{/if}
-	{#if data.flow}
-		<section>
 			<h2>Donación única online</h2>
 			<a href={data.flow} target="_blank"> Donar </a>
 			<small>*Serás redirigido al portal de pagos</small>
@@ -50,7 +43,9 @@
 	.card {
 		display: flex;
 		flex-direction: column;
-		box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 2px 4px 0 rgba(14, 30, 37, 0.12);
+		box-shadow:
+			0 0 0 1px rgba(255, 255, 255, 0.1),
+			0 2px 4px 0 rgba(14, 30, 37, 0.12);
 		transition: 0.3s;
 		padding: 1rem;
 		border-radius: 5px;
