@@ -1,10 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	export let slides: Array<{ imgSrc: string; imgAlt: string }> = [];
-	export let auto = true;
-	export let interval = 5000;
+	interface Props {
+		slides?: Array<{ imgSrc: string; imgAlt: string }>;
+		auto?: boolean;
+		interval?: number;
+	}
 
-	let cur = 0;
+	let { slides = [], auto = true, interval = 5000 }: Props = $props();
+
+	let cur = $state(0);
 
 	function next() {
 		if (cur < slides.length - 1) {

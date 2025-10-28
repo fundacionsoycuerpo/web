@@ -1,14 +1,19 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 	import Nav from '$lib/Nav.svelte';
 	import SideMenu from '$lib/SideMenu.svelte';
 	import Footer from '$lib/Footer.svelte';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <Nav />
 <SideMenu />
 <main>
-	<slot />
+	{@render children?.()}
 </main>
 <Footer />
 

@@ -1,7 +1,11 @@
 <script lang="ts">
 	import Article from '$lib/Article.svelte';
 	import type { Article as ArticleModel } from '$types/Article';
-	export let data: { articles: ArticleModel[] };
+	interface Props {
+		data: { articles: ArticleModel[] };
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>

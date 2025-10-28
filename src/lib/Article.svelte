@@ -1,6 +1,10 @@
 <script lang="ts">
 	import type { Article } from '$types/Article';
-	export let article: Article;
+	interface Props {
+		article: Article;
+	}
+
+	let { article }: Props = $props();
 </script>
 
 <article>

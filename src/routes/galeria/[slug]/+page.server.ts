@@ -8,9 +8,8 @@ function getImages(params: { slug: string }) {
 		.readdirSync(path.join('static', params.slug, 'gallery'))
 		.filter((i) => i.includes('.jpg'))
 		.map((i) => {
-			const { width, height } = imageSize(
-				fs.readFileSync(path.join('static', params.slug, 'gallery', i))
-			);
+			const imagePath = path.join('static', params.slug, 'gallery', i);
+			const { width, height } = imageSize(imagePath);
 			return { src: i, height, width };
 		});
 }

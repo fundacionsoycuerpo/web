@@ -3,7 +3,11 @@
 	import Article from '$lib/Article.svelte';
 	import Event from '$lib/Event.svelte';
 
-	export let data: { articles: ArticleModel[]; events: any[] };
+	interface Props {
+		data: { articles: ArticleModel[]; events: any[] };
+	}
+
+	let { data }: Props = $props();
 
 	let head_title = 'Fundación Soy Cuerpo';
 	let head_description =

@@ -1,7 +1,11 @@
 <script lang="ts">
 	import Article from '$lib/Article.svelte';
 
-	export let data: { department: any; articles: any[] };
+	interface Props {
+		data: { department: any; articles: any[] };
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>
