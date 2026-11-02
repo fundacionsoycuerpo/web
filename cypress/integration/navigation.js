@@ -62,7 +62,7 @@ describe('Fundación Soy Cuerpo - Navigation', () => {
 			cy.url().should('include', '/departamentos/plataformas');
 		});
 
-		it('navigates to /departamentos/arte', () => {
+		it('navigates to /departamentos/salud', () => {
 			cy.get('nav.open').findByRole('link', { name: /salud/i }).click({ scrollBehavior: 'center' });
 			cy.url().should('include', '/departamentos/salud');
 		});
@@ -139,7 +139,7 @@ describe('Fundación Soy Cuerpo - Navigation', () => {
 			cy.url().should('include', '/departamentos/plataformas');
 		});
 
-		it('navigates to /departamentos/arte', () => {
+		it('navigates to /departamentos/salud', () => {
 			cy.get('footer')
 				.findByRole('link', { name: /departamento de salud/i })
 				.scrollIntoView()
