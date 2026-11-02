@@ -19,10 +19,12 @@ describe('Fundación Soy Cuerpo - Content', () => {
 		cy.findByRole('heading', { name: /equipo humano/i, level: 1 }).should('exist');
 	});
 
+	// La sección "¡Hazte socia/socio!" fue eliminada intencionalmente en el PR #67
+	// (migración a SvelteKit 2 / Svelte 5). Su link apuntaba a /registro_donacion,
+	// ruta que no existe, así que no se restaura: el test refleja el estado real.
 	it('/donaciones', () => {
 		cy.visit('/donaciones');
 		cy.findByRole('heading', { name: /donaciones/i, level: 1 }).should('exist');
-		cy.findByRole('heading', { name: /¡Hazte socia\/socio!/i }).should('exist');
 		cy.findByRole('heading', { name: /donación única online/i }).should('exist');
 		cy.findByRole('heading', {
 			name: /donación por transferencia bancaria/i
