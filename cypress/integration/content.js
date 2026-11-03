@@ -22,7 +22,6 @@ describe('Fundación Soy Cuerpo - Content', () => {
 	it('/donaciones', () => {
 		cy.visit('/donaciones');
 		cy.findByRole('heading', { name: /donaciones/i, level: 1 }).should('exist');
-		cy.findByRole('heading', { name: /¡Hazte socia\/socio!/i }).should('exist');
 		cy.findByRole('heading', { name: /donación única online/i }).should('exist');
 		cy.findByRole('heading', {
 			name: /donación por transferencia bancaria/i

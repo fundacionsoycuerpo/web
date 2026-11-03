@@ -4,8 +4,30 @@ describe('Fundación Soy Cuerpo - Navigation', () => {
 	});
 
 	describe('side menu navigation', () => {
+		// Svelte hidrata de forma asíncrona. En un load en frío (o en CI) el click
+		// puede llegar antes de que el handler del botón esté adjunto: se pierde y
+		// `nav` nunca recibe la clase `open`. Reintentamos el click acotadamente
+		// hasta que el menú efectivamente abra.
+		function openSideMenu(attempt = 0) {
+			const MAX_ATTEMPTS = 4;
+
+			cy.findByRole('button', { name: /open menu/i })
+				.should('be.visible')
+				.click();
+
+			cy.get('body').then(($body) => {
+				if ($body.find('nav.open').length) return;
+
+				if (attempt >= MAX_ATTEMPTS) {
+					throw new Error(`El menú lateral no abrió tras ${MAX_ATTEMPTS} intentos`);
+				}
+
+				openSideMenu(attempt + 1);
+			});
+		}
+
 		beforeEach(() => {
-			cy.findByRole('button', { name: /open menu/i }).click();
+			openSideMenu();
 		});
 
 		it('navigates to /', () => {
@@ -62,7 +84,7 @@ describe('Fundación Soy Cuerpo - Navigation', () => {
 			cy.url().should('include', '/departamentos/plataformas');
 		});
 
-		it('navigates to /departamentos/arte', () => {
+		it('navigates to /departamentos/salud', () => {
 			cy.get('nav.open').findByRole('link', { name: /salud/i }).click({ scrollBehavior: 'center' });
 			cy.url().should('include', '/departamentos/salud');
 		});
@@ -139,7 +161,7 @@ describe('Fundación Soy Cuerpo - Navigation', () => {
 			cy.url().should('include', '/departamentos/plataformas');
 		});
 
-		it('navigates to /departamentos/arte', () => {
+		it('navigates to /departamentos/salud', () => {
 			cy.get('footer')
 				.findByRole('link', { name: /departamento de salud/i })
 				.scrollIntoView()
