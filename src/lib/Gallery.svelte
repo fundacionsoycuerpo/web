@@ -1,61 +1,31 @@
-<!-- @migration-task Error while migrating Svelte code: Can't migrate code with afterUpdate. Please migrate by hand. -->
 <script lang="ts">
-	import { afterUpdate } from 'svelte';
+	interface Props {
+		images: { src: string; width: number; height: number }[];
+		/** Se conserva para no romper el `bind:alt` del padre, pero no se usa:
+		 *  el <h1> de la página ya nombra el evento, así que las fotos son
+		 *  decorativas. Repetir el mismo texto 84 veces solo hace que un
+		 *  lector de pantalla enumere 84 frases idénticas.
+		 *  El fix real es un alt por foto desde Strapi. */
+		alt: string;
+		source: string;
+	}
 
-	const lazyLoad = (target: Element) => {
-		const io = new IntersectionObserver((entries, observer) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					const img = entry.target;
-					const src = img.getAttribute('data-lazy');
-					if (src) {
-						img.setAttribute('style', setStyle(src));
-						img.setAttribute('src', src);
-						img.removeAttribute('data-lazy');
-					}
-					observer.disconnect();
-				}
-			});
-		});
-		io.observe(target);
-	};
-
-	export let images: { src: string; width: number; height: number }[], alt: string, source: string;
-
-	const setStyle = (src: string) => {
-		const image = images.find((i) => src.includes(i.src));
-		if (window && image) {
-			if (window.matchMedia('(min-width: 600px)').matches) {
-				return `min-width:${(image.width * 200) / image.height}px;`;
-			} else {
-				const gallery = document.querySelector('.gallery');
-				if (gallery) {
-					return `min-height:${(image.height * gallery.clientWidth) / image.width}px`;
-				}
-			}
-		}
-		return '';
-	};
-
-	afterUpdate(() => {
-		if (images.length) {
-			const targets = document.querySelectorAll('img.gallery-item') as NodeListOf<HTMLImageElement>;
-			targets.forEach((target) => {
-				target.onload = function () {
-					target.removeAttribute('style');
-					target.setAttribute('alt', alt);
-				};
-				lazyLoad(target);
-			});
-		}
-	});
+	let { images, source }: Props = $props();
 </script>
 
 <div class="gallery">
 	{#if images && images.length}
 		<section>
-			{#each images as image, i}
-				<img class="gallery-item" data-lazy="/{source}/gallery/{image.src}" alt="" />
+			{#each images as image (image.src)}
+				<img
+					class="gallery-item"
+					src="/{source}/gallery/{image.src}"
+					alt=""
+					width={image.width}
+					height={image.height}
+					loading="lazy"
+					decoding="async"
+				/>
 			{/each}
 		</section>
 	{/if}
@@ -74,23 +44,21 @@
 
 	section img {
 		position: relative;
-		width: 100%;
-		height: 100%;
-		min-height: 100px;
-		min-width: 50px;
+		display: block;
+		width: auto;
+		height: 200px;
+		min-width: 100px;
 		margin: 2px;
 		background: lightgray;
 		object-fit: contain;
 		object-position: center;
 	}
 
-	@media (min-width: 600px) {
+	@media (max-width: 599px) {
 		section img {
-			position: relative;
-			height: 200px;
-			width: auto;
-			min-height: 200px;
-			min-width: 100px;
+			width: 100%;
+			height: auto;
+			min-width: 50px;
 		}
 	}
 </style>
