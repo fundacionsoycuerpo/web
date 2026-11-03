@@ -5,6 +5,6 @@ yarn-error.log
 build
 .svelte
 .svelte-kit
-.vercel
 
-/functions
+# Netlify: adapter-netlify genera este directorio en cada build
+.netlify
