@@ -19,11 +19,10 @@
 	}
 
 	onMount(() => {
-		if (auto) {
-			setInterval(() => {
-				next();
-			}, interval);
-		}
+		if (!auto) return;
+
+		const id = setInterval(next, interval);
+		return () => clearInterval(id);
 	});
 </script>
 
