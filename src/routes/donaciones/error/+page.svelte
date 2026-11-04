@@ -20,6 +20,7 @@
 	img {
 		flex: 0 0 200px;
 		width: 200px;
+		height: auto;
 		margin-left: auto;
 		margin-right: auto;
 	}

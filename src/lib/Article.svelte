@@ -38,6 +38,10 @@
 <style lang="css">
 	img {
 		width: 100%;
+		/* height:auto respeta la proporcion que declaran los atributos
+		   width/height. Sin esto el atributo height gana y la imagen se
+		   estira a su altura natural aunque el CSS la limite a 200px. */
+		height: auto;
 		object-fit: contain;
 		object-position: center;
 		margin-bottom: 2rem;
@@ -65,6 +69,7 @@
 		img {
 			width: 200px;
 			min-width: 200px;
+			height: auto;
 			margin-right: 2rem;
 			margin-bottom: 0;
 		}

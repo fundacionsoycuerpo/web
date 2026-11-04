@@ -106,6 +106,7 @@
 	section.events .event img {
 		margin-top: 20px;
 		width: 100%;
+		height: auto;
 	}
 	section.events .event a,
 	section.projects .project a {
