@@ -9,7 +9,7 @@ import { ufm } from '$lib/_data/_upload_file_morph';
 
 export function load() {
 	return {
-		articles: articles
+		articles: [...articles]
 			.sort((a, b) =>
 				a.published_at > b.published_at ? -1 : a.published_at < b.published_at ? 1 : 0
 			)
