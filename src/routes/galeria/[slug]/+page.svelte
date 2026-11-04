@@ -28,10 +28,7 @@
 </svelte:head>
 
 <div class="container">
-	<div
-		class="image"
-		style:--cover-ratio={data.cover ? `${data.cover.width} / ${data.cover.height}` : undefined}
-	>
+	<div class="image">
 		<img
 			class="gallery-item"
 			src="/{data.gallery.slug}/portada.jpg"
@@ -60,22 +57,17 @@
 	}
 
 	.image img {
+		/* El hero usa siempre el 100% del ancho. La altura sale de la
+		   proporcion natural de la imagen, que ahora viene declarada en los
+		   atributos width/height: el navegador la conoce antes de descargar,
+		   reserva el espacio y no hay salto (CLS). */
+		display: block;
 		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
+		height: auto;
 	}
 
 	.image {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		max-height: 70vh;
-		/* Reserva la proporcion real de portada.jpg antes de que descargue,
-		   asi el contenido de abajo no se desplaza (CLS).
-		   Sin width/height conocidos no hay aspect-ratio: cae en un 16:9. */
-		aspect-ratio: var(--cover-ratio, 16 / 9);
-		overflow: hidden;
+		width: 100%;
 	}
 
 	.gallery {
