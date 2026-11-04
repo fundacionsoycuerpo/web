@@ -4,19 +4,22 @@
 	let projects = [
 		{
 			title: 'El Cuerpo de la Memoria',
-			description: 'lorem',
+			description:
+				'Encuentro que reflexiona desde el cuerpo y su existencia saludable, en armonía con su historia, reivindicando su memoria y visibilizando la emancipación de nuestro territorio cuerpo.',
 			link: '/proyectos/el_cuerpo_de_la_memoria',
 			color: 'rgba(206, 105, 138, 0.3)'
 		},
 		{
 			title: 'Somos Cerro',
-			description: 'lorem',
+			description:
+				'Primera Jornada de auto-cuidado en espacios naturales, una invitación a habitar nuestro territorio corporal y geográfico.',
 			link: '/proyectos/somos_cerro',
 			color: 'rgba(196, 253, 213, 0.3)'
 		},
 		{
 			title: 'Cuerpo territorio',
-			description: 'lorem',
+			description:
+				'Talleres virtuales enfocados en fomentar el desarrollo saludable y sustentable del ser humano, ofreciendo a la comunidad un espacio inclusivo para el auto-cuidado y conocimiento personal.',
 			link: '/proyectos/cuerpo_territorio',
 			color: 'rgba(255, 191, 176, 0.3)'
 		}

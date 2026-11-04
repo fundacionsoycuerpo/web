@@ -1,3 +1,4 @@
+import { error } from '@sveltejs/kit';
 import fs from 'fs';
 import path from 'path';
 import imageSize from 'image-size';
@@ -17,7 +18,7 @@ function getImages(params: { slug: string }) {
 export function load({ params }: { params: { slug: string } }) {
 	const gallery = galleries.find((g) => g.slug === params.slug);
 	if (!gallery) {
-		return { status: 404, error: new Error('Page Not found') };
+		error(404, 'Page Not found');
 	}
 
 	return { gallery, images: getImages(params) };
