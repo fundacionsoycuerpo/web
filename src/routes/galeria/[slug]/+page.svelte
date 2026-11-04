@@ -28,8 +28,18 @@
 </svelte:head>
 
 <div class="container">
-	<div class="image">
-		<img class="gallery-item" src="/{data.gallery.slug}/portada.jpg" alt="Background" />
+	<div
+		class="image"
+		style:--cover-ratio={data.cover ? `${data.cover.width} / ${data.cover.height}` : undefined}
+	>
+		<img
+			class="gallery-item"
+			src="/{data.gallery.slug}/portada.jpg"
+			width={data.cover?.width}
+			height={data.cover?.height}
+			alt=""
+			fetchpriority="high"
+		/>
 	</div>
 	<div class="inner-content">
 		<h1>{data.gallery.content_title}</h1>
@@ -61,6 +71,11 @@
 		align-items: center;
 		justify-content: center;
 		max-height: 70vh;
+		/* Reserva la proporcion real de portada.jpg antes de que descargue,
+		   asi el contenido de abajo no se desplaza (CLS).
+		   Sin width/height conocidos no hay aspect-ratio: cae en un 16:9. */
+		aspect-ratio: var(--cover-ratio, 16 / 9);
+		overflow: hidden;
 	}
 
 	.gallery {

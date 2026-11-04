@@ -11,7 +11,14 @@
 	<small>{article.published_at}</small>
 	<h3>{article.title}</h3>
 	<div class="content">
-		<img src={article.media.image?.url} alt={article.media.caption} />
+		<img
+			src={article.media.image?.url}
+			alt={article.media.caption}
+			width={article.media.image?.width}
+			height={article.media.image?.height}
+			loading="lazy"
+			decoding="async"
+		/>
 		<div>
 			{@html article.content}
 			{#if article.tags && article.tags.length}

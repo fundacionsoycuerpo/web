@@ -20,5 +20,11 @@ export function load({ params }: { params: { slug: string } }) {
 		return { status: 404, error: new Error('Page Not found') };
 	}
 
-	return { gallery, images: getImages(params) };
+	// Portada del hero: se mide en build con el mismo image-size que las fotos
+	// de la galería. Sin width/height el navegador no reserva la altura y todo
+	// el contenido de abajo salta cuando la imagen termina de cargar.
+	const coverPath = path.join('static', params.slug, 'portada.jpg');
+	const cover = fs.existsSync(coverPath) ? imageSize(coverPath) : undefined;
+
+	return { gallery, images: getImages(params), cover };
 }

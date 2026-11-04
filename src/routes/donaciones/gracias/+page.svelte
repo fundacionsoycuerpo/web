@@ -4,7 +4,7 @@
 
 <div class="inner-content">
 	<div class="thanks">
-		<img src="/img/logo_bg.jpg" alt="Logo fundacion soy cuerpo" />
+		<img src="/img/logo_bg.jpg" alt="Logo fundacion soy cuerpo" width="2019" height="2018" />
 		<div>
 			<h1>¡Gracias por tu aporte!</h1>
 			<p>

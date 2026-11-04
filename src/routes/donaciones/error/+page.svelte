@@ -4,7 +4,7 @@
 
 <div class="inner-content">
 	<div class="error">
-		<img src="/img/logo_bg.jpg" alt="Logo fundacion soy cuerpo" />
+		<img src="/img/logo_bg.jpg" alt="Logo fundacion soy cuerpo" width="2019" height="2018" />
 		<div>
 			<h1>¡Oh!</h1>
 			<p>Hubo un error en el proceso de donación. Te agradecemos intentar nuevamente.</p>

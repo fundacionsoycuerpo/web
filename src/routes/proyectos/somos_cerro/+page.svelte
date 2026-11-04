@@ -14,7 +14,7 @@
 			<div class="event">
 				<h2>Somos Cerro 2019</h2>
 				<a href="/galeria/2019_12_21_somos_cerro">Ir a la galería</a>
-				<img src="/img/afiche_somos_cerro.jpg" alt="" />
+				<img src="/img/afiche_somos_cerro.jpg" alt="" width="940" height="788" />
 			</div>
 		</div>
 	</section>
