@@ -63,6 +63,9 @@
 		   reserva el espacio y no hay salto (CLS). */
 		display: block;
 		width: 100%;
+		/* app.css limita todos los <img> a min(55rem, 100%). El hero tiene que
+		   ocupar el ancho completo, asi que se anula ese tope. */
+		max-width: none;
 		height: auto;
 	}
 
