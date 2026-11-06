@@ -35,7 +35,7 @@
 		</div>
 	</section>
 	<section class="big-banner">
-		<img src="/img/colabora_-_generico2.png" alt="Afiche colaboración" />
+		<img src="/img/colabora_-_generico2.png" alt="Afiche colaboración" width="940" height="788" />
 	</section>
 </div>
 

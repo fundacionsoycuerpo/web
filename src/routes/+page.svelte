@@ -54,16 +54,16 @@
 		<section class="partners">
 			<h2>Alianzas y Colaboraciones</h2>
 			<div class="partners-list">
-				<img src="/img/logos_ext/centro_cultural_espana.jpg" alt="Logo centro cultural de españa" />
-				<img src="/img/logos_ext/sendero_de_chile.png" alt="Logo fundación sendero de chile" />
-				<img src="/img/logos_ext/coanil.png" alt="Logo fundación coanil" />
-				<img src="/img/logos_ext/somos_yoga.jpg" alt="Logo fundación somos yoga" />
-				<img src="/img/logos_ext/museo_de_la_memoria.svg" alt="Logo museo de la memoria" />
+				<img src="/img/logos_ext/centro_cultural_espana.jpg" alt="Logo centro cultural de españa" width="700" height="118" />
+				<img src="/img/logos_ext/sendero_de_chile.png" alt="Logo fundación sendero de chile" width="906" height="301" />
+				<img src="/img/logos_ext/coanil.png" alt="Logo fundación coanil" width="615" height="292" />
+				<img src="/img/logos_ext/somos_yoga.jpg" alt="Logo fundación somos yoga" width="641" height="641" />
+				<img src="/img/logos_ext/museo_de_la_memoria.svg" alt="Logo museo de la memoria" width="130" height="80" />
 			</div>
 		</section>
 
 		<section class="big-banner">
-			<img src="/img/colabora_-_generico2.png" alt="Afiche colaboración" />
+			<img src="/img/colabora_-_generico2.png" alt="Afiche colaboración" width="940" height="788" />
 		</section>
 	</div>
 </div>

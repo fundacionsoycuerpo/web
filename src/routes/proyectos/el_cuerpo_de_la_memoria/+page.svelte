@@ -16,12 +16,12 @@
 			<div class="event">
 				<h2>El Cuerpo de la Memoria 2019</h2>
 				<a href="/galeria/2019_09_05_el_cuerpo_de_la_memoria">Ir a la galería</a>
-				<img src="/img/afiche_el_cuerpo_de_la_memoria.jpg" alt="" />
+				<img src="/img/afiche_el_cuerpo_de_la_memoria.jpg" alt="" width="679" height="960" />
 			</div>
 
 			<div class="event">
 				<h2>El Cuerpo de la Memoria 2020</h2>
-				<img src="/img/el_cuerpo_de_la_memoria_2020.jpg" alt="" />
+				<img src="/img/el_cuerpo_de_la_memoria_2020.jpg" alt="" width="913" height="1280" />
 			</div>
 		</div>
 	</section>
@@ -118,6 +118,7 @@
 	section.events .event img {
 		margin-top: 20px;
 		width: 100%;
+		height: auto;
 	}
 
 	section.events .event a,

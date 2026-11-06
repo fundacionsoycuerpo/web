@@ -8,7 +8,14 @@
 
 <div class="card">
 	<div class="info">
-		<img src={member.avatar.image.url} alt={member.avatar.caption} />
+		<img
+			src={member.avatar.image.url}
+			alt={member.avatar.caption}
+			width={member.avatar.image.width}
+			height={member.avatar.image.height}
+			loading="lazy"
+			decoding="async"
+		/>
 		<div class="main-info">
 			<span>
 				<b>{member.name}</b>

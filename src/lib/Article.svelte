@@ -11,7 +11,14 @@
 	<small>{article.published_at}</small>
 	<h3>{article.title}</h3>
 	<div class="content">
-		<img src={article.media.image?.url} alt={article.media.caption} />
+		<img
+			src={article.media.image?.url}
+			alt={article.media.caption}
+			width={article.media.image?.width}
+			height={article.media.image?.height}
+			loading="lazy"
+			decoding="async"
+		/>
 		<div>
 			{@html article.content}
 			{#if article.tags && article.tags.length}
@@ -31,6 +38,10 @@
 <style lang="css">
 	img {
 		width: 100%;
+		/* height:auto respeta la proporcion que declaran los atributos
+		   width/height. Sin esto el atributo height gana y la imagen se
+		   estira a su altura natural aunque el CSS la limite a 200px. */
+		height: auto;
 		object-fit: contain;
 		object-position: center;
 		margin-bottom: 2rem;
@@ -58,6 +69,7 @@
 		img {
 			width: 200px;
 			min-width: 200px;
+			height: auto;
 			margin-right: 2rem;
 			margin-bottom: 0;
 		}

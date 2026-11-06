@@ -57,6 +57,7 @@
 		object-fit: contain;
 		object-position: top;
 		width: 100%;
+		height: auto;
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	}
 

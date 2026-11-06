@@ -51,6 +51,8 @@
 					src="/img/2610_Fundacion_Soy_Cuerpo_D_01-120x120.png"
 					srcset="/img/2610_Fundacion_Soy_Cuerpo_D_01-120x120.png 1x,/img/2610_Fundacion_Soy_Cuerpo_D_01-240x240.png 2x, /img/2610_Fundacion_Soy_Cuerpo_D_01-480x480.png 4x"
 					alt="Logo"
+					width="120"
+					height="120"
 				/>
 				<span class="home-anchor">Inicio</span>
 			</a>
@@ -71,13 +73,13 @@
 		</div>
 		<div class="social">
 			<a href="https://www.facebook.com/fundacionsoycuerpo">
-				<img src="/svg/facebook.svg" alt="Facebook Logo" />
+				<img src="/svg/facebook.svg" alt="Facebook Logo" width="512" height="512" />
 			</a>
 			<a href="https://www.instagram.com/fundacionsoycuerpo">
-				<img src="/svg/instagram.svg" alt="Instagram Logo" />
+				<img src="/svg/instagram.svg" alt="Instagram Logo" width="512" height="512" />
 			</a>
 			<a href="https://fundacionsoycuerpo.cl/youtube" style="margin-left:10px;">
-				<img src="/svg/youtube.svg" alt="Youtube Logo" />
+				<img src="/svg/youtube.svg" alt="Youtube Logo" width="310" height="310" />
 			</a>
 		</div>
 	</nav>
