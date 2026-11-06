@@ -28,15 +28,12 @@
 </svelte:head>
 
 <div class="container">
-	<div class="image">
-		<img
-			class="gallery-item"
-			src="/{data.gallery.slug}/portada.jpg"
-			width={data.cover?.width}
-			height={data.cover?.height}
-			alt=""
-			fetchpriority="high"
-		/>
+	<div
+		class="image"
+		style:--cover-w={data.cover?.width}
+		style:--cover-h={data.cover?.height}
+	>
+		<img class="gallery-item" src="/{data.gallery.slug}/portada.jpg" alt="" fetchpriority="high" />
 	</div>
 	<div class="inner-content">
 		<h1>{data.gallery.content_title}</h1>
@@ -56,21 +53,28 @@
 		grid-template-columns: 1fr;
 	}
 
-	.image img {
-		/* El hero usa siempre el 100% del ancho. La altura sale de la
-		   proporcion natural de la imagen, que ahora viene declarada en los
-		   atributos width/height: el navegador la conoce antes de descargar,
-		   reserva el espacio y no hay salto (CLS). */
-		display: block;
-		width: 100%;
-		/* app.css limita todos los <img> a min(55rem, 100%). El hero tiene que
-		   ocupar el ancho completo, asi que se anula ese tope. */
-		max-width: none;
-		height: auto;
+	.image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-height: 70vh;
+		/* Reserva la altura exacta que tendra la portada antes de descargarla.
+		   Reproduce la cuenta que hace produccion: ancho disponible (55rem =
+		   el tope de app.css) escalado por la proporcion real del archivo,
+		   con el mismo tope de 70vh. Las dimensiones vienen medidas en build
+		   desde el archivo (ver +page.server.ts), no estan hardcodeadas.
+		   Sin ese dato cae en 16/9. */
+		min-height: min(
+			calc(55rem * var(--cover-h, 9) / var(--cover-w, 16)),
+			70vh
+		);
 	}
 
-	.image {
+	.image img {
 		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
 	}
 
 	.gallery {
