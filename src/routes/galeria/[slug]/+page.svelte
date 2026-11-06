@@ -57,17 +57,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		/* Misma caja que termina ocupando la portada: 100% del ancho, con el
+		   tope de 55rem que impone app.css, y centrada.
+		   Sobre esa caja se declara la proporcion real del archivo, asi el
+		   navegador reserva la altura final antes de descargar la imagen y el
+		   contenido de abajo no se desplaza.
+		   Las dimensiones vienen medidas en build desde el archivo (ver
+		   +page.server.ts), no estan hardcodeadas. Sin ese dato cae en 16/9. */
+		width: 100%;
+		max-width: min(55rem, 100%);
+		margin-left: auto;
+		margin-right: auto;
+		aspect-ratio: var(--cover-w, 16) / var(--cover-h, 9);
 		max-height: 70vh;
-		/* Reserva la altura exacta que tendra la portada antes de descargarla.
-		   Reproduce la cuenta que hace produccion: ancho disponible (55rem =
-		   el tope de app.css) escalado por la proporcion real del archivo,
-		   con el mismo tope de 70vh. Las dimensiones vienen medidas en build
-		   desde el archivo (ver +page.server.ts), no estan hardcodeadas.
-		   Sin ese dato cae en 16/9. */
-		min-height: min(
-			calc(55rem * var(--cover-h, 9) / var(--cover-w, 16)),
-			70vh
-		);
 	}
 
 	.image img {
