@@ -2,7 +2,7 @@
 	import Gallery from '$lib/Gallery.svelte';
 
 	interface Props {
-		data: { gallery: any; images: any }; // export let gallery;
+		data: { gallery: any; images: any; cover?: { width: number; height: number } };
 	}
 
 	let { data = $bindable() }: Props = $props();
