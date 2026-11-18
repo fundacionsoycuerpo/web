@@ -4,13 +4,25 @@ import path from 'path';
 import imageSize from 'image-size';
 import { galleries } from '$lib/_data/_galerias';
 
-function getImages(params: { slug: string }) {
+function getImages(slug: string) {
+	const dir = path.join('static', slug, 'gallery');
+
+	// El load ya validó que el slug exista en _galerias, pero eso no garantiza
+	// que la carpeta de fotos exista en disco. Sin esta guarda, declarar una
+	// galería nueva antes de subir las fotos rompe el build COMPLETO con un
+	// ENOENT, no solo esa página, porque prerender recorre todas las rutas.
+	if (!fs.existsSync(dir)) {
+		throw new Error(
+			`Falta la carpeta de fotos de la galería "${slug}": ${dir}. ` +
+				'Está declarada en _galerias.ts pero sus fotos no están en el repo.'
+		);
+	}
+
 	return fs
-		.readdirSync(path.join('static', params.slug, 'gallery'))
-		.filter((i) => i.includes('.jpg'))
+		.readdirSync(dir)
+		.filter((i) => /\.jpe?g$/i.test(i))
 		.map((i) => {
-			const imagePath = path.join('static', params.slug, 'gallery', i);
-			const { width, height } = imageSize(imagePath);
+			const { width, height } = imageSize(path.join(dir, i));
 			return { src: i, height, width };
 		});
 }
@@ -27,5 +39,5 @@ export function load({ params }: { params: { slug: string } }) {
 	const coverPath = path.join('static', params.slug, 'portada.jpg');
 	const cover = fs.existsSync(coverPath) ? imageSize(coverPath) : undefined;
 
-	return { gallery, images: getImages(params), cover };
+	return { gallery, images: getImages(params.slug), cover };
 }
