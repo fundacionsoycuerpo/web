@@ -23,7 +23,7 @@
 	{#if data.articles && data.articles.length}
 		<section class="news">
 			<h2>Noticias</h2>
-			{#each data.articles as article, i}
+			{#each data.articles as article (article.id)}
 				<Article {article} />
 			{/each}
 		</section>

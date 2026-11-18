@@ -15,7 +15,7 @@
 <div class="inner-content">
 	<h1>Noticias</h1>
 	{#if data.articles && data.articles.length}
-		{#each data.articles as article, i}
+		{#each data.articles as article (article.id)}
 			<Article {article} />
 		{/each}
 	{/if}

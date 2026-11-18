@@ -13,7 +13,7 @@
 <div class="inner-content">
 	<h1>Galería</h1>
 	<ul class="galleries">
-		{#each data.galleries as event}
+		{#each data.galleries as event (event.slug)}
 			<li>
 				<a href={'galeria/' + event.slug}>{event.content_title}</a>
 			</li>

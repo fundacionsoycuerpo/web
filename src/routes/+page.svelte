@@ -34,7 +34,7 @@
 		{#if data.events && data.events.length}
 			<section class="events">
 				<h2>Próximos eventos</h2>
-				{#each data.events as event, i}
+				{#each data.events as event (event.title)}
 					<Event {event} />
 				{/each}
 			</section>
@@ -42,7 +42,7 @@
 		{#if data.articles && data.articles.length}
 			<section class="news">
 				<h2>Noticias</h2>
-				{#each data.articles as article, i}
+				{#each data.articles as article (article.id)}
 					<Article {article} />
 				{/each}
 				<div class="more-news">

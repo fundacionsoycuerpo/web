@@ -23,7 +23,7 @@
 			{@html article.content}
 			{#if article.tags && article.tags.length}
 				<div class="tags">
-					{#each article.tags as tag, i}
+					{#each article.tags as tag (tag.id)}
 						<a class="tag" href="/{tag.url}"> #{tag.name} </a>
 					{/each}
 				</div>
