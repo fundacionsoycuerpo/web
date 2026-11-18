@@ -40,7 +40,7 @@
 		<p>{data.gallery.content_date}</p>
 		<p>{data.gallery.content_location}</p>
 		<div class="gallery">
-			<Gallery images={data.images} bind:alt={data.gallery.imgsAlt} bind:source={data.gallery.slug} />
+			<Gallery images={data.images} alt={data.gallery.imgsAlt} source={data.gallery.slug} />
 		</div>
 		<a href="/galeria">Volver a Galería</a>
 	</div>
