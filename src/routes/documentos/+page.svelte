@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { documents = [
+	const documents = [
 		{
 			name: 'Organizaciones de las danzas en Chile durante 1990 -2020 - NIDPLA',
 			filename: 'organizaciones_danzas-NIDPLA.pdf'
@@ -16,7 +16,7 @@
 			name: 'Reflexiones Fundación Soy Cuerpo - 2019',
 			filename: 'reflexiones_2019_FSC.pdf'
 		}
-	] } = $props();
+	];
 </script>
 
 <svelte:head>
@@ -26,7 +26,7 @@
 <div class="inner-content">
 	<h1>Documentos</h1>
 	<ul class="galleries">
-		{#each documents as doc}
+		{#each documents as doc (doc.filename)}
 			<li>
 				<a target="_blank" rel="noopener" href={'/docs/' + doc.filename}>{doc.name}</a>
 			</li>

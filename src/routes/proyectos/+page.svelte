@@ -32,7 +32,7 @@
 			<h1>Proyectos</h1>
 			{#if projects && projects.length}
 				<div class="projects-list">
-					{#each projects as project, i}
+					{#each projects as project (project.title)}
 						<ProjectCard {project} />
 					{/each}
 				</div>

@@ -4,7 +4,7 @@
 	import Hamburguer from '$lib/Hamburguer.svelte';
 
 	function close() {
-		menuIsOpen.update((isOpen) => false);
+		menuIsOpen.update(() => false);
 	}
 </script>
 

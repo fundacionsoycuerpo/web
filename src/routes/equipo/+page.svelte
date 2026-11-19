@@ -14,7 +14,7 @@
 <div class="inner-content">
 	<h1>Equipo Humano</h1>
 	<div class="members">
-		{#each data.members as member}
+		{#each data.members as member (member.id)}
 			<Member {member} />
 		{/each}
 	</div>
