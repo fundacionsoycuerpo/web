@@ -1,0 +1,20 @@
+# Config de build de Netlify, versionada.
+#
+# Antes vivía solo en el dashboard. Eso hizo que #93 (exigir FLOW_URL) rompiera
+# todos los Deploy Previews sin que se viera antes de pushear: los previews no
+# heredan las variables del dashboard, solo producción.
+#
+# El token no es secreto. Aparece en el HTML público del sitio:
+#   https://fundacionsoycuerpo.cl/donaciones -> flow.cl/btn.php?token=xx2flzy
+# Si algún día cambia, se actualiza acá y en el dashboard.
+
+[build]
+  command = "pnpm build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "24"
+  FLOW_URL = "https://www.flow.cl/btn.php?token=xx2flzy"
+
+# Ojo: NO agregar [[redirects]] acá. adapter-netlify@4 lanza error si encuentra
+# redirects en netlify.toml; van en static/_redirects.

@@ -176,8 +176,19 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica,
-		Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+	font-family:
+		-apple-system,
+		BlinkMacSystemFont,
+		avenir next,
+		avenir,
+		helvetica neue,
+		helvetica,
+		Ubuntu,
+		roboto,
+		noto,
+		segoe ui,
+		arial,
+		sans-serif;
 	line-height: 1.3;
 }
 
