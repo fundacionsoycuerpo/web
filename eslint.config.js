@@ -27,6 +27,24 @@ export default ts.config(
 		}
 	},
 	{
+		// Deuda conocida, degradada a warning para poder poner lint en CI hoy.
+		// Cada regla queda visible en cada corrida: no estan silenciadas.
+		//
+		//   no-navigation-without-resolve (40): href internos sin resolve() de
+		//     SvelteKit. Es refactor de navegacion, no de tooling.
+		//   no-explicit-any (11): tipos incompletos que vienen del export de
+		//     Strapi. Requiere tipar los datos reales.
+		//   no-at-html-tags (3): {@html} con el resultado de marked. Es
+		//     deliberado, el contenido es propio.
+		//
+		// Cuando cada una llegue a 0, subir a 'error'.
+		rules: {
+			'svelte/no-navigation-without-resolve': 'warn',
+			'@typescript-eslint/no-explicit-any': 'warn',
+			'svelte/no-at-html-tags': 'warn'
+		}
+	},
+	{
 		// Cypress corre en un contexto con sus propios globals (cy, it, describe...)
 		files: ['cypress/**/*.js'],
 		languageOptions: {

@@ -122,7 +122,8 @@ export const articles = [
 	},
 	{
 		id: 45,
-		title: 'Lanzamiento y Difusion: "Organizaciones de las danzas en Chile durante 1990 -2020" - NIDPLA',
+		title:
+			'Lanzamiento y Difusion: "Organizaciones de las danzas en Chile durante 1990 -2020" - NIDPLA',
 		published_at: '2023-01-26',
 		content:
 			'Estamos muy contentxs de establecer una colaboración con el Núcleo de investigación en danzas, política y articulación gremial (NIDPLA) y su investigación recién salida del horno: "Organizaciones de las danzas en Chile durante 1990 -2020"❤🔥\n\n Estaremos alojando en nuestras plataformas el dossier de esta investigación que contiene una cartografía y diversos textos temáticos, con disponibilidad para descarga directa 🤝 hasta el 28 de Febrero del 2023\n\n¡Les invitamos a revisar, descargar y leer esta investigación ! ❤\n\n[Ir a sección Documentos](/documentos)',
@@ -134,8 +135,7 @@ export const articles = [
 		id: 46,
 		title: 'Fundación Soy Cuerpo integra el COSOC de Parquemet',
 		published_at: '2023-03-01',
-		content:
-			`Como equipo de Fundación Soy Cuerpo les queremos contar que ya somos integrantes activxs del COSOC (Consejo de la Sociedad Civil) de Parquemet por el periodo 2022- 2025.
+		content: `Como equipo de Fundación Soy Cuerpo les queremos contar que ya somos integrantes activxs del COSOC (Consejo de la Sociedad Civil) de Parquemet por el periodo 2022- 2025.
 			
 Nos encanta la idea de poder participar como organización que aporta desde su experiencia en las iniciativas y el funcionamiento de esta hermosa red de parques urbanos.
 
@@ -148,6 +148,5 @@ Mas información en el siguiente <a target="_blank" href="https://parquemet.cl/n
 		gallery_url: '',
 		created_at: '2022-03-01 00:40:21.569+00',
 		updated_at: '2022-03-01 00:40:21.569+00'
-	},
-
+	}
 ];

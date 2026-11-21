@@ -31,6 +31,19 @@ jobs:
       - name: Install Cypress binary
         run: pnpm exec cypress install
 
+      # El CI corria solo e2e, y por eso el linter de componentes pudo estar
+      # roto desde la migracion a Svelte 5 sin que nadie se enterara: fallaba
+      # en los 26 .svelte y solo se veia corriendo `pnpm lint` a mano.
+      #
+      # check va primero porque es barato y detecta errores de tipos que el
+      # build tolera. lint corre despues; hoy devuelve 54 warnings y 0 errores,
+      # asi que no bloquea.
+      - name: Type check
+        run: pnpm run check
+
+      - name: Lint
+        run: pnpm run lint
+
       # FLOW_URL alimenta la sección "Donación única online" dentro de un
       # {#if data.flow}: sin ella la sección no se renderiza y el test de
       # /donaciones falla. El valor es público (aparece en el HTML del sitio).

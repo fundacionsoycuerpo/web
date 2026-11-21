@@ -187,7 +187,7 @@ export const uploadFile = [
 		width: 600,
 		height: 600,
 		url: 'https://res.cloudinary.com/fundacionsoycuerpo/image/upload/c_scale,h_600/v1650506272/logo_bg_nxvsa8.jpg',
-		provider: 'cloudinary',
+		provider: 'cloudinary'
 		// created_at: '2021-08-29 21:41:36.754+00',
 		// updated_at: '2021-08-29 21:41:36.754+00'
 	},
@@ -199,7 +199,7 @@ export const uploadFile = [
 		width: 480,
 		height: 600,
 		url: 'https://res.cloudinary.com/fundacionsoycuerpo/image/upload/c_scale,h_600/v1650508091/Afiche_NEUTRO_DARIAS_0_oaxg1k.jpg',
-		provider: 'cloudinary',
+		provider: 'cloudinary'
 		// created_at: '2021-08-29 21:41:36.754+00',
 		// updated_at: '2021-08-29 21:41:36.754+00'
 	},
@@ -211,7 +211,7 @@ export const uploadFile = [
 		width: 245,
 		height: 222,
 		url: 'https://res.cloudinary.com/fundacionsoycuerpo/image/upload/v1662407848/logo-main_ministerio_ryqifh.png',
-		provider: 'cloudinary',
+		provider: 'cloudinary'
 		// created_at: '2021-08-29 21:41:36.754+00',
 		// updated_at: '2021-08-29 21:41:36.754+00'
 	},
@@ -223,7 +223,7 @@ export const uploadFile = [
 		width: 1080,
 		height: 1080,
 		url: 'https://res.cloudinary.com/fundacionsoycuerpo/image/upload/v1662409866/POST_FIJO_pr1jqe.png',
-		provider: 'cloudinary',
+		provider: 'cloudinary'
 		// created_at: '2021-08-29 21:41:36.754+00',
 		// updated_at: '2021-08-29 21:41:36.754+00'
 	},
@@ -235,7 +235,7 @@ export const uploadFile = [
 		width: 1080,
 		height: 1080,
 		url: 'https://res.cloudinary.com/fundacionsoycuerpo/image/upload/v1674845788/Afiche_Lanzamiento_otpumo.jpg',
-		provider: 'cloudinary',
+		provider: 'cloudinary'
 		// created_at: '2021-08-29 21:41:36.754+00',
 		// updated_at: '2021-08-29 21:41:36.754+00'
 	},
@@ -247,7 +247,7 @@ export const uploadFile = [
 		width: 2560,
 		height: 1439,
 		url: 'https://res.cloudinary.com/fundacionsoycuerpo/image/upload/v1679943089/cosoc_2023.jpg',
-		provider: 'cloudinary',
+		provider: 'cloudinary'
 		// created_at: '2021-08-29 21:41:36.754+00',
 		// updated_at: '2021-08-29 21:41:36.754+00'
 	}
