@@ -11,6 +11,30 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # Version alineada con local. pnpm 9 no entiende `allowBuilds` y ejecuta
+      # TODOS los postinstall sin filtrar: la config de pnpm-workspace.yaml
+      # quedaba ignorada en silencio. Ver #98.
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11
+
+      # La version de Node sale de .nvmrc, el mismo archivo que usan fnm y nvm
+      # en local. Una sola fuente de verdad.
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Cypress necesita su binario. En pnpm 11 los build scripts de
+      # dependencias no se ejecutan salvo que estén declarados en allowBuilds,
+      # y ahí cypress está en `false` a propósito (descarga ~200MB y solo se
+      # necesita para e2e). Por eso se instala explícitamente.
+      - name: Install Cypress binary
+        run: pnpm exec cypress install
+
       # El CI corria solo e2e, y por eso el linter de componentes pudo estar
       # roto desde la migracion a Svelte 5 sin que nadie se enterara: fallaba
       # en los 26 .svelte y solo se veia corriendo `pnpm lint` a mano.
