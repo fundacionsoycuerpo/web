@@ -1,7 +1,35 @@
 packages:
   - '.'
 
-onlyBuiltDependencies:
-  - '@sveltejs/kit'
-  - esbuild
-  - svelte-preprocess
+# En pnpm 11 la clave es `allowBuilds` (mapa paquete: true/false).
+# `onlyBuiltDependencies` (lista) es la sintaxis vieja: pnpm 11 la ignora y
+# falla con ERR_PNPM_IGNORED_BUILDS en instalaciones limpias.
+#
+# Hay que declarar TODOS los paquetes del arbol que traen hooks de instalacion.
+# Dejar uno afuera no lo desactiva: hace fallar el install con
+# ERR_PNPM_IGNORED_BUILDS. Por eso los que se niegan van con `false`.
+#
+#   esbuild           postinstall -> node install.js
+#                     Crea el shim en node_modules/.bin. El binario nativo lo
+#                     aporta @esbuild/<plataforma> como dependencia opcional,
+#                     pero sin el shim los scripts que invocan esbuild fallan.
+#
+#   svelte-preprocess postinstall -> echo
+#                     Solo imprime un recordatorio. Se permite porque es
+#                     barato y evita un warning permanente.
+#
+#   cypress: false    postinstall -> node index.js --exec install
+#                     Descarga ~200MB del binario. El CI ya lo hace aparte con
+#                     `pnpm exec cypress install`; permitirlo aca duplicaria esa
+#                     descarga en cada run.
+#
+#   core-js-pure: false  postinstall -> require('./postinstall')
+#                     Solo imprime un mensaje de publicidad.
+#
+# @sveltejs/kit estaba en la lista vieja pero no tiene ningun hook de
+# instalacion: se quito.
+allowBuilds:
+  esbuild: true
+  svelte-preprocess: true
+  cypress: false
+  core-js-pure: false
