@@ -11,26 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v6
-        with:
-          version: 9
-
-      # La version de Node sale de .nvmrc, el mismo archivo que usan fnm y nvm
-      # en local. Una sola fuente de verdad.
-      - uses: actions/setup-node@v7
-        with:
-          node-version-file: .nvmrc
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      # Cypress necesita su binario. En pnpm 10+ los build scripts de
-      # dependencias no se ejecutan salvo que estén en onlyBuiltDependencies,
-      # así que se instala explícitamente.
-      - name: Install Cypress binary
-        run: pnpm exec cypress install
-
       # El CI corria solo e2e, y por eso el linter de componentes pudo estar
       # roto desde la migracion a Svelte 5 sin que nadie se enterara: fallaba
       # en los 26 .svelte y solo se veia corriendo `pnpm lint` a mano.
